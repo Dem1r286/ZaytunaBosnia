@@ -68,7 +68,7 @@ const Destinations = () => {
       </div>
 
       {/* Destination Cards */}
-      <div className="flex overflow-hidden justify-center items-center gap-8 w-full px-4">
+      <div className="flex overflow-hidden justify-center items-center gap-[3vw] w-full px-4">
         <AnimatePresence mode="wait" custom={currentIndex}>
           {sourcesData
             .slice(currentIndex, currentIndex + visibleCount)
@@ -79,7 +79,8 @@ const Destinations = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.3 }}
-                className="relative flex justify-center items-center flex-col w-[350px] h-[500px] shadow-lg bg-cover px-2 py-2 rounded-2xl overflow-hidden bg-center before:absolute before:inset-0 before:bg-black/20 before:brightness-80"
+                className="relative flex justify-center items-center flex-col w-[350px] h-[500px] shadow-lg bg-cover px-2 py-2 rounded-2xl overflow-hidden bg-center 
+                before:absolute before:inset-0 before:bg-black/20 before:brightness-80"
                 style={{ backgroundImage: `url(${item.img})` }}
               >
                 <div className="absolute inset-0 bg-black/40"></div>
@@ -90,7 +91,7 @@ const Destinations = () => {
                   </div>
                   <a
                     href={item.url}
-                    className="flex items-center justify-center text-white bg-[#20b970] text-xs font-semibold p-2 rounded-lg"
+                    className="flex items-center justify-center text-white bg-[#22c55e] text-xs font-semibold p-2 rounded-lg"
                   >
                     Read More
                   </a>

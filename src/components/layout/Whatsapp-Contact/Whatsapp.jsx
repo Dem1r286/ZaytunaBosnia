@@ -19,7 +19,7 @@ const Whatsapp = () => {
         className={`whatsapp-icon ${isHovered ? "rotate" : ""}`}
       />
       <div className="whatsapp-paragraph">
-        <p>Contact Us!</p>
+        <p>Contact Us</p>
       </div>
     </a>
   );

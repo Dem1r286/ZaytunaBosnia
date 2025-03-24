@@ -4,11 +4,12 @@ import "../styles/Home.css";
 import Hero from "../components/Main/Homepage/Hero";
 import AppBanner from "../components/Main/Homepage/AppBanner";
 import CourtBanner from "../components/Main/Homepage/CourtBanner";
-import Packages from "../components/Main/Homepage/Packages";
+import Packages from "../components/Main/Homepage/Packages/Packages";
 import Services from "../components/Main/Homepage/Services";
 import Destinations from "../components/Main/Homepage/Destinations";
 import ExploreInvestment from "../components/Main/Homepage/ExploreInvestment";
-import Testimonials from "../components/Main/Homepage/Testimonials";
+import Testimonials from "../components/Main/Homepage/Testimonials/Testimonials";
+import AboutUs from "../components/Main/Homepage/AboutUs";
 
 
 const FadeInSection = ({ children }) => {
@@ -27,19 +28,23 @@ const FadeInSection = ({ children }) => {
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col flex-grow w-full gap-10 justify-center items-center">
+    <div className="flex flex-col flex-grow w-full justify-center items-center gap-40">
       <Hero />
 
+      <FadeInSection>
+        <AboutUs />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Packages />
+      </FadeInSection>
+      
       <FadeInSection>
         <Services />
       </FadeInSection>
 
       <FadeInSection>
         <Destinations />
-      </FadeInSection>
-
-      <FadeInSection>
-        <Packages />
       </FadeInSection>
 
       <FadeInSection>

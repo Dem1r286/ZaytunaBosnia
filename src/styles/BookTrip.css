@@ -1,0 +1,60 @@
+/* Style the day numbers */
+.react-datepicker__day {
+    color: #000000; /* Default text color */
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  /* Style the selected day */
+  .react-datepicker__day--selected {
+    background-color: #22c55e !important; /* Green background */
+    color: white !important;
+    border-radius: 8px;
+  }
+  
+  /* Style the hovered day */
+  .react-datepicker__day:hover {
+    background-color: #16a34a !important; /* Darker green on hover */
+    color: white !important;
+  }
+  
+  /* Style the month name */
+  .react-datepicker__current-month {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000; /* Darker text */
+    margin-bottom: 40px;
+  }
+  
+  /* Style the week days (Mon, Tue, etc.) */
+  .react-datepicker__day-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #6b7280; /* Gray color */
+  }
+  
+  /* Style the navigation buttons (previous/next month) */
+  .react-datepicker__navigation {
+    top: 12px;
+  }
+  
+  .react-datepicker__navigation--previous,
+  .react-datepicker__navigation--next {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .react-datepicker__navigation-icon {
+    filter: invert(40%);
+  }
+  
+  /* Style the input field */
+  .react-datepicker-wrapper input {
+    font-size: 14px;
+    color: #374151; /* Darker text */
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+  }
+  

@@ -2,7 +2,7 @@ import React from "react";
 
 const AppBanner = () => {
   return (
-    <div
+    <div id="app-banner"
       className="flex items-center justify-center bg-gradient-to-r from-[#20b970] to-[#1a9b61] h-[25rem] rounded-3xl w-fit px-16 gap-20 mt-20 shadow-lg"
     >
       <img src="src/assets/phonemockup.png" className="w-[28em] mb-16" alt="Phone Mockup" />

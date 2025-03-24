@@ -1,13 +1,29 @@
 import React from "react";
-import Header from "../components/layout/Header/Header";
-import Footer from "../components/layout/Footer/Footer";
+import { motion } from "framer-motion";
+import ContactContainer from "../components/Main/Contact page/ContactContainer";
+
+const FadeInSection = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      className=""
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Contact = () => {
-    return (
-        <div>
-
-        </div>
-    );
-}
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <FadeInSection>
+        <ContactContainer />
+      </FadeInSection>
+    </div>
+  );
+};
 
 export default Contact;
