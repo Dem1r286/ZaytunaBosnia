@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeaderLinks = () => {
     return (
-      <div className="hidden lg:flex justify-center items-center mr-16">
+      <div className="hidden lg:flex justify-center items-center mr-8">
         <div className="flex items-center gap-14 text-gray-900">
           <Link to="/" className="cursor-pointer">
             Home
@@ -14,12 +14,12 @@ const HeaderLinks = () => {
           </Link>
           <Link
             to="/book-trip"
-            className="cursor-pointer bg-orange-600 px-[10px] py-[8px] text-white rounded-xl text-sm font-medium hover:scale-104 transition-transform duration-300"
+            className="cursor-pointer bg-[#22c55e]  px-[12px] py-[8px] text-white rounded-xl text-sm font-semibold hover:scale-104 transition-transform duration-300"
           >
             Book Your Trip
           </Link>
-          <Link to="/investment" className="cursor-pointer">
-            Investment
+          <Link to="/investments" className="cursor-pointer">
+            Investments
           </Link>
           <Link to="/contact" className="cursor-pointer">
             Contact Us

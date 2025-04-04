@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "/src/styles/BookTrip.css";
 import { Link } from "react-router-dom";
+import MoreInfoContainer from "../components/Main/Book Trip page/MoreInfoContainer";
 
 const FadeInSection = ({ children }) => {
   return (
@@ -24,11 +25,12 @@ const BookTrip = () => {
   const [selectedPackage, setSelectedPackage] = useState("regular");
   const [hasBookedFlight, setHasBookedFlight] = useState(null);
   const [includeTravelGuide, setIncludeTravelGuide] = useState(null);
+  const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center mt-2">
-      <div className="flex flex-col justify-center items-center gap-16">
+    <div className="relative w-full min-h-screen flex flex-col justify-center items-center mt-8 mb-60">
+      <div className="flex flex-col justify-center items-center gap-12">
         <FadeInSection>
           <div className="flex flex-col gap-3 items-center justify-center">
             <p className="font-semibold text-5xl">Booking Form</p>
@@ -41,51 +43,13 @@ const BookTrip = () => {
 
         <FadeInSection>
           <div
-            className="flex flex-row w-[1400px] h-[900px] rounded-xl shadow-xl bg-cover p-10 justify-between px-25 py-10 gap-40 items-center"
+            className="flex flex-row w-[1400px] h-[950px] rounded-xl shadow-xl bg-cover p-10 justify-between px-25 py-10 gap-40 items-center"
             style={{
               backgroundImage: "url('/src/assets/booktriptopwave.svg')",
             }}
           >
             {/* Left Section */}
-            <div className="flex flex-col gap-10 justify-center items-center">
-              {/* Arrival and Departure */}
-              <div className="flex flex-col justify-center items-center gap-3">
-                <p className="font-semibold text-xl">
-                  Select Arrival and Departure
-                </p>
-                <div className="flex gap-10">
-                  <div className="flex flex-col">
-                    <label className="font-semibold text-[13px] text-gray-800 ml-2">
-                      Arrival Date
-                    </label>
-                    <DatePicker
-                      selected={arrivalDate}
-                      onChange={(date) => setArrivalDate(date)}
-                      selectsStart
-                      startDate={arrivalDate}
-                      endDate={departureDate}
-                      minDate={new Date()}
-                      className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <label className="font-semibold text-[13px] text-gray-800 ml-2">
-                      Departure Date
-                    </label>
-                    <DatePicker
-                      selected={departureDate}
-                      onChange={(date) => setDepartureDate(date)}
-                      selectsEnd
-                      startDate={arrivalDate}
-                      endDate={departureDate}
-                      minDate={arrivalDate || new Date()}
-                      className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800"
-                    />
-                  </div>
-                </div>
-              </div>
-
+            <div className="flex flex-col gap-10 justify-center items-center mt-10">
               {/* Full Name & Email */}
 
               <div className="flex flex-row gap-10">
@@ -167,10 +131,45 @@ const BookTrip = () => {
                     <option value="" disabled selected>
                       Choose duration
                     </option>
-                    <option value="5">6 Nights / 5 Days</option>
-                    <option value="7">8 Nights / 7 Days</option>
+                    <option value="5">5 Nights / 6 Days</option>
+                    <option value="7">7 Nights / 8 Days</option>
                     <option value="10">10 Nights / 11 Days</option>
                   </select>
+                </div>
+              </div>
+
+              {/* Arrival and Departure */}
+              <div className="flex flex-col justify-center items-center gap-3">
+                <div className="flex gap-10">
+                  <div className="flex flex-col">
+                    <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                      Arrival Date
+                    </label>
+                    <DatePicker
+                      selected={arrivalDate}
+                      onChange={(date) => setArrivalDate(date)}
+                      selectsStart
+                      startDate={arrivalDate}
+                      endDate={departureDate}
+                      minDate={new Date()}
+                      className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800 h-[35px]"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                      Departure Date
+                    </label>
+                    <DatePicker
+                      selected={departureDate}
+                      onChange={(date) => setDepartureDate(date)}
+                      selectsEnd
+                      startDate={arrivalDate}
+                      endDate={departureDate}
+                      minDate={arrivalDate || new Date()}
+                      className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800 h-[35px]"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -274,16 +273,27 @@ const BookTrip = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="flex flex-col justify-center items-center w-full">
+                <label className="block font-semibold text-sm text-gray-800 ml-2">
+                  Special Requests (e.g. wheelchair access, dietary needs)
+                </label>
+                <textarea
+                  rows="3"
+                  placeholder="Enter any special requests..."
+                  className="block w-[90%] rounded-xl h-[50px] py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm mt-2 resize-none"
+                ></textarea>
+              </div>
             </div>
 
             {/* Right Section */}
 
-            <div className="flex justify-between h-full pt-40 pb-2 items-center flex-col gap-10">
+            <div className="flex justify-between h-full pt-30 pb-2 items-center flex-col gap-10">
               {/* Contact Custom Trip */}
               <div className="flex justify-center items-center flex-col gap-4">
                 <p className="text-center text-[15px] font-semibold">
-                  Looking for a custom trip? We’ve got you covered! Contact us,
-                  and we'll tailor the perfect journey just for you.
+                  Looking for a custom trip? Contact us, and we'll tailor the
+                  perfect journey just for you.
                 </p>
 
                 <Link
@@ -294,23 +304,51 @@ const BookTrip = () => {
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center flex-col">
+              <div className="flex flex-col justify-center bg-gray-100 p-6 rounded-xl shadow-md w-full gap-4">
+                <div className="flex justify-center items-center flex-row gap-6">
+                  <h2 className="text-lg font-semibold">Choose Hotel</h2>
+                  {/* Check on Map Button */}
+                  <a
+                    href="https://maps.google.com?q=Grand+Palace+Hotel+Berlin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold bg-blue-600 text-white px-3 py-2 text-sm rounded-xl hover:bg-blue-700"
+                  >
+                    View on Map
+                  </a>
+                </div>
 
+                {/* Hotel Dropdown */}
+                <select className="w-full p-2 border rounded-md bg-white">
+                  <option value="hotel1">Hotel Hollywood - ★★★★☆</option>
+                  <option value="hotel2">Hotel Ibis - ★★★★☆</option>
+                  <option value="hotel3">Hotel Hills - ★★★★★</option>
+                  <option value="hotel3">Hotel Malak Regency - ★★★★★</option>
+                </select>
+
+                <div className="flex justify-center items-center flex-col">
+                  <p className="bg-gray-600 px-3 py-2 rounded-xl font-semibold text-white text-sm">
+                    459€ / Person
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex justify-center items-center flex-col">
                 {/* Booking Summary */}
-                <div className="flex justify-between items-center w-full flex-col bg-gray-200 rounded-xl pt-3 pb-4 mb-10">
+                <div className="flex justify-between items-center w-full flex-col bg-gray-100 rounded-xl pt-3 pb-4 mb-10 shadow-md">
                   <p className="font-semibold text-lg mb-4">Booking Summary</p>
 
                   <div className="flex justify-between items-center gap-20 w-full px-6 text-sm">
                     <div className="flex flex-col items-start gap-1">
                       <p>359€ x 3 Person</p>
-                      <p>Hotel per night / person</p>
+                      <p>Custom Hotel / person</p>
                       <p>Travel guide</p>
                       <p className="font-semibold">Total</p>
                     </div>
 
                     <div className="flex flex-col items-end gap-1">
                       <p>1077€</p>
-                      <p>70€</p>
+                      <p>+ 70€</p>
                       <p>50€</p>
                       <p className="font-semibold">1100€</p>
                     </div>
@@ -318,40 +356,46 @@ const BookTrip = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                <div className="flex flex-row justify-center items-center gap-10 ml-25">
-                  <button
-                    className="w-[180px] h-[40px] rounded-[12px] border-none bg-[#22c55e] flex items-center justify-center cursor-pointer transition-all duration-500 overflow-hidden shadow-md relative active:scale-95"
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
-                  >
-                    <span
-                      className={`absolute left-[-50px] w-[30px] h-[30px] bg-transparent rounded-full flex items-center justify-center overflow-hidden z-10 transition-all duration-500 ${
-                        hovered ? "translate-x-[58px] rounded-[40px]" : ""
-                      }`}
+                  <div className="flex flex-row justify-center items-center gap-6 ml-25">
+                    <button
+                      className="w-[180px] h-[40px] rounded-[12px] border-none bg-[#22c55e] flex items-center justify-center cursor-pointer transition-all duration-500 overflow-hidden shadow-md relative active:scale-95"
+                      onMouseEnter={() => setHovered(true)}
+                      onMouseLeave={() => setHovered(false)}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="18px"
-                        height="18px"
-                        fill="white"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className={`absolute left-[-50px] w-[30px] h-[30px] bg-transparent rounded-full flex items-center justify-center overflow-hidden z-10 transition-all duration-500 ${
+                          hovered ? "translate-x-[58px] rounded-[40px]" : ""
+                        }`}
                       >
-                        <path d="M20.285 5.295a1 1 0 0 0-1.41-.01L9 14.84 5.125 11.23a1 1 0 1 0-1.25 1.56l4.5 4a1 1 0 0 0 1.36-.08l10-10.33a1 1 0 0 0 .01-1.42Z" />
-                      </svg>
-                    </span>
-                    <p
-                      className={`h-full w-fit flex items-center justify-center text-white font-semibold text-sm z-0 transition-all duration-500 ${
-                        hovered ? "translate-x-[10px]" : ""
-                      }`}
-                    >
-                      Confirm Booking
-                    </p>
-                  </button>
+                        <svg
+                          viewBox="0 0 24 24"
+                          width="18px"
+                          height="18px"
+                          fill="white"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M20.285 5.295a1 1 0 0 0-1.41-.01L9 14.84 5.125 11.23a1 1 0 1 0-1.25 1.56l4.5 4a1 1 0 0 0 1.36-.08l10-10.33a1 1 0 0 0 .01-1.42Z" />
+                        </svg>
+                      </span>
+                      <p
+                        className={`h-full w-fit flex items-center justify-center text-white font-semibold text-sm z-0 transition-all duration-500 ${
+                          hovered ? "translate-x-[10px]" : ""
+                        }`}
+                      >
+                        Confirm Booking
+                      </p>
+                    </button>
 
-                  <button className="text-xs bg-blue-600 text-white font-semibold px-2 py-1 rounded-xl hover:scale-104 transition-transform duration-300">
-                    More Info
-                  </button>
-                </div>
+                    <button className="text-xs bg-blue-600 text-white font-semibold px-2 py-1 rounded-xl hover:scale-104 transition-transform duration-300"
+                      onClick = {() => setIsMoreInfoOpen(true)} 
+                    >
+                      More Info
+                    </button>
+
+                        {isMoreInfoOpen && <MoreInfoContainer onClose={() => setIsMoreInfoOpen(false)} />}
+  
+
+                  </div>
                 </div>
 
                 <p className="text-sm text-gray-600 text-center mt-2">

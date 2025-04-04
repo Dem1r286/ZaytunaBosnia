@@ -17,7 +17,7 @@ const Footer = () => {
     { name: "Court Interpreter", link: "court-banner" }
   ];
   return (
-    <div id="footer" className="relative w-full text-white mt-80 flex flex-col">
+    <div id="footer" className="relative w-full text-white flex flex-col z-10 mt-10">
       <WavesEx />
       <div className="footer-content relative z-10 px-20 flex flex-row justify-center items-center pb-20 gap-[10vw]">
         <Newsletter />

@@ -18,7 +18,7 @@ const FadeInSection = ({ children }) => {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mb-60">
       <FadeInSection>
         <ContactContainer />
       </FadeInSection>

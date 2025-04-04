@@ -28,7 +28,7 @@ const FadeInSection = ({ children }) => {
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col flex-grow w-full justify-center items-center gap-40">
+    <div className="flex flex-col flex-grow w-full justify-center items-center gap-40 mb-60">
       <Hero />
 
       <FadeInSection>

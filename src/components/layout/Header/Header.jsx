@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import HeaderLogo from "./components/HeaderLogo";
 import HeaderLinks from "./components/HeaderLinks";
@@ -7,10 +7,36 @@ import HamburgerMenu from "./components/HamburgerMenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full flex items-center bg-white shadow justify-between px-8 z-20">
+      <div
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-8 z-20 py-1 bg-white transition-transform duration-300 shadow-sm ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <HeaderLogo />
         <HeaderLinks />
 

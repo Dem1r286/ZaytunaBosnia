@@ -6,7 +6,11 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        marker: ['Permanent Marker', 'cursive'],
+      },
+    },
     screens: {
       "3xs": "250px",
       "2xs": "340px",

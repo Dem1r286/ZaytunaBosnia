@@ -21,7 +21,7 @@ const AboutUs = () => {
           <span className="font-semibold"> Join us on a journey of discovery—let’s explore the Bosnia & Herzegovina together!</span>
         </p>
         <Link to="contact">
-            <button className="relative inline-block p-px font-semibold leading-6 text-white bg-orange-600 shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+            <button className="relative inline-block p-px font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
               <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative z-1 block px-4 py-2 rounded-xl">
                 <div className="relative z-1 flex items-center space-x-3">

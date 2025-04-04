@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PackageCards from "./components/PackageCard";
+import PackageCardHomepage from "./components/PackageCardHomepage";
 
 const Packages = () => {
   return (
@@ -12,7 +12,7 @@ const Packages = () => {
         </p>
       </div>
     
-      <PackageCards />
+      <PackageCardHomepage />
 
       <div className="flex items-center justify-center">
         <div className="relative group">

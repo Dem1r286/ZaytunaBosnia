@@ -9,6 +9,8 @@ import "./styles/App.css";
 import TravelPackages from "./pages/TravelPackages";
 import ScrollToTop from "./components/layout/Header/components/ScrollToTop";
 import BookTrip from "./pages/BookTrip";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   const { t, i18n } = useTranslation("global");
@@ -20,7 +22,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="travel-packages" element={<TravelPackages />} />
-          <Route path="investment" element={<Investment />} />
+          <Route path="investments" element={<Investment />} />
           <Route path="book-trip" element={<BookTrip />} />
           <Route path="contact" element={<Contact />} />
         </Route>
