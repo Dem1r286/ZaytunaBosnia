@@ -50,14 +50,3 @@ const PackageCard = ({
 };
 
 export default PackageCard;
-
-{/* <div className="my-10 gap-10">
-                <ul className="flex flex-col gap-5">
-                    {features.map((feature, index) => (
-                        <li key={index} className="flex w-full justify-start items-center text-sm text-white gap-3">
-                            <Check className="text-black min-w-6 min-h-6 rounded-full bg-white p-1 " strokeWidth={2} />
-                            {feature}
-                        </li>
-                    ))}
-                </ul>
-            </div> */}

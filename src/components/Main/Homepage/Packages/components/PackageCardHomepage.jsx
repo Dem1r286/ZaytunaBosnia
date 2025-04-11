@@ -9,7 +9,7 @@ const packageData = [
 
 const PackageCardHomepage = () => {
   return (
-    <div className="flex flex-row justify-center items-center gap-[4vw]">
+    <div className="flex flex-row justify-center items-center gap-[4vw] flex-wrap">
       {packageData.map((item, idx) => (
         <Link key={idx} to={`/travel-packages?package=${item.id}`}>
           <div className="flex justify-center items-center bg-gray-800 h-[300px] w-[500px] rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">

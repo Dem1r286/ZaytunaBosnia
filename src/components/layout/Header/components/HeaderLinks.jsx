@@ -14,7 +14,7 @@ const HeaderLinks = () => {
           </Link>
           <Link
             to="/book-trip"
-            className="cursor-pointer bg-[#22c55e]  px-[12px] py-[8px] text-white rounded-xl text-sm font-semibold hover:scale-104 transition-transform duration-300"
+            className="cursor-pointer bg-[#22c55e] px-[12px] py-[8px] text-white rounded-xl text-sm font-semibold hover:scale-104 transition-transform duration-300"
           >
             Book Your Trip
           </Link>
