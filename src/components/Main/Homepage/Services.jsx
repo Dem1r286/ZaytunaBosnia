@@ -13,11 +13,9 @@ const Services = () => {
     const services = [
         { heading: "Transportation", url: "./src/assets/transportation.png", description: "Tours for individuals or groups (private cars & buses)" },
         { heading: "Hotel & Accommodation", url: "./src/assets/hotel.png", description: "Comfortable stays for all budgets" },
-        { heading: "Flight Booking", url: "./src/assets/flightbooking.png", description: "Find the best flight deals for any budget and destination with ease" },
         { heading: "Airport-Hotel Transfers", url: "./src/assets/transfer.png", description: "Seamless transfers between your hotel and the airport" },
         { heading: "Travel Guides", url: "./src/assets/travelguide.png", description: "Easily explore new destinations with our expert travel guides" },
-        { heading: "Travel Advice", url: "./src/assets/traveladvice.png", description: "Get the best tips on when to visit, local services, visa requirements, and more. Feel free to ask!" },
-        { heading: "Travel Insurance", url: "./src/assets/travelinsurance.png", description: "Coverage for trip cancellations, medical emergencies, and more. Travel with peace of mind!" },
+        { heading: "Travel Advice", url: "./src/assets/traveladvice.png", description: "Get the best tips on when to visit, local services, visa requirements, and more. Feel free to ask!" }
     ];
 
     return (

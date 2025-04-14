@@ -1,5 +1,5 @@
 import React from "react";
-import { Check } from "lucide-react";
+import { Check, ArrowDown } from "lucide-react";
 
 const PackageCard = ({
     nights,
@@ -40,6 +40,10 @@ const PackageCard = ({
                         </li>
                     ))}
                 </ul>
+                <div className={`${days > 5 ? "absolute" : "hidden"} flex gap-1 text-xs ml-10 pt-2`}>
+                <p className="font-semibold">Read more</p>
+                <ArrowDown size={15} />
+                </div>
             </div>
 
             <button className="mt-4 text-white py-2 rounded-2xl font-bold px-10" style={{ backgroundColor: buttonColor }}>
