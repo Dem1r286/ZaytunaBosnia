@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const packageData = [
-  { name: "Winter Package", id: "winter", image: "./src/assets/winterpackage.png" },
-  { name: "Summer Package", id: "summer", image: "./src/assets/summerpackage.png" },
-  { name: "Honeymoon Package", id: "honeymoon", image: "./src/assets/honeymoonpackage.png" }
+  { name: "Winter Package", id: "winter", image: "assets/packages/winterpackage.webp" },
+  { name: "Summer Package", id: "summer", image: "assets/packages/summerpackage.webp" },
+  { name: "Honeymoon Package", id: "honeymoon", image: "assets/packages/honeymoonpackage.webp" }
 ];
 
 const PackageCardHomepage = () => {

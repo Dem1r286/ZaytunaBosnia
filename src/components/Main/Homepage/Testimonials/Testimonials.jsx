@@ -5,62 +5,57 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Rating } from "@mui/material";
 import LeaveReview from "./components/LeaveReview";
 import { useState } from "react";
-
-const testimonials = [
-  {
-    name: "Allison O'Holleran",
-    date: "7.12.2024",
-    rating: 5,
-    description:
-      "An unforgettable experience! The agency planned the perfect itinerary, from Sarajevo’s rich history to the breathtaking landscapes of the Sutjeska National Park.",
-  },
-  {
-    name: "Mark J.",
-    date: "28.06.2024",
-    rating: 5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-  {
-    name: "Mark J.",
-    date: "24.05.2024",
-    rating: 4.5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-  {
-    name: "Mark J.",
-    date: "30.04.2023",
-    rating: 5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-  {
-    name: "Mark J.",
-    date: "08.10.2024",
-    rating: 5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-  {
-    name: "Mark J.",
-    date: "19.06.2024",
-    rating: 4.5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-  {
-    name: "Mark J.",
-    date: "10.08.2024",
-    rating: 5,
-    description:
-      "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const TestimonialSlider = () => {
+  const { t, i18n } = useTranslation("global");
   const [isReviewOpen, setIsReviewOpen] = useState(false);
 
+  const testimonials = [
+    {
+      name: t("testimonials.list.0.name"),
+      date: t("testimonials.list.0.date"),
+      rating: 5,
+      description: t("testimonials.list.0.description"),
+    },
+    {
+      name: t("testimonials.list.1.name"),
+      date: t("testimonials.list.1.date"),
+      rating: 5,
+      description: t("testimonials.list.1.description"),
+    },
+    {
+      name: t("testimonials.list.2.name"),
+      date: t("testimonials.list.2.date"),
+      rating: 4.5,
+      description: t("testimonials.list.2.description"),
+    },
+    {
+      name: t("testimonials.list.3.name"),
+      date: t("testimonials.list.3.date"),
+      rating: 5,
+      description: t("testimonials.list.3.description"),
+    },
+    {
+      name: t("testimonials.list.4.name"),
+      date: t("testimonials.list.4.date"),
+      rating: 5,
+      description: t("testimonials.list.4.description"),
+    },
+    {
+      name: t("testimonials.list.5.name"),
+      date: t("testimonials.list.5.date"),
+      rating: 4.5,
+      description: t("testimonials.list.5.description"),
+    },
+    {
+      name: t("testimonials.list.6.name"),
+      date: t("testimonials.list.6.date"),
+      rating: 5,
+      description: t("testimonials.list.6.description"),
+    },
+  ];
+  
   return (
     <div
       id="testimonials"
@@ -68,10 +63,10 @@ const TestimonialSlider = () => {
     >
       <div className="flex justify-center items-center flex-col mb-10 gap-2">
         <h2 className="text-3xl font-semibold text-black">
-          What people say about us?
+        {t("testimonials.heading")}
         </h2>
         <p className="text-center font-medium text-sm text-gray-700">
-          Read firsthand experiences from those who explored with us and discovered unforgettable adventures!
+        {t("testimonials.text")}
         </p>
       </div>
       <Swiper
@@ -85,7 +80,7 @@ const TestimonialSlider = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide
             key={index}
-            className="bg-white p-6 rounded-xl shadow-lg w-full"
+            className="bg-white p-6 mb-14 rounded-xl shadow-lg w-full"
           >
             <div className="flex items-center gap-4">
               <div>
@@ -99,10 +94,10 @@ const TestimonialSlider = () => {
         ))}
       </Swiper>
       <button
-        className="font-semibold text-sm bg-[#22c55e] text-white px-4 py-2 rounded-xl mt-10 self-end mr-4 shadow-lg hover:scale-104 transition-transform duration-300"
+        className="font-semibold text-sm bg-[#22c55e] text-white px-4 py-2 rounded-xl mt-4 self-end mr-4 shadow-lg hover:scale-105 transition-transform duration-300"
         onClick={() => setIsReviewOpen(true)}
       >
-        Leave A Review
+        {t("testimonials.button")}
       </button>
       {isReviewOpen && <LeaveReview onClose={() => setIsReviewOpen(false)} />}
     </div>

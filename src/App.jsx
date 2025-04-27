@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import TravelPackages from "./pages/TravelPackages";
 import TravelPackageDetails from "./pages/TravelPackageDetails";
 import ScrollToTop from "./components/layout/Header/components/ScrollToTop";
+import DestinationDetails from "./pages/DestinationDetails";
 import BookTrip from "./pages/BookTrip";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="book-trip" element={<BookTrip />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/travel-package-details" element={<TravelPackageDetails />} />
+          <Route path="/destination/:name" element={<DestinationDetails />} />
         </Route>
       </Routes>
     </Router>

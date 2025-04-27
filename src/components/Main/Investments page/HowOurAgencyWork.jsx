@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, MessageCircle, FileText, Handshake, ClipboardCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const StepsCard = ({ heading, description, Icon }) => {
   return (
@@ -14,38 +15,40 @@ const StepsCard = ({ heading, description, Icon }) => {
 };
 
 const HowOurAgencyWork = () => {
+  const { t, i18n } = useTranslation("global");
   const steps = [
     { 
-      heading: "Contact Us", 
-      description: "Get in touch with us to discuss your needs and expectations.", 
+      heading: t("investments.steps.contact-us"), 
+      description: t("steps.contact-description"), 
       Icon: Phone 
     },
     { 
-      heading: "Consultation", 
-      description: "We consult with you to understand your goals and provide solutions.", 
+      heading: t("investments.steps.consultation"), 
+      description: t("steps.consultation-description"), 
       Icon: MessageCircle 
     },
     { 
-      heading: "Agreement", 
-      description: "We finalize the details and get an agreement in place for your project.", 
+      heading: t("investments.steps.agreement"), 
+      description: t("investments.steps.agreement-description"), 
       Icon: FileText 
     },
     { 
-      heading: "Negotiating", 
-      description: "We act as a middleman, negotiating and securing agreements with various service providers.", 
+      heading: t("investments.steps.negotiating"), 
+      description: t("investments.steps.negotiating-description"), 
       Icon: Handshake 
     },
     { 
-      heading: "Service Delivery", 
-      description: "We deliver your requested services with excellence, on time.", 
+      heading: t("investments.steps.service-delivery"), 
+      description: t("investments.steps.service-delivery-description"), 
       Icon: ClipboardCheck 
     }
   ];
   
+  
   return (
     <div className="flex flex-col items-center pt-14 pb-24 px-5 bg-[#22c55e] w-screen gap-12 mt-20">
       <h2 className="text-3xl font-bold text-white mb-10">
-        How Our Agency Works
+      {t("investments.steps.heading")}
       </h2>
       <div className="flex justify-center items-center flex-row gap-[3vw] flex-wrap">
         {steps.map((service) => (

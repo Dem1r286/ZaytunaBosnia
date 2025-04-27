@@ -1,20 +1,74 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ContactForm from "../../../Contact page/components/ContactForm";
-import { X } from "lucide-react";
+import { X, Check, XCircle } from "lucide-react";
+import Loader from "../../../../../../Loader";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import AlertBox from "../../../../layout/Footer/components/AlertBox";
 
 const LeaveReview = ({ onClose }) => {
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [contactStatus, setContactStatus] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  useEffect(() => {
+    if (contactStatus) {
+      const timer = setTimeout(() => {
+        setContactStatus(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [contactStatus, setContactStatus]);
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setShowAlert(false);
+    setContactStatus("");
+
+    try {
+      const response = await axios.post("http://localhost:5000/leave-review", formData);
+
+      if (response.status === 201) {
+        setAlertMessage("Message sent successfully!");
+        setShowAlert(true);
+        setFormData({ name: "", email: "", message: "" });
+        setContactStatus("success");
+      } else {
+        throw new Error("Unexpected response");
+      }
+    } catch (error) {
+      setAlertMessage("Something went wrong. Please try again.");
+      setShowAlert(true);
+      setContactStatus("error");
+      console.error("Send email error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
-    <div 
-      className="fixed inset-0 flex items-center justify-center z-50 w-screen h-screen bg-black/50" 
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50 w-screen h-screen bg-black/50"
       onClick={onClose}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 30 }} 
-        animate={{ opacity: 1, scale: 1, y: 0 }} 
-        exit={{ opacity: 0, scale: 0.8, y: 30 }} 
+        initial={{ opacity: 0, scale: 0.8, y: 30 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.8, y: 30 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg py-20 px-40 gap-20"
+        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg pt-20 pb-25 px-40 gap-20"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -30,13 +84,87 @@ const LeaveReview = ({ onClose }) => {
             We appreciate your thoughts! Our team will check your review and share it shortly.
           </p>
         </div>
-        
-        <ContactForm 
-          className="" 
-          messagePlaceholder="Share your experience with us..." 
-          messageLabel="Your Review"
-          messageButton="Send Review"
-        />
+
+        <form onSubmit={handleSubmit} className="flex justify-center items-center flex-col gap-8">
+          <div>
+            <label htmlFor="name" className="block font-semibold text-[13px] ml-2 text-gray-800">
+              Your Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="e.g. John Doe"
+              className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block font-semibold text-[13px] ml-2 text-gray-800">
+              Your Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="e.g. johndoe@example.com"
+              className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block font-semibold text-[13px] ml-2 text-gray-800">
+              Your Review
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+              placeholder="e.g. I would like to inquire about..."
+              className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 resize-none placeholder:text-sm"
+              required
+            ></textarea>
+          </div>
+
+          <div className="flex justify-center items-center flex-row w-full ml-10">
+            <div className="flex justify-center items-center gap-2 flex-col">
+            <button
+              type="submit"
+              className="px-3 py-2 mt-4 text-sm font-semibold text-white bg-green-500 shadow-md rounded-md flex items-center gap-1 transition-transform duration-300 hover:scale-105 active:scale-95"
+            >
+              <span>Send Review</span>
+              <svg
+                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </button>
+            {showAlert && <AlertBox message={alertMessage} onClose={() => setShowAlert(false)} />}
+            </div>
+
+            <div className="w-6 h-6 flex-shrink-0 ml-6 mt-4">
+              {isLoading ? (
+                <Loader />
+              ) : contactStatus === "success" ? (
+                <Check className="text-green-500 w-5 h-5" />
+              ) : contactStatus === "error" ? (
+                <XCircle className="text-red-500 w-5 h-5" />
+              ) : null}
+            </div>
+          </div>
+        </form>
       </motion.div>
     </div>
   );

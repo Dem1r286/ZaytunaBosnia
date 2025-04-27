@@ -4,6 +4,7 @@ import HoneymoonPackages from "../components/Main/Travel Packages page/Honeymoon
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const FadeInSection = ({ children }) => (
   <motion.div
@@ -18,6 +19,7 @@ const FadeInSection = ({ children }) => (
 );
 
 const TravelPackages = () => {
+  const { t, i18n } = useTranslation("global");
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const packageType = searchParams.get("package");
@@ -50,11 +52,10 @@ const TravelPackages = () => {
       <FadeInSection>
         <div className="flex justify-center items-center flex-col w-full">
           <p className="font-semibold text-4xl m-0 text-left">
-            Dream, Discover, Depart – Travel Packages for Every Adventure!
+          {t("travel-packages-page.heading")}
           </p>
           <p className="w-[60%] text-center font-medium text-md text-gray-700 mt-2">
-            Choose the perfect experience – whether it's a Summer retreat, a
-            Winter wonderland, or a Honeymoon escape, your journey begins here!
+          {t("travel-packages-page.subtext")}
           </p>
         </div>
       </FadeInSection>

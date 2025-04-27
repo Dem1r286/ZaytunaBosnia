@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, ArrowDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const PackageCard = ({
     nights,
@@ -13,6 +14,7 @@ const PackageCard = ({
     buttonColor,
     activities
 }) => {
+    const { t, i18n } = useTranslation("global");
     return (
         <div className={`flex flex-col justify-center items-center shadow-xl w-[420px] h-[600px] rounded-4xl text-white px-10 pb-5 hover:scale-105 transition-transform duration-300`} style={{ backgroundColor: bgColor }}>
             <h3 className="text-5xl mt-4" style={{ fontFamily: "'Bangers', cursive" }}>
@@ -41,7 +43,7 @@ const PackageCard = ({
                     ))}
                 </ul>
                 <div className={`${days > 5 ? "absolute" : "hidden"} flex gap-1 text-xs ml-10 pt-2`}>
-                <p className="font-semibold">Read more</p>
+                <p className="font-semibold">{t("common.read-more-button")}</p>
                 <ArrowDown size={15} />
                 </div>
             </div>

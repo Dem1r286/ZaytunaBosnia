@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PackageCardHomepage from "./components/PackageCardHomepage";
+import { useTranslation } from "react-i18next";
 
 const Packages = () => {
+   const { t, i18n } = useTranslation("global");
   return (
     <div id="packages" className="flex justify-center items-center flex-col gap-20">
       <div className="flex justify-center flex-col items-center">
-        <h4 className="text-4xl font-semibold mb-4">Travel Packages</h4>
+        <h4 className="text-4xl font-semibold mb-4">{t("travel-packages-homepage.heading")}</h4>
         <p className="w-[60%] text-center font-medium text-sm text-gray-700">
-          Discover exclusive travel packages for every season and occasion. From cozy winter retreats to romantic honeymoons, we have the perfect trip—or a custom-tailored experience designed to fit your needs.
+        {t("travel-packages-homepage.text")}
         </p>
       </div>
     
@@ -22,7 +24,7 @@ const Packages = () => {
               <span className="relative z-1 block px-6 py-3 rounded-xl bg-[#22c55e]">
                 <div className="relative z-1 flex items-center space-x-2">
                   <span className="transition-all duration-500 group-hover:translate-x-1">
-                    See All Packages
+                  {t("travel-packages-homepage.button")}
                   </span>
                   <svg
                     className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"

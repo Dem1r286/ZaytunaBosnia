@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Whatsapp.css";
+import { useTranslation } from "react-i18next";
 
 const Whatsapp = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t, i18n } = useTranslation("global");
 
   return (
     <a
@@ -14,12 +16,12 @@ const Whatsapp = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
-        src="./src/assets/whatsapp.png"
+        src="assets/icons/whatsapp.webp"
         alt="WhatsApp ikona"
         className={`whatsapp-icon ${isHovered ? "rotate" : ""}`}
       />
       <div className="whatsapp-paragraph">
-        <p>Contact Us</p>
+        <p>{t("common.contact-button")}</p>
       </div>
     </a>
   );

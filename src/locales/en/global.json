@@ -1,0 +1,545 @@
+{
+  "hero": {
+    "heading": "Zaytuna Bosnia",
+    "heading2": "Your Trusted Travel Agency for Hotel, Driver & Travel Guides"
+  },
+  "about-us": {
+    "heading": "Who Are We?",
+    "text1": "We are a",
+    "text2": "passionate travel agency from Bosnia and Herzegovina",
+    "text3": "dedicated to creating unforgettable experiences for travelers. With a team of 10+ dedicated individuals, we specialize in crafting personalized trips that showcase the beauty, culture, and adventure of our country and beyond. Our mission is to inspire and connect people through travel, offering unique and authentic experiences tailored to every traveler’s needs. Whether you seek breathtaking landscapes, historical sites, or exciting adventures, we are here to turn your travel dreams into reality.",
+    "text4": "Join us on a journey of discovery—let’s explore the Bosnia & Herzegovina together!"
+  },
+  "travel-packages-homepage": {
+    "heading": "Travel Packages",
+    "text": "  Discover exclusive travel packages for every season and occasion. From cozy winter retreats to romantic honeymoons, we have the perfect trip or a custom-tailored experience designed to fit your needs.",
+    "button": "See All Packages"
+  },
+  "services": {
+    "heading": "Services",
+    "text": "Complete travel services for a smooth trip—transport, stays, flights, and expert guidance just for you",
+    "card1-heading": "Transportation",
+    "card1-description": "Tours for individuals or groups (private cars & buses)",
+
+    "card2-heading": "Hotel & Accommodation",
+    "card2-description": "Comfortable stays for all budgets",
+
+    "card3-heading": "Airport-Hotel Transfers",
+    "card3-description": "Seamless transfers between your hotel and the airport",
+
+    "card4-heading": "Travel Guides",
+    "card4-description": "Easily explore new destinations with our expert travel guides",
+
+    "card5-heading": "Travel Advice",
+    "card5-description": "Get the best tips on when to visit, local services, visa requirements, and more. Feel free to ask!"
+  },
+  "destinations": {
+    "heading": "Explore Destinations",
+    "card1": "Sarajevo",
+    "card2": "Mostar",
+    "card3": "Blagaj",
+    "card4": "Jajce",
+    "card5": "Počitelj",
+    "card6": "Konjic",
+    "card7": "Jajce Mills",
+    "card8": "Štrbački Buk Waterfall",
+    "card9": "Travnik",
+    "card10": "Bijambare",
+    "card11": "Spring of the Bosna",
+    "card12": "Kravice Waterfall",
+    "card13": "Prokoško Lake",
+    "card14": "Bjelašnica Mountain",
+    "card15": "Trebević Mountain"
+  },
+  "court-banner": {
+    "heading": "Do you need court interpreter?",
+    "text1": "Our team of expert court interpreters provides fast",
+    "text2": "and accurate translation for Bosnian and Arabic!",
+    "button1": "Go To Page"
+  },
+  "explore-investment": {
+    "heading": "Explore Bosnia's Investment Potential",
+    "list": [
+      {
+        "heading": "Find Your Dream Residence: Bosnia's Real Estate",
+        "text": "Welcome to the realm of opportunities in Bosnia's real estate market, where you can discover your dream residence amidst a backdrop of stunning landscapes, rich history, and warm hospitality. Whether you seek a charming countryside villa, a modern apartment in the heart of the bustling cities, or a serene retreat by the crystal-clear lakes, Bosnia offers a diverse range of options to suit every taste and lifestyle. With its affordable prices, favorable investment climate, and a growing market, now is the perfect time to explore the vast potential of Bosnia's real estate sector. Let us guide you on this exciting journey as we unveil the possibilities that await you in finding your perfect home in this remarkable country."
+      },
+      {
+        "heading": "Cultivating Success: Investing in Bosnia's Agriculture and Farmland",
+        "text": "Unlock the potential of agricultural investment and bask in the opportunities that Bosnia's fertile lands and thriving agricultural sector present. Embracing a rich heritage of traditional farming practices combined with modern techniques, Bosnia offers a promising landscape for those seeking to invest in agriculture and farmland. With its diverse climate and abundant natural resources, the country boasts an array of crops, including fruits, vegetables, grains, and livestock."
+      },
+      {
+        "heading": "Seizing the Enterpreneurial Spirit: Investing in and Starting New Businesses",
+        "text": "Embrace the entrepreneurial spirit by investing in and launching new businesses, tapping into the boundless opportunities that await. Whether you're an aspiring entrepreneur or a seasoned investor, Bosnia offers a fertile ground for innovation and growth, with a supportive business environment, skilled workforce, and strategic location at the crossroads of Europe. From dynamic startups to thriving industries, the potential for success is limitless. Seize the moment and embark on a journey of entrepreneurial fulfillment in Bosnia, where dreams turn into reality and ventures flourish."
+      },
+      {
+        "heading": "Education for Lasting Impact: Investing in Knowledge to Create Positive Change",
+        "text": "Invest in knowledge and make a lasting impact through education, driving positive change in Bosnia and beyond. By investing in educational initiatives, whether through scholarships, infrastructure development, or innovative programs, you empower individuals and communities to unlock their full potential and contribute to the progress of society. Education serves as a catalyst for transformation, equipping future leaders, fostering innovation, and building a brighter future. Join the movement of investing in knowledge to create a ripple effect of positive change that will shape the destiny of Bosnia and leave a lasting legacy for generations to come."
+      }
+    ]
+  },
+  "app-banner": {
+    "heading1": "Download and get",
+    "heading2": "your first journey with us!",
+    "subtext1": "Download and get your first travel experience, you can",
+    "subtext2": "download on App Store and Google Play. This app",
+    "subtext3": "is free and very easy to use by users."
+  },
+  "testimonials": {
+    "heading": "What people say about us?",
+    "text": "Read firsthand experiences from those who explored with us and discovered unforgettable adventures!",
+    "button": "Leave a Review",
+    "list": [
+      {
+        "name": "Allison O'Holleran",
+        "date": "7.12.2024",
+        "rating": 5,
+        "description": "An unforgettable experience! The agency planned the perfect itinerary, from Sarajevo’s rich history to the breathtaking landscapes of the Sutjeska National Park."
+      },
+      {
+        "name": "Mark J.",
+        "date": "28.06.2024",
+        "rating": 5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      },
+      {
+        "name": "Mark J.",
+        "date": "24.05.2024",
+        "rating": 4.5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      },
+      {
+        "name": "Mark J.",
+        "date": "30.04.2023",
+        "rating": 5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      },
+      {
+        "name": "Mark J.",
+        "date": "08.10.2024",
+        "rating": 5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      },
+      {
+        "name": "Mark J.",
+        "date": "19.06.2024",
+        "rating": 4.5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      },
+      {
+        "name": "Mark J.",
+        "date": "10.08.2024",
+        "rating": 5,
+        "description": "Absolutely loved our trip! Everything was well-organized, and we discovered hidden gems like the stunning waterfalls of Kravice. Highly recommend!"
+      }
+    ]
+  },
+  "header-links": {
+    "link1": "Home",
+    "link2": "Travel Packages",
+    "link3": "Investments",
+    "header-logo": "ZAYTUNA"
+  },
+  "common": {
+    "contact-button": "Contact Us",
+    "learn-more-button": "Learn More",
+    "read-more-button": "Read More",
+    "book-your-trip": "Book Your Trip",
+    "book-your-trip-now": "Book Your Trip Now",
+    "book-regular": "Book Regular",
+    "book-vip": "Book Vip"
+  },
+  "footer": {
+    "packages": "Packages",
+    "services": "Services",
+    "investments": "Investments",
+    "destinations": "Destinations",
+    "faq": "FAQ",
+    "real-estate": "Real Estate",
+    "startup": "Startup",
+    "education": "Education",
+    "agriculture": "Agriculture",
+    "court-interpreter": "Court Interpreter",
+    "newsletter-heading": "Get Inspired Weekly",
+    "newsletter-subtext1": "Join our community and be the first to know! Get exclusive ",
+    "newsletter-subtext2": "updates, travel tips, and handpicked recommendations!",
+    "newsletter-button": "Subscribe",
+    "newsletter-placeholder": "Enter email",
+    "footer-contact": "Connect With Us",
+    "discover-heading": "Discover",
+    "terms-of-service": "Terms of Service",
+    "privacy-policy": "Privacy Policy",
+    "cookie-policy": "Cookie Policy",
+    "footer-name": "Zaytuna Bosnia",
+    "footer-app-heading": "Don't have the app yet?",
+    "footer-app-subtext1": "Download now and explore the best destinations, hidden",
+    "footer-app-subtext2": "gems, and easily book and schedule your travel!"
+  },
+  "contact-page": {
+    "heading": "Let's Connect",
+    "subtext": "Have questions or need more information? We're here to help! Whether you're looking for travel recommendations, personalized trip planning, or exciting investment opportunities, our team is ready to assist you. Let’s connect and turn your dreams into reality!",
+    "heading2": "Get In Touch",
+    "subtext2": "Fill out the form below, and we'll get back to you as soon as possible!",
+    "input1": "Your Name",
+    "placeholder1": "e.g. John Doe",
+    "input2": "Your Email",
+    "placeholder2": "e.g. johndoe@example.com",
+    "input3": "Your Message",
+    "placeholder3": "e.g. I would like to inquire about...",
+    "subtext3": "You can also reach us directly via email",
+    "subtext4": "or WhatsApp for a faster response.",
+    "button1": "Send Message",
+    "button2": "WhatsApp",
+    "button3": "Gmail"
+  },
+  "booking-page": {
+    "heading": "Booking Form",
+    "subtext": "Secure your trip in just a few steps. Pick your package, select your dates, and get ready for an amazing adventure!",
+    "input1": "Full Name",
+    "input2": "Email",
+    "input3": "Number of Adults",
+    "input4": "Number of Children",
+    "input5": "Select Travel Package",
+    "package-option": "Select a package",
+    "package-option1": "Summer Package",
+    "package-option2": "Winter Package",
+    "package-option3": "Honeymoon Package",
+    "input6": "Select Trip Duration",
+    "duration-option": "Choose Duration",
+    "duration-option1": "4 nights / 5 days",
+    "duration-option2": "5 nights / 6 days",
+    "duration-option3": "7 nights / 8 days",
+    "input7": "Arrival Date",
+    "input8": "Departure Date",
+    "input9": "Phone Number",
+    "special-requests": "Special Requests (e.g. wheelchair access, dietary needs)",
+    "special-requests-placeholder": "Enter any special requests...",
+    "travel-guide": "Include travel guide?",
+    "book-flight": "Do you have a flight booked?",
+    "package-type": "Package type",
+    "hotel": "Choose Hotel",
+    "hotel-map-button": "View on Map",
+    "hotel1": "Hotel Hollywood",
+    "hotel2": "Hotel Ibis",
+    "hotel3": "Hotel Astra",
+    "hotel4": "Hotel Hills",
+    "hotel5": "Hotel Malak Regency",
+    "booking-summary": "Booking Summary",
+    "button1": "Confirm Booking",
+    "button2": "More Info",
+    "button-subtext": "Please check your email and click the confirmation link to validate your booking.",
+    "yes": "Yes",
+    "no": "No",
+    "regular": "Regular",
+    "vip": "VIP",
+    "contact-tailor": "Looking for a custom trip? Contact us, and we'll tailor the perfect journey just for you."
+  },
+
+  "investments": {
+    "heading-estate": "Your Future Starts Here: Invest in Bosnia’s Real Estate",
+    "estate-subtext": "Whether you're looking to find your dream home, build from the ground up, organize construction projects, or secure the perfect property or land, we're here to guide you every step of the way.",
+    "heading-agriculture": "Growing the Future: Invest in Bosnia’s Agriculture",
+    "agriculture-subtext": "Bosnia offers fertile lands and the ideal climate for agricultural investments. Whether you're interested in organic farming, livestock, or large-scale food production, we provide expert guidance and resources.",
+    "heading-startup": "Supporting Startups: Investing in Bosnia's Future",
+    "startup-subtext": "Supporting new businesses with the right resources, fostering investment, and driving economic growth for a sustainable future.",
+    "heading-education": "Empowering Bosnia: Strategic Education Investments",
+    "education-subtext": "Empowering minds with knowledge, fostering innovation, and creating opportunities for a brighter future through education",
+    "steps": {
+      "heading": "How Our Agency Works",
+      "contact-us": "Contact Us",
+      "contact-description": "Get in touch with us to discuss your needs and expectations.",
+      "consultation": "Consultation",
+      "consultation-description": "We consult with you to understand your goals and provide solutions.",
+      "agreement": "Agreement",
+      "agreement-description": "We finalize the details and get an agreement in place for your project.",
+      "negotiating": "Negotiating",
+      "negotiating-description": "We act as a middleman, negotiating and securing agreements with various service providers.",
+      "service-delivery": "Service Delivery",
+      "service-delivery-description": "We deliver your requested services with excellence, on time."
+    },
+    "investmentEducation": {
+      "waqf": "Waqf (Islamic Endowment)",
+      "waqf-description": "Establishing or contributing to educational Waqf funds can play a crucial role in supporting education in Bosnia. Waqf allows individuals and organizations to allocate assets, such as land or financial resources, for the perpetual benefit of educational institutions and students. Income generated from these endowments can be used to provide scholarships to underprivileged students, construct or maintain schools and libraries, and offer educational programs. By creating Waqf funds dedicated to education, individuals and organizations can leave a lasting legacy that continually contributes to the development of education in Bosnia.",
+      "scholarship-grants": "Scholarship and Grants",
+      "scholarship-grants-description": "Investing in scholarships and grants is a direct way to empower Bosnian students to pursue higher education and achieve their academic aspirations. These financial aids can alleviate the financial burden on students and their families, covering tuition fees, textbooks, and living expenses. Scholarships and grants can be designed to target students with outstanding academic performance, those from marginalized communities, or those pursuing specific fields of study. By providing such opportunities, investors can help unlock the potential of Bosnian youth and contribute to a more educated and skilled workforce.",
+      "teacher-training": "Teacher Training and Development",
+      "teacher-training-description": "Enhancing the quality of education in Bosnia hinges on the professional growth of its educators. Investing in teacher training and development programs is instrumental in achieving this goal. Funds can support workshops, seminars, and certifications that help teachers improve their pedagogical skills, adapt to modern teaching methods, and stay updated with educational advancements. By empowering teachers, investors ensure that students receive a high-quality education, fostering a more knowledgeable and skilled workforce for Bosnia's future.",
+      "infrastructure-technology": "Infrastructure and Technology",
+      "infrastructure-technology-description": "Modernizing educational infrastructure and integrating technology into the learning environment is essential for preparing Bosnia's youth for the challenges of the 21st century. Investment in the construction, renovation, or expansion of schools, colleges, and universities can provide students with safe and conducive spaces for learning. Additionally, providing access to digital resources, such as computers, internet connectivity, and educational software, equips students with vital digital literacy skills. This investment not only improves the educational experience but also enhances Bosnia's competitiveness in a globalized world.",
+      "learn-more": "Learn More"
+    },
+    "investmentStartup": {
+      "startup-investment": "Startup Investment",
+      "startup-investment-description": "Investing in startups in Bosnia presents an exciting opportunity for both local and international investors. To embark on this journey, one can start by researching the vibrant startup ecosystem in Bosnia and Herzegovina. Attend local startup events, network with entrepreneurs, and explore co-working spaces to gain insights into the entrepreneurial landscape. Collaborating with local accelerators and incubators can be instrumental in identifying promising startups for investment. Additionally, seeking legal and financial advice to navigate the regulatory framework and investment procedures is essential. Bosnia welcomes foreign investors, and there are various avenues, such as angel investing, venture capital, and crowdfunding, to engage with startups. By fostering connections within the local entrepreneurial community and staying informed about emerging opportunities, investors can contribute to the growth and innovation of Bosnia's startup ecosystem while potentially reaping the rewards of their investments.",
+      "starting-new-businesses": "Starting New Businesses",
+      "starting-new-businesses-description": "Starting a new business in Bosnia and Herzegovina is a promising venture in a rapidly evolving market. To embark on this entrepreneurial journey, aspiring business owners should begin with comprehensive market research to identify opportunities and assess demand. Crafting a solid business plan, choosing the right legal structure, and securing financing are pivotal steps. Additionally, selecting an appropriate location, building a competent team, and implementing effective marketing strategies are essential for success. Adherence to legal and regulatory requirements and sound financial management practices are also critical. Bosnia's entrepreneurial ecosystem welcomes innovation and investment, making it an exciting destination for those eager to launch and grow their own businesses.",
+      "legal-regulatory-guidance": "Legal and Regulatory Guidance",
+      "legal-regulatory-guidance-description": "Zaytuna is well-equipped to provide invaluable legal and regulatory guidance across a wide spectrum of business domains. With our team of experienced legal experts, we offer comprehensive support to entrepreneurs and organizations, ensuring compliance with local laws and regulations. Whether you are launching a startup, expanding your business, or seeking to navigate complex legal frameworks, we provide tailored solutions to address your specific needs. Our services encompass contract drafting and review, intellectual property protection, licensing, and regulatory compliance assessments. We understand that staying abreast of evolving legal landscapes is crucial for business success, and Zaytuna is committed to helping our clients navigate these complexities with confidence and ease, allowing them to focus on their core operations and growth objectives.",
+      "market-research-analysis": "Market and Research Analysis",
+      "market-research-analysis-description": "Zaytuna is your trusted partner for Market Research and Trend Analysis services. Our dedicated team of experts conducts comprehensive research to provide businesses in Bosnia and Herzegovina with a deep understanding of market dynamics and emerging trends. We offer tailored solutions to help you make informed decisions, whether you're launching a new product, expanding your market presence, or seeking investment opportunities. Our services encompass competitor analysis, consumer surveys, market sizing, and trend forecasting. With Zaytuna by your side, you can gain a competitive advantage by staying ahead of market developments, identifying growth prospects, and crafting strategies aligned with the latest trends. We are committed to delivering accurate and actionable market intelligence to drive your business forward in an ever-evolving landscape."
+    },
+    "investmentServices": {
+      "construction-services": "CONSTRUCTION SERVICES",
+      "construction-services-description": "Our construction services are synonymous with precision, reliability, and craftsmanship. We excel in both residential and commercial construction projects, from elegant homes to sophisticated corporate spaces. Our commitment to quality is unwavering, and we employ the latest construction techniques and materials to ensure durability and sustainability. At Zaytuna, we understand that every project is unique, and we tailor our approach to meet your specific needs and preferences. From concept to completion, our construction services embody excellence in every detail, making us your trusted partner for turning dreams into reality.",
+      "interior-design": "INTERIOR DESIGN",
+      "interior-design-description": "Zaytuna's interior design services are the epitome of creativity and functionality. Our team of skilled interior designers has a knack for transforming spaces into captivating, harmonious environments that reflect your individual style and purpose. Whether it's a cozy home interior or a sophisticated office layout, we take a client-centric approach to curate interiors that resonate with your vision. From selecting the perfect color palette and furnishings to optimizing spatial flow and incorporating sustainable design elements, our interior design solutions are tailored to your unique needs. At Zaytuna, we believe that a well-designed interior is not only visually stunning but also enhances your daily living or working experience. Discover the artistry of interior design with Zaytuna.",
+      "property-ownership": "PROPERTY OWNERSHIP",
+      "property-ownership-description": "Zaytuna is proud to offer specialized Property Ownership Mediation Services in Bosnia and Herzegovina. Our team of experienced mediators understands the complexities of property disputes in this region and is dedicated to facilitating fair and efficient resolutions. Whether you're dealing with issues related to land ownership, boundary disputes, or property rights, our expert mediators will work diligently to find mutually agreeable solutions that align with local laws and regulations. At Zaytuna, we are committed to providing a supportive and impartial platform for property owners to resolve conflicts amicably, ensuring that your property ownership experience is as smooth and hassle-free as possible in Bosnia and Herzegovina.",
+      "food-production": "Food Production",
+      "food-production-description": "Food production in Bosnia and Herzegovina is a burgeoning sector offering enticing opportunities for savvy investors. The country’s favorable agricultural conditions, coupled with its strategic location in Europe, provide a solid foundation for agricultural ventures. As the world’s focus on sustainability and organic products grows, Bosnia and Herzegovina is well-positioned to meet this demand. Investment possibilities range from crop cultivation and livestock farming to dairy and meat processing, catering to both domestic and international markets. Embracing modern technologies and sustainable practices can enhance productivity and product quality. Furthermore, the rising consumer interest in locally sourced and organic foods adds to the sector's appeal, making it a promising arena for investors looking to capitalize on this evolving market.",
+      "greenhouses": "Greenhouses",
+      "greenhouses-description": "Incorporating modern technology into greenhouse agriculture has revolutionized the way we cultivate crops. These technologically advanced greenhouses leverage automation, precision agriculture, and controlled environments to optimize conditions for plant growth. Through the use of sensors, data analytics, and smart irrigation systems, farmers can closely monitor and regulate factors such as temperature, humidity, and nutrient levels, ensuring ideal conditions year-round. Additionally, the integration of renewable energy sources and efficient climate control systems makes modern greenhouses not only highly productive but also environmentally sustainable. This fusion of agriculture and cutting-edge technology represents a significant leap forward in our ability to meet the demands of a growing global population while minimizing resource usage and environmental impact.",
+      "livestock-farming": "Livestock Farming",
+      "livestock-farming-description": "Livestock farming in Bosnia and Herzegovina offers strong growth and sustainability prospects, supported by diverse topography and deep-rooted traditions. The sector spans cattle, poultry, and swine production, meeting local and regional demand for meat and dairy. Rising interest in organic and eco-conscious methods aligns with global trends for ethical, sustainable farming. Investors can benefit by adopting modern techniques, improving animal welfare, and meeting international standards. Additionally, export potential to European markets enhances economic opportunities. Beyond financial gains, investing in this sector boosts regional food security and promotes responsible farming.",
+      "architecture-solutions": "ARCHITECTURE SOLUTIONS",
+      "architecture-solutions-description": "At Zaytuna, we partner with leading architectural firms, builders, and designers to create innovative and sustainable architectural solutions. Our collaborative approach ensures that every project—whether it’s timeless residential designs or cutting-edge commercial spaces—delivers the highest standards of quality. By combining our expertise with that of our trusted partners, we craft spaces that blend aesthetics, functionality, and sustainability, exceeding expectations and inspiring environments."
+    }
+  },
+  "travel-packages-page": {
+    "heading": "Dream, Discover, Depart – Travel Packages for Every Adventure!",
+    "subtext": "Choose the perfect experience – whether it's a Summer retreat, a Winter wonderland, or a Honeymoon escape, your journey begins here!",
+    "summer": {
+      "heading": "Summer Packages",
+      "subtext": "Our best seller",
+      "subtext2": "Your Next Adventure Awaits – Choose a Package to Begin!",
+      "activities1": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure"
+      },
+      "activities2": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure"
+      },
+      "activities3": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure",
+        "day7": "Day 7: Departure",
+        "day8": "Day 8: Departure"
+      },
+      "activitiesDetails1": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails2": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails3": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail7": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail8": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      }
+    },
+    "honeymoon": {
+      "heading": "Honeymoon Packages",
+      "subtext": "Click a package to explore",
+      "subtext2": "Your Next Adventure Awaits – Choose a Package to Begin!",
+      "activities1": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure"
+      },
+      "activities2": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure"
+      },
+      "activities3": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure",
+        "day7": "Day 7: Departure",
+        "day8": "Day 8: Departure"
+      },
+      "activitiesDetails1": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails2": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails3": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail7": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail8": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      }
+    },
+    "winter": {
+      "heading": "Winter Packages",
+      "subtext": "Perfect for Couples",
+      "subtext2": "Your Next Adventure Awaits – Choose a Package to Begin!",
+      "activities1": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure"
+      },
+      "activities2": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure"
+      },
+      "activities3": {
+        "day1": "Day 1: Arrival and Accommodation",
+        "day2": "Day 2: Sarajevo Discovery - Tunnel of Hope, City Charms, and Trebević Adventure",
+        "day3": "Day 3: Herzegovina Delights - Mostar, Kravice Waterfalls, and Historic Treasures",
+        "day4": "Day 4: Exploration of Travnik, Jajce, and Pliva's Natural Wonders",
+        "day5": "Day 5: Departure",
+        "day6": "Day 6: Departure",
+        "day7": "Day 7: Departure",
+        "day8": "Day 8: Departure"
+      },
+      "activitiesDetails1": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails2": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      },
+      "activitiesDetails3": {
+        "detail1": "Upon arrival at SJJ Airport, you will receive a warm welcome and embark on a panoramic tour of Sarajevo. During this tour, you will be introduced to essential information about the country, the city itself, the weather, the local people, the currency, and the best dining establishments. Afterward, you will be transferred to your hotel for check-in, where our team will assist in arranging the timing and schedule for the next day's activities. Enjoy some leisure time to explore at your own pace and unwind in the vibrant city of Sarajevo. Rest comfortably overnight, preparing for the exciting adventures that lie ahead.",
+        "detail2": "After breakfast at the hotel, begin your day with a visit to the Sarajevo Tunnel of Hope, a key historical site from the 1993 siege. Next, enjoy the peaceful nature at Vrelo Bosne, a scenic park featuring the spring of the River Bosna. Continue to Sarajevo's Old Town and city center for a guided tour that highlights the city’s rich blend of Ottoman, Austro-Hungarian, and modern influences. Later, take a panoramic cable car ride up to Trebevic Mountain, where you can explore forest trails, visit Sunnyland amusement park, or relax in local mountain cafes. End the day with shopping and return to your hotel for an overnight stay.",
+        "detail3": "After breakfast, we head to Herzegovina, a region rich in nature and history. Our first stop is Mostar, famous for the iconic UNESCO-listed Old Bridge and its blend of cultures. Explore the charming old town and enjoy riverside cafés. We then visit the stunning Kravice Waterfalls, followed by the medieval village of Pocitelj, known for its stone architecture and hillside fortress. Next, we explore Blagaj, home to the Buna River spring and the peaceful Dervish House. On the way back to Sarajevo, we make a short stop in Konjic to see its historic Ottoman bridge. Enjoy your evening at leisure and rest overnight in Sarajevo.",
+        "detail4": "After breakfast, we begin our journey with a visit to Travnik, a former Ottoman capital rich in history. Explore the Sulejmania Mosque, Elci Ibrahim Pasha’s Madrassah, Nobel laureate Ivo Andric’s home, and the scenic Bluewater area, topped with views from the medieval fortress. Next, we head to Jajce, once the seat of Bosnian kings, known for its iconic 22-meter Pliva Waterfall. We continue to the Pliva Lakes, home to historic watermills from the 16th century. Before returning to Sarajevo, we stop at the Semesnica ethno village to enjoy traditional Bosnian cuisine in a peaceful, natural setting. End the day with free time and an overnight stay in Sarajevo.",
+        "detail5": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail6": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail7": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!",
+        "detail8": "After savoring a delicious breakfast at the hotel, you'll have some free time to indulge in shopping or take a leisurely stroll through the charming town. Later, we will arrange your transfer to the airport. As your remarkable 5-day tour comes to an end, it's time for us to bid you farewell. We sincerely hope that you've relished every moment of your journey with our agency. Safe travels, and we look forward to welcoming you back in the future!"
+      }
+    }
+  },
+  "travel-package-details": {
+    "heading1": "Tour Program", 
+    "heading2": "What Will You See",
+    "subtext": "Discover stunning destinations, each offering unique sights and experiences",
+    "contact-paragraph": "Can’t find a package that fits your needs? No worries — just reach out to us and we’ll tailor something just for you!",
+    "services": {
+      "driver": "Driver Services",
+      "accommodation": "Accommodation",
+      "guide": "Tour Guide",
+      "date": "From March to November",
+      "family": "Family Friendly",
+      "vip": "Vip Available"
+    },
+    "price-include": {
+      "heading": "Price Includes",
+      "paragraph1": "Transportation provided in a modern, air-conditioned vehicle (car/van/bus) with all fees included (fuel, tolls, parking). Airport transfers are also included.",
+      "paragraph2": "Experienced driver (English or Arabic is not guaranteed, depending on availability), available during daily tours, with a maximum of 8 hours per day.",
+      "paragraph3": "Accommodation for",
+      "paragraph4": "nights, including obligatory service charges and taxes levied by the hotel. The type of the accommodation (hotel or villa) will be determined based on the group size."
+    },
+    "price-exclude": {
+      "heading": "Price Excludes",
+      "paragraph1": "Visa fees or travel insurance",
+      "paragraph2": "International airfares and airport taxes",
+      "paragraph3": "Excursions, activities, and sightseeing trips that are not specifically mentioned as included.",
+      "paragraph4": "Additional charges imposed by hotels for the use of the higher-category rooms, certain facilities, extra meals, drinks, laundry, and personal items. This includes any applicable taxes or service charges."
+    },
+    "regular-package": {
+      "heading": "Regular Package",
+      "paragraph1": "Accommodation as per itinerary (3 or 4 star hotel)",
+      "paragraph2": "Ordinary transportation",
+      "paragraph3": "Travel guide speaking English or Arabic (based on availability)",
+      "paragraph4": "Driver (English or Arabic is not guaranteed, depending on availability)",
+      "paragraph5": "All entrance fees for included attractions"
+    },
+    "vip-package": {
+      "heading": "What Does the VIP Package Get You?",
+      "paragraph1": "Luxury accommodation as per the VIP package (5 star hotel)",
+      "paragraph2": "Luxury transportation",
+      "paragraph3": "Travel guide fluent in Arabic and English",
+      "paragraph4": "Driver fluent in Arabic or English",
+      "paragraph5": "Exclusive VIP treatment for the entire duration of the trip"
+    },
+    "other-packages-heading": "Check Other Packages"
+  },
+  "destination-details": {
+    "more-heading": "More Destinations",
+    "description1": "Where history meets modern life—charming old town, lively streets, and a unique cultural vibe",
+    "description2": "Famous for it's iconic bridge, with cobbled streets, vibrant markets, riverside cafés, and a rich cultural heritage",
+    "description3": "A historic Dervish monastery by the Buna River spring, nestled beneath a dramatic cliff",
+    "description4": "A stunning natural beauty.",
+    "description5": "A stunning natural beauty.",
+    "description6": "A stunning natural beauty.",
+    "description7": "Tiny wooden mills by crystal-clear waters, standing for over 400 years",
+    "description8": "",
+    "description9": "Famous for its medieval fortress, flavorful ćevapi, vibrant Ottoman-era streets, and the crystal-clear river",
+    "description10": "A stunning natural beauty.",
+    "description11": "Located in Sarajevo, the Bosnia River Spring is a tranquil natural site, perfect for a peaceful getaway surrounded by nature",
+    "description12": "A breathtaking waterfall in Herzegovina, perfect for swimming, picnics, and unforgettable views",
+    "description13": "Hidden alpine gem with wooden huts, wild nature, and a peaceful mountain lake vibe",
+    "description14": "Mountain escape near Sarajevo, perfect for skiing, hiking, and scenic views all year round",
+    "description15": "Easily reached by cable car from Sarajevo, Trebević offers scenic views, peaceful nature, and the historic bobsled track",
+    "text1": "Sarajevo, the heart and capital of Bosnia and Herzegovina, is a city like no other—a place where history, culture, and resilience intertwine in a way that feels both deeply emotional and vibrantly alive. Nestled in a narrow valley and surrounded by the Dinaric Alps, Sarajevo is a city of contrasts: East meets West, old meets new, tradition meets modern life. It’s a living museum of civilizations, often referred to as the “Jerusalem of Europe” for its long-standing religious and cultural diversity. Within just a few streets, you can find mosques, Orthodox churches, Catholic cathedrals, and synagogues—testaments to centuries of coexistence. The city’s soul is most visible in Baščaršija, the old Ottoman bazaar, where cobblestone streets, artisan shops, and the scent of freshly brewed Bosnian coffee transport you back in time. Here, you can sit by the Sebilj fountain, listen to the call to prayer echo from Gazi Husrev-beg Mosque, and watch daily life flow as it has for centuries. Yet just a short walk away, you’ll notice Austro-Hungarian influences in the grand architecture lining Ferhadija Street, giving the city an unexpected European flair. Sarajevo has witnessed both triumph and tragedy. In 1914, the assassination of Archduke Franz Ferdinand here sparked World War I. Decades later, the city proudly hosted the 1984 Winter Olympics. In the 1990s, it endured the longest siege in modern history during the Bosnian War. Despite this, Sarajevo emerged with strength, turning its scars into lessons of peace and resilience. Today, Sarajevo is a city that welcomes you warmly. Its people are known for their hospitality, humor, and openness. Whether you're enjoying ćevapi in a local grill, sipping rakija in a tucked-away bar, or hiking up to the Yellow Fortress to catch a panoramic sunset view over red-tiled rooftops, Sarajevo has a way of making you feel at home—even if it’s your first time visiting. It’s a city where every corner tells a story, where the past and present live side by side, and where you’ll leave not just with memories, but with a sense of connection to something truly special.",
+    "text2": "",
+    "text3": "",
+    "text4": "",
+    "text5": "",
+    "text6": "",
+    "text7": "",
+    "text8": "",
+    "text9": "",
+    "text10": "",
+    "text11": "",
+    "text12": "",
+    "text13": "",
+    "text14": "",
+    "text15": ""
+  }
+}

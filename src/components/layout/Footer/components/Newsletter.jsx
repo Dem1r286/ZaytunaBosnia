@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import AlertBox from "./AlertBox";
+import { useTranslation } from "react-i18next";
 
 const Newsletter = () => {
   const [formEmail, setFormEmail] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const { t, i18n } = useTranslation("global");
 
   const handleChange = (e) => {
     setFormEmail(e.target.value);
@@ -53,17 +55,17 @@ const Newsletter = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-4 mt-6">
       <div className="flex justify-center items-center flex-col text-center">
-        <h6 className="font-semibold text-xl mb-2">Get Inspired Weekly</h6>
+        <h6 className="font-semibold text-xl mb-2">{t("footer.newsletter-heading")}</h6>
         <p className="text-xs font-semibold mb-4">
-          Join our community and be the first to know! Get exclusive <br /> 
-          updates, travel tips, and handpicked recommendations!
+        {t("footer.newsletter-subtext1")}<br /> 
+        {t("footer.newsletter-subtext2")}
         </p>
 
         <div className="relative flex flex-col items-center">
           <div className="flex">
             <input
               type="email"
-              placeholder="Enter email"
+              placeholder={t("footer.newsletter-placeholder")}
               className="w-[250px] bg-white rounded-l-lg px-4 py-2 text-sm placeholder-black text-black"
               value={formEmail}
               onChange={handleChange}
@@ -72,7 +74,7 @@ const Newsletter = () => {
               className="w-[100px] text-white bg-gray-800 py-2 rounded-r-lg text-sm text-center cursor-pointer"
               onClick={handleSubmit}
             >
-              Subscribe
+             {t("footer.newsletter-button")}
             </button>
           </div>
           {showAlert && <AlertBox message={alertMessage} />}
@@ -80,7 +82,7 @@ const Newsletter = () => {
       </div>
 
       <div className="mt-6">
-        <p className="font-semibold text-lg">Connect With Us</p>
+        <p className="font-semibold text-lg">{t("footer.footer-contact")}</p>
         <div className="flex flex-row gap-4 justify-center items-center mt-2">
           <a
             href="https://www.instagram.com/zaytuna_bosnia/"
@@ -88,7 +90,7 @@ const Newsletter = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/src/assets/instagram.png"
+              src="assets/icons/instagram.webp"
               className="w-6 cursor-pointer"
               alt="Instagram"
             />
@@ -99,7 +101,7 @@ const Newsletter = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/src/assets/facebook.png"
+              src="assets/icons/facebook.webp"
               className="w-6 cursor-pointer"
               alt="Facebook"
             />

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 const MoreInfoContainer = ({ onClose }) => {
   return (
     <div
@@ -14,7 +15,7 @@ const MoreInfoContainer = ({ onClose }) => {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 30 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg py-20 px-20 gap-20 w-[80%] max-w-[1500px]"
+        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg py-14 px-20 gap-20 w-[80%] max-w-[1500px]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -96,9 +97,30 @@ const MoreInfoContainer = ({ onClose }) => {
             </ul>
           </div>
 
+          <div className="w-[80%] text-left text-gray-800 mt-4">
+            <p className="font-semibold text-lg">Hotel Selection Without VIP Package:</p>
+            <p className="text-sm text-gray-600">
+              Customers have the option to choose and reserve hotels based on their preferences, including 5-star hotels, even without purchasing the VIP package.
+              Please note that selecting a premium hotel does not include VIP services. Services such as luxury transportation, a bilingual travel guide, or exclusive treatment
+              are only available as part of the VIP package and will not be included in the hotel-only booking.
+            </p>
+          </div>
+
+          <div className="w-[80%] text-left text-gray-800 mt-4">
+            <p className="font-semibold text-lg">How the Booking Process Works:</p>
+            <p className="text-sm text-gray-600">
+              Once you submit your booking request, you'll receive an email asking you to confirm your reservation. This step is important to validate your interest.
+              After you confirm via email, our team is immediately notified with your full booking details. We will then review your booking and officially approve it. Once approved, you will receive a second confirmation email to let you know everything is set.
+              After that, we may reach out to you directly if we need any extra information or to provide a detailed explanation of your itinerary and options.
+              <br /><br />
+              This ensures clarity, transparency, and a smooth experience from booking to trip!
+            </p>
+          </div>
+
+
           <p className="text-md text-gray-800 w-[80%] text-center mt-6 font-semibold">
-          Please review the included and excluded items carefully, and feel free to ask any questions before confirming your booking. 
-          If you have any special requests or need further details, don’t hesitate to contact us. We’re here to help!
+            Please review the included and excluded items carefully, and feel free to ask any questions before confirming your booking.
+            If you have any special requests or need further details, don’t hesitate to contact us. We’re here to help!
           </p>
 
           <Link

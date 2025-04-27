@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ServiceCard = ({ url, heading, description }) => (
     <div id="services" className="flex flex-col w-[350px] h-[400px] bg-gradient-to-b from-[#155dfc] to-[#0b3ea8] 
@@ -10,19 +11,21 @@ const ServiceCard = ({ url, heading, description }) => (
 );
 
 const Services = () => {
+    const { t, i18n } = useTranslation("global");
     const services = [
-        { heading: "Transportation", url: "./src/assets/transportation.png", description: "Tours for individuals or groups (private cars & buses)" },
-        { heading: "Hotel & Accommodation", url: "./src/assets/hotel.png", description: "Comfortable stays for all budgets" },
-        { heading: "Airport-Hotel Transfers", url: "./src/assets/transfer.png", description: "Seamless transfers between your hotel and the airport" },
-        { heading: "Travel Guides", url: "./src/assets/travelguide.png", description: "Easily explore new destinations with our expert travel guides" },
-        { heading: "Travel Advice", url: "./src/assets/traveladvice.png", description: "Get the best tips on when to visit, local services, visa requirements, and more. Feel free to ask!" }
+        { heading: t("services.card1-heading"), url: "assets/servicesIllustration/transportation.webp", description: t("services.card1-description") },
+        { heading: t("services.card2-heading"), url: "assets/servicesIllustration/hotel.webp", description: t("services.card2-description") },
+        { heading: t("services.card3-heading"), url: "assets/servicesIllustration/transfer.webp", description: t("services.card3-description") },
+        { heading: t("services.card4-heading"), url: "assets/servicesIllustration/travelguide.webp", description: t("services.card4-description") },
+        { heading: t("services.card5-heading"), url: "assets/servicesIllustration/traveladvice.webp", description: t("services.card5-description") }
     ];
+    
 
     return (
         <div className="flex flex-col items-center gap-20">
             <div className="flex justify-center items-center flex-col gap-4">
-            <h4 className="text-4xl font-semibold">Services</h4>
-            <p className="text-gray-700 font-medium text-sm text-center">Complete travel services for a smooth trip—transport, stays, flights, and expert guidance just for you.</p>
+            <h4 className="text-4xl font-semibold">{t("services.heading")}</h4>
+            <p className="text-gray-700 font-medium text-sm text-center">{t("services.text")}</p>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-10">
                 {services.map((service) => (

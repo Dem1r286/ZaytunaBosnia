@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full flex items-center justify-between px-8 z-20 py-1 bg-white transition-transform duration-300 shadow-sm ${
+        className={`fixed top-0 left-0 flex items-center justify-between w-screen px-8 z-20 py-1 bg-white transition-transform duration-300 shadow-sm ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
