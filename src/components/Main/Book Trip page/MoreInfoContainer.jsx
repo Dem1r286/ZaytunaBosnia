@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 const MoreInfoContainer = ({ onClose }) => {
+  const { t } = useTranslation("global");
   return (
     <div
       className="fixed inset-0 flex items-center justify-center z-50 w-screen h-screen bg-black/50"
@@ -15,7 +17,7 @@ const MoreInfoContainer = ({ onClose }) => {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 30 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg py-14 px-20 gap-20 w-[80%] max-w-[1500px]"
+        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg px-20 py-14 gap-20 w-screen h-screen"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -25,109 +27,102 @@ const MoreInfoContainer = ({ onClose }) => {
           <X size={35} className="text-gray-800" />
         </button>
 
-        <div className="flex justify-center items-center flex-col gap-2">
+        <div className="flex justify-center items-center flex-col gap-2 max-w-[1700px]">
           <p className="font-semibold text-2xl text-gray-900">
-            Booking Summary & Cost Breakdown
+            {t("booking-more-info.heading")}
           </p>
 
           <p className="text-md text-gray-800 w-[80%] text-center">
-            This section provides a detailed overview of your booking, including
-            the total cost and what’s included in your trip. Here’s what you can
-            expect:
+            {t("booking-more-info.subheading")}
           </p>
 
           <div className="w-[80%] text-left text-gray-800">
-            <p className="font-semibold text-lg mt-4">Taxes & Fees:</p>
+            <p className="font-semibold text-lg mt-4">{t("booking-more-info.heading1")}</p>
             <p className="text-sm text-gray-600">
-              All applicable taxes and service fees are included in the total
-              cost, so there are no hidden charges.
-            </p>
-          </div>
-
-          <div className="w-[80%] text-left text-gray-800">
-            <p className="font-semibold text-lg mt-4">Additional Costs:</p>
-            <p className="text-sm text-gray-600">
-              Optional excursions or add-ons like travel insurance or special
-              services can be added to your booking at an extra cost. Please
-              review the options and select those that suit your needs.
+              {t("booking-more-info.text1")}
+              {" "}<span className="font-semibold">{t("booking-more-info.text2")}</span>
             </p>
           </div>
 
           <div className="w-[80%] text-left text-gray-800 mt-4">
             <p className="font-semibold text-lg">
-              Included in the Regular Price:
+              {t("booking-more-info.heading2")}
             </p>
             <ul className="list-disc pl-5 text-sm text-gray-600">
-              <li>Driver (English or Arabic is not guaranteed, depending on availability)</li>
-              <li>Travel guide speaking English or Arabic (based on availability)</li>
-              <li>Accommodation as per itinerary</li>
-              <li>All entrance fees for included attractions</li>
-              <li>Travel guide (with your approval) — No additional charge</li>
+              <li>{t("booking-more-info.text3")}</li>
+              <li>{t("booking-more-info.text4")}</li>
+              <li>{t("booking-more-info.text5")}</li>
+              <li>{t("booking-more-info.text6")}</li>
+              <li>{t("booking-more-info.text7")}</li>
             </ul>
           </div>
 
           <div className="w-[80%] text-left text-gray-800 mt-4">
-            <p className="font-semibold text-lg">Exclusions:</p>
+            <p className="font-semibold text-lg">{t("booking-more-info.heading3")}</p>
             <ul className="list-disc pl-5 text-sm text-gray-600">
+              <li>{t("booking-more-info.text8")}</li>
+              <li>{t("booking-more-info.text9")}</li>
+              <li>{t("booking-more-info.text10")}</li>
+              <li>{t("booking-more-info.text11")}</li>
               <li>
-                Visa fees, travel insurance, airport taxes, and international
-                airfares
-              </li>
-              <li>
-                Excursions, activities, and sightseeing trips not specifically
-                mentioned as included
-              </li>
-              <li>
-                Additional charges for higher-category rooms, certain hotel
-                facilities, extra meals, drinks, laundry, and personal items
+                {t("booking-more-info.text12")}
               </li>
             </ul>
           </div>
 
           <div className="w-[80%] text-left text-gray-800 mt-4">
-            <p className="font-semibold text-lg">VIP Package Included:</p>
+            <p className="font-semibold text-lg">{t("booking-more-info.heading4")}</p>
             <ul className="list-disc pl-5 text-sm text-gray-600">
-              <li>Luxury accommodation as per the VIP package</li>
-              <li>Higher-end transportation (premium car)</li>
-              <li>Travel guide fluent in Arabic and English</li>
-              <li>Driver fluent in Arabic or English</li>
-              <li>
-                Exclusive VIP treatment for the entire duration of the trip
-              </li>
+              <li>I{t("booking-more-info.text13")}</li>
+              <li>{t("booking-more-info.text14")}</li>
+              <li>{t("booking-more-info.text15")}</li>
+              <li>{t("booking-more-info.text16")}</li>
             </ul>
           </div>
 
           <div className="w-[80%] text-left text-gray-800 mt-4">
-            <p className="font-semibold text-lg">Hotel Selection Without VIP Package:</p>
+            <p className="font-semibold text-lg">{t("booking-more-info.heading5")}</p>
+            <ul className="list-disc pl-5 text-sm text-gray-600">
+              <li>{t("booking-more-info.text17")}</li>
+              <li>{t("booking-more-info.text18")}</li>
+            </ul>
+          </div>
+
+          <div className="w-[80%] text-left text-gray-800 mt-4">
+            <p className="font-semibold text-lg">{t("booking-more-info.heading6")}</p>
             <p className="text-sm text-gray-600">
-              Customers have the option to choose and reserve hotels based on their preferences, including 5-star hotels, even without purchasing the VIP package.
-              Please note that selecting a premium hotel does not include VIP services. Services such as luxury transportation, a bilingual travel guide, or exclusive treatment
-              are only available as part of the VIP package and will not be included in the hotel-only booking.
+                 <li>{t("booking-more-info.text19")}</li>
             </p>
           </div>
 
+
           <div className="w-[80%] text-left text-gray-800 mt-4">
-            <p className="font-semibold text-lg">How the Booking Process Works:</p>
+            <p className="font-semibold text-lg">{t("booking-more-info.heading7")}</p>
             <p className="text-sm text-gray-600">
-              Once you submit your booking request, you'll receive an email asking you to confirm your reservation. This step is important to validate your interest.
-              After you confirm via email, our team is immediately notified with your full booking details. We will then review your booking and officially approve it. Once approved, you will receive a second confirmation email to let you know everything is set.
-              After that, we may reach out to you directly if we need any extra information or to provide a detailed explanation of your itinerary and options.
-              <br /><br />
-              This ensures clarity, transparency, and a smooth experience from booking to trip!
+                 <li>{t("booking-more-info.text20")}</li>
+            </p>
+          </div>
+
+          <div className="w-[80%] text-left text-gray-800 mt-4">
+            <p className="font-semibold text-lg">{t("booking-more-info.heading8")}</p>
+            <p className="text-sm text-gray-600">
+                <li>{t("booking-more-info.text21")}</li>
+            </p>
+              <p className="text-sm text-gray-600 mt-2">
+                <li>{t("booking-more-info.text22")}</li>
             </p>
           </div>
 
 
           <p className="text-md text-gray-800 w-[80%] text-center mt-6 font-semibold">
-            Please review the included and excluded items carefully, and feel free to ask any questions before confirming your booking.
-            If you have any special requests or need further details, don’t hesitate to contact us. We’re here to help!
+            {t("booking-more-info.contact")}
           </p>
 
           <Link
             to="/contact#contact"
             className="bg-orange-600 w-fit h-fit mt-4 py-2 px-4 text-white font-semibold rounded-xl text-sm hover:scale-104 transition-transform duration-300"
           >
-            Contact Us
+            {t("common.contact-button")}
           </Link>
         </div>
       </motion.div>

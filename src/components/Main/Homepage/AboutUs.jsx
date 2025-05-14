@@ -12,7 +12,7 @@ const AboutUs = () => {
       </div>
       <div className="flex justify-center items-center flex-col gap-10">
         <p className="text-md text-center max-w-[70%]">
-        {t("about-us.text1")} <span className="font-semibold">{t("about-us.text2")}</span>, {t("about-us.text3")}
+        {t("about-us.text1")} <span className="font-semibold">{t("about-us.text2")}</span>, {t("about-us.text3")} {" "}
           <span className="font-semibold">{t("about-us.text4")}</span>
         </p>
         <Link to="contact">

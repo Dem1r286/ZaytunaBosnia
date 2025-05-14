@@ -57,11 +57,11 @@ const HomePage = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <AppBanner />
+        <Testimonials />
       </FadeInSection>
 
       <FadeInSection>
-        <Testimonials />
+        <AppBanner />
       </FadeInSection>
     </div>
   );

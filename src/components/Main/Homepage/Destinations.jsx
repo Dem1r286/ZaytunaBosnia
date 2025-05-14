@@ -15,7 +15,7 @@ const Destinations = () => {
     { img: "assets/destinations/blagaj.webp", name: t("destinations.card3"), id: "blagaj-tekija", url: "" },
     { img: "assets/destinations/jajce.webp", name: t("destinations.card4"), id: "jajce-waterfall", url: "" },
     { img: "assets/destinations/pocitelj.webp", name: t("destinations.card5"), id: "pocitelj", url: "" },
-    { img: "assets/destinations/pocitelj.webp", name: t("destinations.card6"), id: "konjic", url: "" },
+    { img: "assets/destinations/konjic.webp", name: t("destinations.card6"), id: "konjic", url: "" },
     { img: "assets/destinations/jajce-mlin.webp", name:  t("destinations.card7"), id: "jajce-mills", url: "" },
     { img: "assets/destinations/strbackibuk.webp", name:  t("destinations.card8"), id: "strbacki-buk", url: "" },
     { img: "assets/destinations/travnik.webp", name:  t("destinations.card9"), id: "travnik", url: "" },
@@ -23,8 +23,8 @@ const Destinations = () => {
     { img: "assets/destinations/vrelobosne.webp", name:  t("destinations.card11"), id: "bosnia-river", url: "" },
     { img: "assets/destinations/kravice.webp", name:  t("destinations.card12"), id: "kravice", url: "" },
     { img: "assets/destinations/prokoskolake.webp", name:  t("destinations.card13"), id: "prokosko-lake", url: "" },
-    { img: "assets/destinations/bjelasnica.jpg", name:  t("destinations.card14"), id: "bjelasnica", url: "" },
-    { img: "assets/destinations/trebevic.jpg", name: t("destinations.card15"), id: "trebevic", url: "" },
+    { img: "assets/destinations/bjelasnica.webp", name:  t("destinations.card14"), id: "bjelasnica", url: "" },
+    { img: "assets/destinations/trebevic.webp", name: t("destinations.card15"), id: "trebevic", url: "" },
   ];
 
   const nextSlide = () => {

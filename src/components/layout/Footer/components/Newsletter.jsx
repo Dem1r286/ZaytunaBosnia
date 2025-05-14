@@ -7,7 +7,7 @@ const Newsletter = () => {
   const [formEmail, setFormEmail] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
 
   const handleChange = (e) => {
     setFormEmail(e.target.value);
@@ -15,21 +15,20 @@ const Newsletter = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!formEmail) {
       setAlertMessage("Please enter a valid email.");
       setShowAlert(true);
       setTimeout(() => setShowAlert(false), 3000);
       return;
     }
-  
+
     try {
       const response = await axios.post("http://localhost:5000/subscribe", {
         email: formEmail,
       });
-  
-  
-      if (response.status === 201) { 
+
+      if (response.status === 201) {
         setAlertMessage("Thank you for subscribing!");
         setFormEmail("");
       } else {
@@ -46,22 +45,24 @@ const Newsletter = () => {
         setAlertMessage("Network error. Please check your connection.");
       }
     }
-  
+
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 3000);
   };
-  
 
   return (
     <div className="flex flex-col justify-center items-center gap-4 mt-6">
       <div className="flex justify-center items-center flex-col text-center">
         <h6 className="font-semibold text-xl mb-2">{t("footer.newsletter-heading")}</h6>
         <p className="text-xs font-semibold mb-4">
-        {t("footer.newsletter-subtext1")}<br /> 
-        {t("footer.newsletter-subtext2")}
+          {t("footer.newsletter-subtext1")}<br />
+          {t("footer.newsletter-subtext2")}
         </p>
 
-        <div className="relative flex flex-col items-center">
+        <form
+          onSubmit={handleSubmit}
+          className="relative flex flex-col items-center"
+        >
           <div className="flex">
             <input
               type="email"
@@ -69,16 +70,17 @@ const Newsletter = () => {
               className="w-[250px] bg-white rounded-l-lg px-4 py-2 text-sm placeholder-black text-black"
               value={formEmail}
               onChange={handleChange}
+              required
             />
             <button
+              type="submit"
               className="w-[100px] text-white bg-gray-800 py-2 rounded-r-lg text-sm text-center cursor-pointer"
-              onClick={handleSubmit}
             >
-             {t("footer.newsletter-button")}
+              {t("footer.newsletter-button")}
             </button>
           </div>
-          {showAlert && <AlertBox message={alertMessage} />}
-        </div>
+          {showAlert && <AlertBox message={alertMessage} textColor="white" />}
+        </form>
       </div>
 
       <div className="mt-6">

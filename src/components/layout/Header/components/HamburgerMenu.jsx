@@ -20,7 +20,7 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }) => {
         }`}
       >
         <div className="w-full flex items-center justify-between px-8 py-4">
-          <img src="assets/icons/logowhite.webp" className="w-16" alt="Logo" />
+          <img src="assets/icons/logo.svg" className="w-20" alt="Logo" />
   
           <button onClick={() => setIsMenuOpen(false)} className="text-white">
             <X size={32} />

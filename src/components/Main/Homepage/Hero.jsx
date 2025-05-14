@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       className="flex flex-col items-center justify-center w-screen h-[60vh] mt-14 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('assets/investmentImages/realestatebackground.webp')" }}
+      style={{ backgroundImage: "url('assets/destinations/ai.png')" }}
     >
       <h1 className="text-white text-5xl font-semibold mb-4">{t("hero.heading")}</h1>
       <h2 className="text-white text-2xl font-medium">{t("hero.heading2")}</h2>

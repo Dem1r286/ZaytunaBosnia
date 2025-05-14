@@ -36,7 +36,7 @@ const ExploreInvestment = () => {
     <div id="explore-investment" className="flex flex-col justify-center items-center px-30 py-20 rounded-2xl">
 
       <div className="flex justify-center items-center gap-10 mb-36">
-        <img src="assets/icons/logo.webp" alt="Bosnia Real Estate Logo" className="w-20" />
+        <img src="assets/icons/logo.svg" alt="Bosnia Real Estate Logo" className="w-30" />
         <h2 className="font-semibold text-3xl">
         {t("explore-investment.heading")}
         </h2>

@@ -8,6 +8,7 @@ const HoneymoonPackages = () => {
   const { t, i18n } = useTranslation("global");
   return (
     <div id="honeymoon-packages" className="flex justify-start items-center">
+       <p className="absolute left-1/2 transform -translate-x-1/2 font-bold text-5xl z-10 text-white bg-black p-6 rounded-xl">{t("travel-package-details.not-available")}</p>
       <div className="w-full flex flex-col gap-16">
 
         <div className="w-full flex flex-col items-start ml-10 justify-start">
@@ -21,11 +22,11 @@ const HoneymoonPackages = () => {
           <p className="font-semibold text-3xl mt-1">{t("travel-packages-page.honeymoon.heading")}</p>
         </div>
 
-        <div className="flex justify-center items-center flex-row gap-[5vw] ml-70">
+        <div className="flex flex-wrap justify-center items-center gap-10 w-screen mx-auto blur-sm">
 
           {/* Package 1 */}
           <Link
-            to="/travel-package-details"
+            // to="/travel-package-details"
             state={{
               nights: 7,
               days: 8,
@@ -60,8 +61,8 @@ const HoneymoonPackages = () => {
               price={1400}
               vipPrice={1600}
               currency="€"
-              bgColor={"#400d41"}
-              buttonColor={"#ff6900"}
+              bgColor={"#2c2c2c"}
+              buttonColor={"white"}
               packageType="regular"
               activities={[
                 t("travel-packages-page.honeymoon.activities1.day1"),
@@ -76,7 +77,7 @@ const HoneymoonPackages = () => {
 
           {/* Package 2 */}
           <Link
-            to="/travel-package-details"
+           // to="/travel-package-details"
             state={{
               nights: 10,
               days: 11,
@@ -117,8 +118,8 @@ const HoneymoonPackages = () => {
               price={1800}
               vipPrice={2000}
               currency="€"
-              bgColor={"#400d41"}
-              buttonColor={"#ff6900"}
+              bgColor={"#2c2c2c"}
+              buttonColor={"white"}
               packageType="regular"
               activities={[
                 t("travel-packages-page.honeymoon.activities1.day1"),

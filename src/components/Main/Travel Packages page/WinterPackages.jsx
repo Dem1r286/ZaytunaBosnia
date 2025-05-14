@@ -8,24 +8,25 @@ const WinterPackages = () => {
   const { t, i18n } = useTranslation("global");
   return (
     <div id="winter-packages" className="flex justify-center items-center">
+       <p className="absolute left-1/2 transform -translate-x-1/2 font-bold text-5xl z-10 text-white bg-black p-6 rounded-xl">{t("travel-package-details.not-available")}</p>
       <div className="w-full flex flex-col gap-16">
 
         <div className="w-full flex flex-col items-start ml-10">
           <div className="flex items-center gap-4">
             <span className="bg-orange-500 rounded-2xl h-[5px] w-[50px]"></span>
             <p className="text-[#22c55e] font-semibold flex items-center gap-2">
-              {t("travel-packages-page.summer.subtext")} <Heart className="w-5 h-5 text-green-500" />
+              {t("travel-packages-page.winter.subtext")} <Heart className="w-5 h-5 text-green-500" />
             </p>
           </div>
           <p className="font-semibold text-3xl mt-1">{t("travel-packages-page.winter.heading")}</p>
         </div>
 
 
-        <div className="flex justify-center items-center flex-row gap-[5vw]">
+        <div className="flex flex-wrap justify-center items-center gap-10 w-screen mx-auto blur-sm">
 
           {/* Package 1 */}
           <Link
-            to="/travel-package-details"
+            // to="/travel-package-details" 
             state={{
               nights: 3,
               days: 4,
@@ -52,8 +53,8 @@ const WinterPackages = () => {
               price={349}
               vipPrice={499}
               currency="€"
-              bgColor={"#004aad"}
-              buttonColor={"#ff6900"}
+              bgColor={"#2c2c2c"}
+              buttonColor={"white"}
               packageType="regular"
               activities={[
                 t("travel-packages-page.winter.activities1.day1"),
@@ -68,7 +69,7 @@ const WinterPackages = () => {
 
           {/* Package 2 */}
           <Link
-            to="/travel-package-details"
+            // to="/travel-package-details"
             state={{
               nights: 4,
               days: 5,
@@ -97,8 +98,8 @@ const WinterPackages = () => {
               price={349}
               vipPrice={499}
               currency="€"
-              bgColor={"#004aad"}
-              buttonColor={"#ff6900"}
+              bgColor={"#2c2c2c"}
+              buttonColor={"white"}
               packageType="regular"
               activities={[
                 t("travel-packages-page.winter.activities2.day1"),
@@ -113,7 +114,7 @@ const WinterPackages = () => {
 
           {/* Package 3 */}
           <Link
-            to="/travel-package-details"
+            // to="/travel-package-details"
             state={{
               nights: 4,
               days: 5,
@@ -144,8 +145,8 @@ const WinterPackages = () => {
               price={349}
               vipPrice={499}
               currency="€"
-              bgColor={"#004aad"}
-              buttonColor={"#ff6900"}
+              bgColor={"#2c2c2c"}
+              buttonColor={"white"}
               packageType="regular"
               activities={[
                 t("travel-packages-page.winter.activities3.day1"),

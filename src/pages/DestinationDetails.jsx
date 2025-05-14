@@ -6,10 +6,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 
 const DestinationDetails = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
   const { name } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,185 +18,240 @@ const DestinationDetails = () => {
     "sarajevo": {
       name: t("destinations.card1"),
       description: t("destination-details.description1"),
-      text: t("destination-details.text1"),
+      heading: t("destination-details.heading1"),
+      text1: t("destination-details.text1-1"),
+      text2: t("destination-details.text1-2"),
+      text3: t("destination-details.text1-3"),
+      text4: t("destination-details.text1-4"),
       images: [
         "/assets/destinations/sarajevo.webp",
-        "/assets/destinations/sarajevo.webp",
-        "/assets/destinations/sarajevo.webp",
-        "/assets/destinations/sarajevo.webp",
-        "/assets/destinations/sarajevo.webp"
+        "/assets/destinations/sarajevo1.webp",
+        "/assets/destinations/sarajevo2.webp",
+        "/assets/destinations/sarajevo3.webp",
+        "/assets/destinations/sarajevo4.webp"
       ]
     },
     "mostar": {
       name: t("destinations.card2"),
       description: t("destination-details.description2"),
-      text: t("destination-details.text2"),
+      heading: t("destination-details.heading2"),
+      text1: t("destination-details.text2-1"),
+      text2: t("destination-details.text2-2"),
+      text3: t("destination-details.text2-3"),
+      text4: t("destination-details.text2-4"),
       images: [
         "/assets/destinations/mostar.webp",
-        "/assets/destinations/mostar.webp",
-        "/assets/destinations/mostar.webp",
-        "/assets/destinations/mostar.webp",
-        "/assets/destinations/mostar.webp",
+        "/assets/destinations/mostar1.webp",
+        "/assets/destinations/mostar2.webp",
+        "/assets/destinations/mostar3.webp",
+        "/assets/destinations/mostar4.webp",
       ]
     },
     "blagaj-tekija": {
-      name:  t("destinations.card3"),
+      name: t("destinations.card3"),
       description: t("destination-details.description3"),
-      text: t("destination-details.text3"),
+      heading: t("destination-details.heading3"),
+      text1: t("destination-details.text3-1"),
+      text2: t("destination-details.text3-2"),
+      text3: t("destination-details.text3-3"),
+      text4: t("destination-details.text3-4"),
       images: [
         "/assets/destinations/blagaj.webp",
-        "/assets/destinations/blagaj.webp",
-        "/assets/destinations/blagaj.webp",
-        "/assets/destinations/blagaj.webp",
-        "/assets/destinations/blagaj.webp",
+        "/assets/destinations/blagaj1.webp",
+        "/assets/destinations/blagaj2.webp",
+        "/assets/destinations/blagaj3.webp",
+        "/assets/destinations/blagaj4.webp",
       ]
     },
     "jajce-waterfall": {
-      name:  t("destinations.card4"),
+      name: t("destinations.card4"),
       description: t("destination-details.description4"),
-      text: t("destination-details.text4"),
+      heading: t("destination-details.heading4"),
+      text1: t("destination-details.text4-1"),
+      text2: t("destination-details.text4-2"),
+      text3: t("destination-details.text4-3"),
+      text4: t("destination-details.text4-4"),
       images: [
         "/assets/destinations/jajce.webp",
-        "/assets/destinations/jajce.webp",
-        "/assets/destinations/jajce.webp",
-        "/assets/destinations/jajce.webp",
-        "/assets/destinations/jajce.webp"
+        "/assets/destinations/jajce1.webp",
+        "/assets/destinations/jajce2.webp",
+        "/assets/destinations/jajce3.webp",
+        "/assets/destinations/jajce4.webp"
       ]
     },
     "pocitelj": {
-      name:  t("destinations.card5"),
+      name: t("destinations.card5"),
       description: t("destination-details.description5"),
-      text: t("destination-details.text5"),
+      heading: t("destination-details.heading5"),
+      text1: t("destination-details.text5-1"),
+      text2: t("destination-details.text5-2"),
+      text3: t("destination-details.text5-3"),
+      text4: t("destination-details.text5-4"),
       images: [
         "/assets/destinations/pocitelj.webp",
-        "/assets/destinations/pocitelj.webp",
-        "/assets/destinations/pocitelj.webp",
-        "/assets/destinations/pocitelj.webp",
-        "/assets/destinations/pocitelj.webp"
+        "/assets/destinations/pocitelj1.webp",
+        "/assets/destinations/pocitelj2.webp",
+        "/assets/destinations/pocitelj3.webp"
       ]
     },
     "konjic": {
       name: t("destinations.card6"),
-      description:t("destination-details.description6"),
-      text: t("destination-details.text6"),
+      description: t("destination-details.description6"),
+      heading: t("destination-details.heading6"),
+      text1: t("destination-details.text6-1"),
+      text2: t("destination-details.text6-2"),
+      text3: t("destination-details.text6-3"),
+      text4: t("destination-details.text6-4"),
       images: [
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg"
+        "/assets/destinations/konjic.webp",
+        "/assets/destinations/konjic1.webp",
+        "/assets/destinations/konjic2.webp",
+        "/assets/destinations/konjic3.webp",
+        "/assets/destinations/konjic4.webp"
       ]
     },
     "jajce-mills": {
       name: t("destinations.card7"),
       description: t("destination-details.description7"),
-      text:t("destination-details.text7"),
+      heading: t("destination-details.heading7"),
+      text1: t("destination-details.text7-1"),
+      text2: t("destination-details.text7-2"),
+      text3: t("destination-details.text7-3"),
+      text4: t("destination-details.text7-4"),
       images: [
         "/assets/destinations/jajce-mlin.webp",
-        "/assets/destinations/jajce-mlin.webp",
-        "/assets/destinations/jajce-mlin.webp",
-        "/assets/destinations/jajce-mlin.webp",
-        "/assets/destinations/jajce-mlin.webp"
+        "/assets/destinations/jajcemlin2.webp",
+        "/assets/destinations/jajcemlin3.webp"
       ]
     },
     "strbacki-buk": {
       name: t("destinations.card8"),
       description: t("destination-details.description8"),
-      text: t("destination-details.text8"),
+      heading: t("destination-details.heading8"),
+      text1: t("destination-details.text8-1"),
+      text2: t("destination-details.text8-2"),
+      text3: t("destination-details.text8-3"),
+      text4: t("destination-details.text8-4"),
       images: [
         "/assets/destinations/strbackibuk.webp",
-        "/assets/destinations/strbackibuk.webp",
-        "/assets/destinations/strbackibuk.webp",
-        "/assets/destinations/strbackibuk.webp",
-        "/assets/destinations/strbackibuk.webp"
+        "/assets/destinations/strbackibuk1.webp",
+        "/assets/destinations/strbackibuk2.webp",
+        "/assets/destinations/strbackibuk3.webp"
       ]
     },
     "travnik": {
       name: t("destinations.card9"),
       description: t("destination-details.description9"),
-      text: t("destination-details.text9"),
+      heading: t("destination-details.heading9"),
+      text1: t("destination-details.text9-1"),
+      text2: t("destination-details.text9-2"),
+      text3: t("destination-details.text9-3"),
+      text4: t("destination-details.text9-4"),
       images: [
         "/assets/destinations/travnik.webp",
-        "/assets/destinations/travnik.webp",
-        "/assets/destinations/travnik.webp",
-        "/assets/destinations/travnik.webp",
-        "/assets/destinations/travnik.webp"
+        "/assets/destinations/travnik1.webp",
+        "/assets/destinations/travnik2.webp",
+        "/assets/destinations/travnik3.webp",
+        "/assets/destinations/travnik4.webp"
       ]
     },
     "bijambare": {
       name: t("destinations.card10"),
       description: t("destination-details.description10"),
-      text: t("destination-details.text10"),
+      heading: t("destination-details.heading10"),
+      text1: t("destination-details.text10-1"),
+      text2: t("destination-details.text10-2"),
+      text3: t("destination-details.text10-3"),
+      text4: t("destination-details.text10-4"),
       images: [
         "/assets/destinations/bijambare.webp",
-        "/assets/destinations/bijambare.webp",
-        "/assets/destinations/bijambare.webp",
-        "/assets/destinations/bijambare.webp",
-        "/assets/destinations/bijambare.webp"
+        "/assets/destinations/bijambare1.webp",
+        "/assets/destinations/bijambare2.webp",
+        "/assets/destinations/bijambare3.webp"
       ]
     },
     "bosnia-river": {
       name: t("destinations.card11"),
       description: t("destination-details.description11"),
-      text: t("destination-details.text11"),
+      heading: t("destination-details.heading11"),
+      text1: t("destination-details.text11-1"),
+      text2: t("destination-details.text11-2"),
+      text3: t("destination-details.text11-3"),
+      text4: t("destination-details.text11-4"),
       images: [
         "/assets/destinations/vrelobosne.webp",
-        "/assets/destinations/vrelobosne.webp",
-        "/assets/destinations/vrelobosne.webp",
-        "/assets/destinations/vrelobosne.webp",
-        "/assets/destinations/vrelobosne.webp"
+        "/assets/destinations/vrelobosne1.webp",
+        "/assets/destinations/vrelobosne2.webp",
+        "/assets/destinations/vrelobosne3.webp",
+        "/assets/destinations/vrelobosne4.webp"
       ]
     },
     "kravice": {
       name: t("destinations.card12"),
       description: t("destination-details.description12"),
-      text: t("destination-details.text12"),
+      heading: t("destination-details.heading12"),
+      text1: t("destination-details.text12-1"),
+      text2: t("destination-details.text12-2"),
+      text3: t("destination-details.text12-3"),
+      text4: t("destination-details.text12-4"),
       images: [
         "/assets/destinations/kravice.webp",
-        "/assets/destinations/kravice.webp",
-        "/assets/destinations/kravice.webp",
-        "/assets/destinations/kravice.webp",
-        "/assets/destinations/kravice.webp"
+        "/assets/destinations/kravice2.webp",
+        "/assets/destinations/kravice3.webp",
+        "/assets/destinations/kravice4.webp",
+        "/assets/destinations/kravice5.webp"
       ]
     },
     "prokosko-lake": {
       name: t("destinations.card13"),
       description: t("destination-details.description13"),
-      text: t("destination-details.text13"),
+      heading: t("destination-details.heading13"),
+      text1: t("destination-details.text13-1"),
+      text2: t("destination-details.text13-2"),
+      text3: t("destination-details.text13-3"),
+      text4: t("destination-details.text13-4"),
       images: [
         "/assets/destinations/prokoskolake.webp",
-        "/assets/destinations/prokoskolake.webp",
-        "/assets/destinations/prokoskolake.webp",
-        "/assets/destinations/prokoskolake.webp",
-        "/assets/destinations/prokoskolake.webp"
+        "/assets/destinations/prokosko1.webp",
+        "/assets/destinations/prokosko2.webp",
+        "/assets/destinations/prokosko3.webp",
+        "/assets/destinations/prokosko4.webp"
       ]
     },
     "bjelasnica": {
       name: t("destinations.card14"),
       description: t("destination-details.description14"),
-      text: t("destination-details.text14"),
+      heading: t("destination-details.heading14"),
+      text1: t("destination-details.text14-1"),
+      text2: t("destination-details.text14-2"),
+      text3: t("destination-details.text14-3"),
+      text4: t("destination-details.text14-4"),
       images: [
-        "/assets/destinations/bjelasnica.jpg",
-        "/assets/destinations/bjelasnica.jpg",
-        "/assets/destinations/bjelasnica.jpg",
-        "/assets/destinations/bjelasnica.jpg",
-        "/assets/destinations/bjelasnica.jpg"
+        "/assets/destinations/bjelasnica.webp",
+        "/assets/destinations/bjelasnica1.webp",
+        "/assets/destinations/bjelasnica2.webp",
+        "/assets/destinations/bjelasnica3.webp",
+        "/assets/destinations/bjelasnica4.webp"
       ]
     },
     "trebevic": {
       name: t("destinations.card15"),
       description: t("destination-details.description15"),
-      text: t("destination-details.text15"),
+      heading: t("destination-details.heading15"),
+      text1: t("destination-details.text15-1"),
+      text2: t("destination-details.text15-2"),
+      text3: t("destination-details.text15-3"),
+      text4: t("destination-details.text15-4"),
       images: [
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg",
-        "/assets/destinations/trebevic.jpg"
+        "/assets/destinations/trebevic.webp",
+        "/assets/destinations/trebevic1.webp",
+        "/assets/destinations/trebevic2.webp",
+        "/assets/destinations/trebevic3.webp",
+        "/assets/destinations/trebevic4.webp"
       ]
     }
   };
-  
+
 
   const destination = destinationsData[name];
 
@@ -218,6 +274,9 @@ const DestinationDetails = () => {
       .slice(0, 4);
   }, [name]);
 
+    useEffect(() => {
+    setCurrentIndex(0);
+  }, [name]);
 
   return (
     <div
@@ -228,8 +287,16 @@ const DestinationDetails = () => {
 
 
       <div className="flex justify-between items-center flex-row w-full px-30 max-w-[2000px] gap-20">
-        <div className="flex justify-center items-center bg-gray-100 w-[60%] p-10 rounded-xl">
-          {destination?.text
+        <div className="flex justify-center flex-col items-center bg-gray-100 w-[60%] p-10 rounded-xl">
+          {destination?.heading
+            ?.split('\n\n')
+            .map((paragraph, index) => (
+              <p key={index} className="text-xl font-medium tracking-wide mb-4">
+                {paragraph}
+              </p>
+            ))}
+
+          {destination?.text1
             ?.split('\n\n')
             .map((paragraph, index) => (
               <p key={index} className="text-sm tracking-wide mb-4">
@@ -237,7 +304,31 @@ const DestinationDetails = () => {
               </p>
             ))}
 
+          {destination?.text2
+            ?.split('\n\n')
+            .map((paragraph, index) => (
+              <p key={index} className="text-sm tracking-wide mb-4 font-semibold">
+                {paragraph}
+              </p>
+            ))}
+
+          {destination?.text3
+            ?.split('\n\n')
+            .map((paragraph, index) => (
+              <p key={index} className="text-sm tracking-wide mb-4">
+                {paragraph}
+              </p>
+            ))}
+
+          {destination?.text4
+            ?.split('\n\n')
+            .map((paragraph, index) => (
+              <p key={index} className="text-sm tracking-wide mb-4">
+                {paragraph}
+              </p>
+            ))}
         </div>
+
         <div className="flex flex-col justify-center items-center relative">
           <div className="flex overflow-hidden justify-center items-center px-4 py-10">
             <AnimatePresence mode="popLayout">
@@ -278,18 +369,32 @@ const DestinationDetails = () => {
         </div>
       </div>
 
-{/* 
-      <div className="flex justify-center gap-10 items-center flex-col mt-14">
-        <p className="font-medium text-2xl">Top Things To Do in {destination?.name}</p>
-        <div className="flex flex-wrap justify-center items-center flex-row gap-10">
-          {destination?.activities?.filter(activity => activity.trim() !== "").map((activity, index) => (
-            <div key={index} className="flex justify-between items-center flex-col bg-white shadow-lg rounded-lg p-4 text-center w-[150px] h-[150px] hover:scale-105 transition-transform duration-300">
-              <p className="text-sm font-medium">{activity}</p>
+      <Link to="/book-trip">
+        <button className="relative my-10 inline-block p-px text-lg font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+          <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+          <span className="relative z-1 block px-10 py-3 rounded-xl">
+            <div className="relative z-1 flex items-center space-x-3">
+              <span className="transition-all duration-500 group-hover:translate-x-1">
+                {t("common.book-your-trip")}
+              </span>
+              <svg
+                className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                data-slot="icon"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
             </div>
-          ))}
-        </div>
-      </div> */}
-
+          </span>
+        </button>
+      </Link>
 
       <div className="flex justify-center items-center flex-col gap-10 mt-14">
         <p className="text-2xl font-medium">{t("destination-details.more-heading")}</p>

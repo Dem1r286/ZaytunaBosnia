@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useTranslation } from "react-i18next";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const BookingInputs = ({
     name,
@@ -21,51 +22,129 @@ const BookingInputs = ({
     departureDate,
     setDepartureDate,
     phoneNumber,
-    setPhoneNumber
+    setPhoneNumber,
+    setTotalPrice,
+    childrenAges,
+    setChildrenAges,
+    errors,
+    setErrors
 }) => {
-    const { t, i18n } = useTranslation("global");
+    const { t } = useTranslation("global");
+    const [price, setPrice] = useState(0);
+    const [carouselStartIndex, setCarouselStartIndex] = useState(0);
+
+    const priceMap = {
+        "4 nights / 5 days": 359,
+        "6 nights / 7 days": 549,
+        "7 nights / 8 days": 669,
+        "9 nights / 10 days": 859
+    };
+
+    const handleTripDuration = (e) => {
+        const selectedDuration = e.target.value;
+        setTripDuration(selectedDuration);
+        const updatedPrice = priceMap[selectedDuration];
+        setPrice(updatedPrice);
+        setTotalPrice(updatedPrice);
+    };
+
+    const handleNumOfChildrenChange = (e) => {
+        const count = Number(e.target.value);
+        setNumOfChildren(count);
+        setChildrenAges(Array(count).fill(""));
+        setCarouselStartIndex(0);
+    };
+
+    const handleChildAgeChange = (index, value) => {
+        const updatedAges = [...childrenAges];
+        updatedAges[index] = value;
+        setChildrenAges(updatedAges);
+
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            childrenAges: prevErrors.childrenAges?.map((err, i) =>
+                i === index ? "" : err
+            )
+        }));
+    };
+
+    const isAnyChildAgeEmpty = childrenAges.some(age => age === "");
+    const maxVisible = 3;
+    const canScrollLeft = carouselStartIndex > 0;
+    const canScrollRight =
+        Array.isArray(childrenAges) &&
+        carouselStartIndex + maxVisible < childrenAges.length;
+
+    const scrollLeft = () => {
+        if (canScrollLeft) setCarouselStartIndex((prev) => prev - 1);
+    };
+
+    const scrollRight = () => {
+        if (canScrollRight) setCarouselStartIndex((prev) => prev + 1);
+    };
+
+    const handleInputChange = (field, value) => {
+        if (field === "name") setName(value);
+        if (field === "email") setEmail(value);
+        if (field === "phoneNumber") setPhoneNumber(value);
+
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            [field]: ""
+        }));
+    };
+
     return (
         <>
+            {/* Name & Email */}
             <div className="flex flex-row gap-10">
                 <div>
                     <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input1")}
+                        {t("booking-page.input1")}
                     </label>
                     <input
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => handleInputChange("name", e.target.value)}
                         type="text"
                         placeholder={t("contact-page.placeholder1")}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.name ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                        required
                     />
                 </div>
 
                 <div>
                     <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input2")}
+                        {t("booking-page.input2")}
                     </label>
                     <input
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => handleInputChange("email", e.target.value)}
                         type="text"
                         placeholder={t("contact-page.placeholder2")}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.email ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                        required
                     />
                 </div>
             </div>
 
             {/* Number of Adults & Children */}
-            <div className="flex flex-row gap-10">
+            <div className="flex flex-row gap-10 mt-4">
                 <div>
                     <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input3")}
+                        {t("booking-page.input3")}
                     </label>
                     <select
                         value={numOfAdults}
-                        onChange={(e) => setNumOfAdults(Number(e.target.value))}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800"
+                        onChange={(e) => {
+                            setNumOfAdults(Number(e.target.value));
+                            setErrors((prev) => ({ ...prev, numOfAdults: "" }));
+                        }}
+                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.numOfAdults ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
                     >
-                        {[...Array(10)].map((_, i) => (
+                        {[...Array(8)].map((_, i) => (
                             <option key={i + 1} value={i + 1}>
                                 {i + 1}
                             </option>
@@ -75,14 +154,15 @@ const BookingInputs = ({
 
                 <div>
                     <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input4")}
+                        {t("booking-page.input4")}
                     </label>
                     <select
                         value={numOfChildren}
-                        onChange={(e) => setNumOfChildren(Number(e.target.value))}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800"
+                        onChange={handleNumOfChildrenChange}
+                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.numOfChildren ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
                     >
-                        {[...Array(11)].map((_, i) => (
+                        {[...Array(8)].map((_, i) => (
                             <option key={i} value={i}>
                                 {i}
                             </option>
@@ -91,96 +171,170 @@ const BookingInputs = ({
                 </div>
             </div>
 
-            {/* Travel Package & Duration */}
-            <div className="flex flex-row gap-10">
-                <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input5")}
-                    </label>
-                    <select
-                        value={travelPackage}
-                        onChange={(e) => setTravelPackage(e.target.value)}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+            {/* Carousel for Children Ages */}
+            {childrenAges.length > 0 && (
+                <div
+                    className={`w-full flex items-center gap-4 mt-4 overflow-hidden px-10 pb-5 pt-3 rounded-xl ${isAnyChildAgeEmpty ? "ring-1 ring-red-500" : "ring-1 ring-gray-200"
+                        } bg-gray-100`}
+                >
+                    <button
+                        onClick={scrollLeft}
+                        disabled={!canScrollLeft}
+                        className={`p-1 pt-6 text-gray-600 ${!canScrollLeft ? "opacity-30 cursor-not-allowed" : ""
+                            }`}
                     >
-                        <option value="" disabled>
-                        {t("booking-page.package-option")}
-                        </option>
-                        <option value="Summer Package">{t("booking-page.package-option1")}</option>
-                        <option value="Winter Package">{t("booking-page.package-option2")}</option>
-                        <option value="Honeymoon Package">{t("booking-page.package-option3")}</option>
-                    </select>
-                </div>
+                        <ChevronLeft />
+                    </button>
 
-                <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input6")}
-                    </label>
-                    <select
-                        value={tripDuration}
-                        onChange={(e) => setTripDuration(e.target.value)}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+                    <div className="flex gap-4 overflow-hidden p-2">
+                        {childrenAges
+                            .slice(carouselStartIndex, carouselStartIndex + maxVisible)
+                            .map((age, index) => {
+                                const globalIndex = carouselStartIndex + index;
+                                return (
+                                    <div key={globalIndex} className="flex flex-col min-w-[120px]">
+                                        <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                                            {t("booking-page.child-age")} {globalIndex + 1}
+                                        </label>
+                                        <input
+                                            value={age}
+                                            onChange={(e) =>
+                                                handleChildAgeChange(globalIndex, e.target.value)
+                                            }
+                                            type="number"
+                                            min="0"
+                                            className={`block w-full max-w-[120px] rounded-md py-1.5 px-2 ring-1 ${errors?.childrenAges?.[globalIndex]
+                                                ? "ring-red-500"
+                                                : "ring-gray-500"
+                                                } bg-gray-100 text-gray-800 appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+                                        />
+                                    </div>
+                                );
+                            })}
+                    </div>
+
+                    <button
+                        onClick={scrollRight}
+                        disabled={!canScrollRight}
+                        className={`p-1 pt-6 text-gray-800 ${!canScrollRight ? "opacity-30 cursor-not-allowed" : ""
+                            }`}
                     >
-                        <option value="" disabled>
-                        {t("booking-page.duration-option")}
-                        </option>
-                        <option value="4 nights / 5 days">{t("booking-page.duration-option1")}</option>
-                        <option value="5 nights / 6 days">{t("booking-page.duration-option2")}</option>
-                        <option value="7 nights / 8 days">{t("booking-page.duration-option3")}</option>
-                    </select>
+                        <ChevronRight />
+                    </button>
                 </div>
-            </div>
+            )}
 
-            {/* Arrival and Departure Dates */}
-            <div className="flex flex-col justify-center items-center gap-6">
-                {/* Row: Arrival & Departure */}
+
+            {/* Arrival, Departure Dates & Phone */}
+            <div className="flex flex-col justify-center items-center gap-6 mt-6">
                 <div className="flex gap-10">
                     <div className="flex flex-col">
                         <label className="font-semibold text-[13px] text-gray-800 ml-2">
-                        {t("booking-page.input7")}
+                            {t("booking-page.input7")}
                         </label>
                         <DatePicker
                             selected={arrivalDate}
-                            onChange={(date) => setArrivalDate(date)}
+                            onChange={(date) => {
+                                const formattedDate = new Date(date.toISOString().split("T")[0]);
+                                setArrivalDate(formattedDate);
+                                setErrors((prev) => ({ ...prev, arrivalDate: "" }));
+                            }}
                             selectsStart
                             startDate={arrivalDate}
                             endDate={departureDate}
                             dateFormat="yyyy-MM-dd"
-                            showTimeSelect={false}
                             minDate={new Date()}
-                            className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800 h-[35px]"
+                            className={`block w-72 rounded-md py-1.5 px-2 h-[35px] ring-1 ${errors?.arrivalDate ? "ring-red-500" : "ring-gray-300"
+                                } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                            required
                         />
                     </div>
 
                     <div className="flex flex-col">
                         <label className="font-semibold text-[13px] text-gray-800 ml-2">
-                        {t("booking-page.input8")}
+                            {t("booking-page.input8")}
                         </label>
                         <DatePicker
                             selected={departureDate}
-                            onChange={(date) => setDepartureDate(date)}
+                            onChange={(date) => {
+                                const formattedDate = new Date(date.toISOString().split("T")[0]);
+                                setDepartureDate(formattedDate);
+                                setErrors((prev) => ({ ...prev, departureDate: "" }));
+                            }}
                             selectsEnd
                             startDate={arrivalDate}
                             endDate={departureDate}
                             dateFormat="yyyy-MM-dd"
-                            showTimeSelect={false}
                             minDate={arrivalDate || new Date()}
-                            className="border border-gray-300 p-2 rounded-md bg-gray-100 text-gray-800 h-[35px]"
+                            className={`block w-72 rounded-md py-1.5 h-[35px] px-2 ring-1 ${errors?.departureDate ? "ring-red-500" : "ring-gray-300"
+                                } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                            required
                         />
                     </div>
                 </div>
 
-                {/* Phone Number below */}
                 <div className="flex flex-col w-full items-center">
                     <label className="block font-semibold text-[13px] text-gray-800 ml-2">
-                    {t("booking-page.input9")}
+                        {t("booking-page.input9")}
                     </label>
                     <input
                         value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
                         type="tel"
                         placeholder="e.g. +1 234 567 890"
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.phoneNumber ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                        required
                     />
+                </div>
+            </div>
+
+            {/* Travel Package & Duration */}
+            <div className="flex flex-row gap-10 mt-4">
+                <div>
+                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                        {t("booking-page.input5")}
+                    </label>
+                    <select
+                        value={travelPackage}
+                        onChange={(e) => {
+                            setTravelPackage(e.target.value);
+                            setErrors((prev) => ({ ...prev, travelPackage: "" }));
+                        }}
+                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+                        required
+                    >
+                        <option value="" disabled>
+                            {t("booking-page.package-option")}
+                        </option>
+                        <option value="Summer Package">{t("booking-page.package-option1")}</option>
+                        <option value="Winter Package" disabled>
+                            {t("booking-page.package-option2")}
+                        </option>
+                        <option value="Honeymoon Package" disabled>
+                            {t("booking-page.package-option3")}
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                        {t("booking-page.input6")}
+                    </label>
+                    <select
+                        value={tripDuration}
+                        onChange={handleTripDuration}
+                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+                        required
+                    >
+                        <option value="" disabled>
+                            {t("booking-page.duration-option")}
+                        </option>
+                        <option value="4 nights / 5 days">{t("booking-page.duration-option1")}</option>
+                        <option value="6 nights / 7 days">{t("booking-page.duration-option2")}</option>
+                        <option value="7 nights / 8 days">{t("booking-page.duration-option3")}</option>
+                        <option value="9 nights / 10 days">{t("booking-page.duration-option4")}</option>
+                    </select>
                 </div>
             </div>
         </>

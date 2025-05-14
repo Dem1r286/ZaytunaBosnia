@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
 
-const AlertBox = ({ message, onClose }) => {
+const AlertBox = ({ message, onClose, textColor = "text-red-600" }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onClose();
+      if (typeof onClose === "function") {
+        onClose();
+      }
     }, 3000);
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, [message, onClose]);
 
   return (
-    <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-black text-[12px] font-semibold px-4 py-2 rounded-md">
-      {message}
+    <div className="absolute top-full mt-2 text-center z-10 flex justify-center items-center">
+      <span className={`text-[14px] font-semibold ${textColor}`}>
+        {message}
+      </span>
     </div>
   );
 };

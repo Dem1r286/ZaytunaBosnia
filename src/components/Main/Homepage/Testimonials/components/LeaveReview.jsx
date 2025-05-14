@@ -5,8 +5,10 @@ import Loader from "../../../../../../Loader";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AlertBox from "../../../../layout/Footer/components/AlertBox";
+import { useTranslation } from "react-i18next";
 
 const LeaveReview = ({ onClose }) => {
+  const { t } = useTranslation("global");
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -79,23 +81,23 @@ const LeaveReview = ({ onClose }) => {
         </button>
 
         <div className="flex justify-center items-center flex-col gap-2">
-          <p className="font-semibold text-2xl text-gray-900">Leave a Review</p>
+          <p className="font-semibold text-2xl text-gray-900">{t("leave-review.heading")}</p>
           <p className="text-sm text-gray-800">
-            We appreciate your thoughts! Our team will check your review and share it shortly.
+            {t("leave-review.subheading")}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="flex justify-center items-center flex-col gap-8">
           <div>
             <label htmlFor="name" className="block font-semibold text-[13px] ml-2 text-gray-800">
-              Your Name
+              {t("leave-review.input1")}
             </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="e.g. John Doe"
+              placeholder={t("leave-review.placeholder1")}
               className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
               required
             />
@@ -103,14 +105,14 @@ const LeaveReview = ({ onClose }) => {
 
           <div>
             <label htmlFor="email" className="block font-semibold text-[13px] ml-2 text-gray-800">
-              Your Email
+              {t("leave-review.input2")}
             </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="e.g. johndoe@example.com"
+              placeholder={t("leave-review.placeholder3")}
               className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
               required
             />
@@ -118,40 +120,40 @@ const LeaveReview = ({ onClose }) => {
 
           <div>
             <label htmlFor="message" className="block font-semibold text-[13px] ml-2 text-gray-800">
-              Your Review
+              {t("leave-review.input3")}
             </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               rows="4"
-              placeholder="e.g. I would like to inquire about..."
+              placeholder={t("leave-review.placeholder2")}
               className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 resize-none placeholder:text-sm"
               required
             ></textarea>
           </div>
 
-          <div className="flex justify-center items-center flex-row w-full ml-10">
+          <div className="relative flex justify-center items-center flex-row w-full ml-10">
             <div className="flex justify-center items-center gap-2 flex-col">
-            <button
-              type="submit"
-              className="px-3 py-2 mt-4 text-sm font-semibold text-white bg-green-500 shadow-md rounded-md flex items-center gap-1 transition-transform duration-300 hover:scale-105 active:scale-95"
-            >
-              <span>Send Review</span>
-              <svg
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <AlertBox message={alertMessage} textColor="text-black" />
+              <button
+                type="submit"
+                className="px-3 py-2 mt-4 text-sm font-semibold text-white bg-green-500 shadow-md rounded-md flex items-center gap-1 transition-transform duration-300 hover:scale-105 active:scale-95"
               >
-                <path
-                  clipRule="evenodd"
-                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </button>
-            {showAlert && <AlertBox message={alertMessage} onClose={() => setShowAlert(false)} />}
+                <span>{t("leave-review.button-review")}</span>
+                <svg
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
 
             <div className="w-6 h-6 flex-shrink-0 ml-6 mt-4">

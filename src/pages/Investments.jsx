@@ -206,15 +206,15 @@ const Investments = () => {
         <HeroAgriculture />
         <div className="flex flex-col gap-40">
           <InvestmentSection
-            title={i18n.t("investmentServices.food-production")}
-            description={i18n.t("investmentServices.food-production-description")}
+            title={t("investments.investmentServices.food-production")}
+              description={t("investments.investmentServices.food-production-description")}
             imageSrc="assets/investmentImages/foodproduction.webp"
             reverseLayout={true}
           />
 
           <InvestmentSection
-            title={i18n.t("investmentServices.greenhouses")}
-            description={i18n.t("investmentServices.greenhouses-description")}
+            title={t("investments.investmentServices.greenhouses")}
+             description={t("investments.investmentServices.greenhouses-description")}
             imageSrc="assets/investmentImages/greenhouse.webp"
             reverseLayout={false}
           />

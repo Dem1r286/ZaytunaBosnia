@@ -18,17 +18,17 @@ const PackageCard = ({
     return (
         <div className={`flex flex-col justify-center items-center shadow-xl w-[420px] h-[600px] rounded-4xl text-white px-10 pb-5 hover:scale-105 transition-transform duration-300`} style={{ backgroundColor: bgColor }}>
             <h3 className="text-5xl mt-4" style={{ fontFamily: "'Bangers', cursive" }}>
-                {nights} NIGHTS / {days} DAYS
+                {nights} {t("travel-package-details.night")} / {days} {t("travel-package-details.day")}
             </h3>
             <div className="flex flex-row justify-center items-center">
                 <div className="flex justify-start flex-col items-center mt-6 mr-10">
                     <p className="text-5xl font-black">
                         {price} {currency}
                     </p>
-                    <p className="text-lg text-black font-bold bg-white px-4 rounded-xl mt-2">{packageType}</p>
+                    <p className="text-lg text-black font-bold bg-white px-4 rounded-xl mt-2">{t("travel-packages-page.regular")}</p>
                 </div>
                 <div className="flex justify-center font-semibold items-center flex-col text-white mt-8 shadow-2xl bg-black/20 px-3 py-2 rounded-xl">
-                    <p>Vip available</p>
+                    <p>{t("travel-packages-page.vip-available")}</p>
                     <p className="font-bold">{vipPrice}{currency}</p>
                 </div>
             </div>
@@ -48,7 +48,7 @@ const PackageCard = ({
                 </div>
             </div>
 
-            <button className="mt-4 text-white py-2 rounded-2xl font-bold px-10" style={{ backgroundColor: buttonColor }}>
+            <button className="mt-4 text-black py-2 rounded-2xl font-bold px-10" style={{ backgroundColor: buttonColor }}>
                 {buttonText}
             </button>
         </div>

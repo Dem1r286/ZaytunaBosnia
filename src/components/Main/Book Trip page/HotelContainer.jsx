@@ -1,12 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const HotelContainer = ({ hotel, setHotel }) => {
+const HotelContainer = ({ hotel, setHotel, tripDuration, packagePrice }) => {
+  const { t } = useTranslation("global");
+
   const getMapLink = (hotelName) => {
-    const query = encodeURIComponent(hotelName);
+    const firstHotel = hotelName.split("&")[0].trim();
+    const query = encodeURIComponent(firstHotel);
     return `https://maps.google.com?q=${query}`;
   };
-  const { t, i18n } = useTranslation("global");
+
+  const isShortTrip = tripDuration === "4 nights / 5 days";
 
   return (
     <div className="flex flex-col justify-center bg-gray-100 p-6 rounded-xl shadow-md w-full gap-4">
@@ -25,18 +29,28 @@ const HotelContainer = ({ hotel, setHotel }) => {
       <select
         value={hotel}
         onChange={(e) => setHotel(e.target.value)}
-        className="w-full p-2 border rounded-md bg-white"
+        className="w-full p-2 border rounded-md bg-white font-medium"
       >
-        <option value="Hotel Hollywood, Sarajevo">Hotel Hollywood - ★★★★☆</option>
-        <option value="Hotel Ibis, Sarajevo">Hotel Ibis - ★★★★☆</option>
-        <option value="Hotel Astra, Sarajevo">Hotel Astra - ★★★★☆</option>
-        <option value="Hotel Hills, Sarajevo">Hotel Hills - ★★★★★</option>
-        <option value="Hotel Malak Regency, Sarajevo">Hotel Malak Regency - ★★★★★</option>
+        <option value="Hotel Krone & Hotel Luna">
+          {isShortTrip ? t("booking-page.hotel-short1") : t("booking-page.hotel1")}
+        </option>
+        <option value="Hotel Ibis & Hotel Lobby">
+          {isShortTrip ? t("booking-page.hotel-short2") : t("booking-page.hotel2")}
+        </option>
+        <option value="Hotel Hills & Hotel Kostelski Buk">
+          {isShortTrip ? t("booking-page.hotel-short3") : t("booking-page.hotel3")}
+        </option>
+        <option value="Hotel Malak Regency & Hotel Kostelski Buk">
+          {isShortTrip ? t("booking-page.hotel-short4") : t("booking-page.hotel4")}
+        </option>
       </select>
 
       <div className="flex justify-center items-center flex-col">
-        <p className="bg-gray-600 px-3 py-2 rounded-xl font-semibold text-white text-sm">
-          359€ / Person
+        <p className="bg-[#1e2939] px-3 py-2 rounded-xl font-semibold text-white text-md">
+          {packagePrice}€ {t("booking-page.price-person")}
+        </p>
+        <p className="text-xs mt-2 text-center text-gray-600">
+          {t("booking-page.price-explanation")}
         </p>
       </div>
     </div>
