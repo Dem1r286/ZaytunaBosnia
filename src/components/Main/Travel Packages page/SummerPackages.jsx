@@ -17,28 +17,28 @@ const FadeInSection = ({ children }) => (
 );
 
 const SummerPackages = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
   return (
     <div id="summer-packages" className="flex justify-center items-center w-screen">
-      <div className="w-full max-w-[2000px] px-20 flex flex-col gap-16">
+      <div className="w-full max-w-[2000px] px-14 md:px-20 flex flex-col items-center justify-center gap-16">
         {/* Header Section */}
-        <div className="flex flex-wrap justify-between items-center gap-6">
-          <div>
-            <div className="flex items-center gap-4">
-              <span className="bg-orange-500 rounded-2xl h-[5px] w-[50px]" />
-              <p className="text-[#22c55e] font-semibold">
+        <div className="w-full flex flex-col xl:flex-row justify-center items-center xl:px-20 xl:gap-20">
+          <div className="flex items-start flex-col self-start">
+            <div className="flex items-center gap-2 md:gap-4">
+              <span className="bg-orange-500 rounded-2xl h-[4px] md:h-[5px] w-[15px] md:w-[50px]" />
+              <p className="text-[#22c55e] font-semibold text-xs md:text-sm lg:text-md">
                 {t("travel-packages-page.summer.subtext")}
               </p>
             </div>
-            <p className="font-semibold text-3xl mt-1">
+            <p className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-3xl md:mt-1 mb-3">
               {t("travel-packages-page.summer.heading")}
             </p>
           </div>
 
           <FadeInSection>
-            <p className="text-lg font-semibold bg-[#22c55e] shadow-md text-white px-6 py-2 rounded-xl flex items-center gap-5">
+            <p className="w-full text-[10px] md:text-lg font-semibold bg-[#22c55e] shadow-md text-white px-6 py-1 md:py-2 rounded-xl flex justify-center items-center gap-5 whitespace-nowrap">
               {t("travel-packages-page.summer.subtext2")}
-              <ArrowDown size={26} />
+              <ArrowDown className="w-4 md:w-6" />
             </p>
           </FadeInSection>
         </div>

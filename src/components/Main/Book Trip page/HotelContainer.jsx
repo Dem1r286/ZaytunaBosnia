@@ -13,14 +13,14 @@ const HotelContainer = ({ hotel, setHotel, tripDuration, packagePrice }) => {
   const isShortTrip = tripDuration === "4 nights / 5 days";
 
   return (
-    <div className="flex flex-col justify-center bg-gray-100 p-6 rounded-xl shadow-md w-full gap-4">
+    <div className="flex flex-col justify-center items-center bg-gray-100 p-6 rounded-xl shadow-md w-[90%] md:w-full gap-4">
       <div className="flex justify-center items-center flex-row gap-6">
-        <h2 className="text-lg font-semibold">{t("booking-page.hotel")}</h2>
+        <h2 className="text-sm sm:text-md md:text-lg font-semibold">{t("booking-page.hotel")}</h2>
         <a
           href={getMapLink(hotel)}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold bg-blue-600 text-white px-3 py-2 text-sm rounded-xl hover:bg-blue-700"
+          className="font-semibold bg-blue-600 text-white px-3 py-2 text-[10px] md:text-sm rounded-xl hover:bg-blue-700"
         >
           {t("booking-page.hotel-map-button")}
         </a>
@@ -29,7 +29,7 @@ const HotelContainer = ({ hotel, setHotel, tripDuration, packagePrice }) => {
       <select
         value={hotel}
         onChange={(e) => setHotel(e.target.value)}
-        className="w-full p-2 border rounded-md bg-white font-medium"
+        className="w-[70%] text-xs p-2 border rounded-md bg-white font-medium"
       >
         <option value="Hotel Krone & Hotel Luna">
           {isShortTrip ? t("booking-page.hotel-short1") : t("booking-page.hotel1")}
@@ -46,10 +46,10 @@ const HotelContainer = ({ hotel, setHotel, tripDuration, packagePrice }) => {
       </select>
 
       <div className="flex justify-center items-center flex-col">
-        <p className="bg-[#1e2939] px-3 py-2 rounded-xl font-semibold text-white text-md">
+        <p className="bg-[#1e2939] px-3 py-2 rounded-xl font-semibold text-white text-sm md:text-md">
           {packagePrice}€ {t("booking-page.price-person")}
         </p>
-        <p className="text-xs mt-2 text-center text-gray-600">
+        <p className="text-[10px] md:text-xs mt-2 text-center text-gray-600">
           {t("booking-page.price-explanation")}
         </p>
       </div>

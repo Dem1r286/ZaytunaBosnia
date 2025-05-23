@@ -1,14 +1,13 @@
 .whatsapp-container {
-    background-color:   #085805;
+    background-color: #085805;
     position: fixed;
-    top: 20%;
+    bottom: 50px;
     right: 0;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 100;
+    z-index: 49;
     width: 120px;
     height: 80px;
     border-radius: 10px 0 0 10px;
@@ -46,4 +45,60 @@
   .rotate {
     transform: rotate(360deg);
   }
-  
+
+  @media (max-width: 767px) {
+  .whatsapp-container {
+    width: 90px;
+    height: 60px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+  }
+
+  .whatsapp-paragraph {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .whatsapp-container {
+    width: 105px;
+    height: 70px;
+    border-radius: 9px 0 0 9px;
+  }
+
+  .whatsapp-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+  }
+
+  .whatsapp-paragraph {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .whatsapp-container {
+    width: 90px;
+    height: 60px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+  }
+
+  .whatsapp-paragraph {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}

@@ -35,6 +35,7 @@
   },
   "destinations": {
     "heading": "اكتشف الوجهات",
+      "text": "اكتشف أماكن مذهلة - من ملاذات الجبال إلى ملاذات شاطئ البحر، تبدأ مغامرتك القادمة هنا",
     "card1": "سراييفو",
     "card2": "موستار",
     "card3": "بلاجاج",
@@ -710,5 +711,10 @@
     "placeholder1": "مثال: محمد أحمد",
     "placeholder2": "على سبيل المثال، أود الاستفسار عن...",
     "placeholder3": "مثال: mohamed@example.com"
+  },
+    "package-images": {
+    "honeymoon": "assets/packages/honeymoonpackagear.webp",
+    "summer": "assets/packages/summerpackagear.webp",
+    "winter": "assets/packages/winterpackagear.webp"
   }
 }

@@ -48,19 +48,19 @@ const TravelPackages = () => {
   }, [packageType]);
 
   return (
-    <div id="travel-packages" className="flex flex-col mt-45 gap-30">
+    <div id="travel-packages" className="flex flex-col mt-30 md:mt-45 gap-10 md:gap-30">
       <FadeInSection>
         <div className="flex justify-center items-center flex-col">
-          <p className="font-semibold text-[40px] m-0 text-left">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold m-0 text-center px-20">
           {t("travel-packages-page.heading")}
           </p>
-          <p className="w-[60%] text-center font-medium text-md text-gray-700 mt-1">
+          <p className="w-[100%] px-20 md:w-[60%] text-center font-medium text-[10px] sm:text-sm md:text-[14px] text-gray-700 mt-1">
           {t("travel-packages-page.subtext")}
           </p>
         </div>
       </FadeInSection>
 
-      <div className="flex flex-col items-center justify-center gap-35 mb-80">
+      <div className="flex flex-col items-center justify-center gap-35 mb-50 md:mb-80">
         <FadeInSection>
           <div ref={summerRef} className="w-full flex justify-start px-10">
             <SummerPackages />

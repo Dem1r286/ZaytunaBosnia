@@ -274,24 +274,24 @@ const DestinationDetails = () => {
       .slice(0, 4);
   }, [name]);
 
-    useEffect(() => {
+  useEffect(() => {
     setCurrentIndex(0);
   }, [name]);
 
   return (
     <div
       id="destination-details"
-      className="flex justify-center items-center flex-col min-h-screen w-screen py-40">
-      <h1 className="text-5xl font-bold mb-2">{destination?.name}</h1>
-      <p className="text-md mb-10 ">{destination?.description}</p>
+      className="flex justify-center items-center flex-col min-h-screen w-screen py-30 lg:py-40">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-1 lg:mb-2">{destination?.name}</h1>
+      <p className="text-[10px] sm:text-sm md:text-[14px] mb-10 px-10 text-center">{destination?.description}</p>
 
 
-      <div className="flex justify-between items-center flex-row w-full px-30 max-w-[2000px] gap-20">
-        <div className="flex justify-center flex-col items-center bg-gray-100 w-[60%] p-10 rounded-xl">
+      <div className="flex justify-between items-center flex-col lg:flex-row w-full px-10 lg:px-30 max-w-[2000px] gap-10 lg:gap-20">
+        <div className="flex justify-center flex-col items-center bg-gray-100 w-full lg:w-[60%] p-10 rounded-xl">
           {destination?.heading
             ?.split('\n\n')
             .map((paragraph, index) => (
-              <p key={index} className="text-xl font-medium tracking-wide mb-4">
+              <p key={index} className="text-sm sm:text-md lg:text-xl font-medium tracking-wide mb-4 text-center">
                 {paragraph}
               </p>
             ))}
@@ -299,7 +299,7 @@ const DestinationDetails = () => {
           {destination?.text1
             ?.split('\n\n')
             .map((paragraph, index) => (
-              <p key={index} className="text-sm tracking-wide mb-4">
+              <p key={index} className="text-xs lg:text-sm tracking-wide mb-4">
                 {paragraph}
               </p>
             ))}
@@ -307,7 +307,7 @@ const DestinationDetails = () => {
           {destination?.text2
             ?.split('\n\n')
             .map((paragraph, index) => (
-              <p key={index} className="text-sm tracking-wide mb-4 font-semibold">
+              <p key={index} className="text-xs lg:text-sm tracking-wide mb-4 font-semibold">
                 {paragraph}
               </p>
             ))}
@@ -315,7 +315,7 @@ const DestinationDetails = () => {
           {destination?.text3
             ?.split('\n\n')
             .map((paragraph, index) => (
-              <p key={index} className="text-sm tracking-wide mb-4">
+              <p key={index} className="text-xs lg:text-sm tracking-wide mb-4">
                 {paragraph}
               </p>
             ))}
@@ -323,62 +323,22 @@ const DestinationDetails = () => {
           {destination?.text4
             ?.split('\n\n')
             .map((paragraph, index) => (
-              <p key={index} className="text-sm tracking-wide mb-4">
+              <p key={index} className="text-xs lg:text-sm tracking-wide mb-4">
                 {paragraph}
               </p>
             ))}
         </div>
 
-        <div className="flex flex-col justify-center items-center relative">
-          <div className="flex overflow-hidden justify-center items-center px-4 py-10">
-            <AnimatePresence mode="popLayout">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.3 }}
-                className="relative flex justify-center items-center w-[500px] h-[500px] shadow-lg bg-white rounded-2xl overflow-hidden"
-              >
-                <img
-                  src={destination?.images[currentIndex]}
-                  alt="destination"
-                  className="object-cover w-full h-full"
-                />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <button
-            onClick={prevSlide}
-            disabled={currentIndex === 0}
-            className={`p-2 rounded-full bg-green-300 absolute left-0 transform -translate-x-8 top-1/2 -translate-y-1/2 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"
-              }`}
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            disabled={currentIndex >= destination?.images.length - 1}
-            className={`p-2 rounded-full bg-green-300 absolute right-0 transform translate-x-8 top-1/2 -translate-y-1/2 ${currentIndex >= destination?.images.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"
-              }`}
-          >
-            <ChevronRight size={24} />
-          </button>
-        </div>
-      </div>
-
-      <Link to="/book-trip">
-        <button className="relative my-10 inline-block p-px text-lg font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+         <Link to="/book-trip">
+        <button className="relative inline-block p-px font-semibold mt-10 leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
           <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-          <span className="relative z-1 block px-10 py-3 rounded-xl">
+          <span className="relative z-1 block px-4 py-2 rounded-xl">
             <div className="relative z-1 flex items-center space-x-3">
-              <span className="transition-all duration-500 group-hover:translate-x-1">
+              <span className="transition-all duration-500 group-hover:translate-x-1 text-lg">
                 {t("common.book-your-trip")}
               </span>
               <svg
-                className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                className=":w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
                 data-slot="icon"
                 aria-hidden="true"
                 fill="currentColor"
@@ -396,14 +356,54 @@ const DestinationDetails = () => {
         </button>
       </Link>
 
-      <div className="flex justify-center items-center flex-col gap-10 mt-14">
+        <div className="flex flex-col justify-center items-center relative">
+          <div className="flex overflow-hidden justify-center items-center px-4 pt-6 pb-4">
+            <AnimatePresence mode="popLayout">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.3 }}
+                className="relative flex justify-center items-center flex-col w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] shadow-lg bg-cover rounded-2xl bg-center"
+              >
+                <img
+                  src={destination?.images[currentIndex]}
+                  alt="destination"
+                  className="object-cover w-full h-full rounded-2xl"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation Buttons at Bottom */}
+          <div className="flex justify-center gap-6">
+            <button
+              onClick={prevSlide}
+              disabled={currentIndex === 0}
+              className={`p-2 rounded-full bg-green-300 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+            >
+              <ChevronLeft className="w-5 md:w-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              disabled={currentIndex >= destination?.images.length - 1}
+              className={`p-2 rounded-full bg-green-300 ${currentIndex >= destination?.images.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+            >
+              <ChevronRight className="w-5 md:w-6" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center flex-col gap-10 mt-14">
         <p className="text-2xl font-medium">{t("destination-details.more-heading")}</p>
-        <div className="flex flex-wrap justify-center items-center flex-row gap-10">
+        <div className="flex flex-wrap justify-center items-center flex-row gap-4 md:gap-10">
           {randomDestinations.map((key) => (
             <Link
               key={key}
               to={`/destination/${key}`}
-              className="relative flex items-end justify-center w-[200px] h-[250px] rounded-lg hover:scale-105 transition-transform duration-300 text-white text-center"
+              className="relative flex items-end justify-center w-[100px] h-[120px] rounded-lg hover:scale-105 transition-transform duration-300 text-white text-center"
               style={{
                 backgroundImage: `url(${destinationsData[key].images[0]})`,
                 backgroundSize: "cover",
@@ -412,7 +412,7 @@ const DestinationDetails = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/10 rounded-lg"></div>
-              <p className="relative z-10 text-sm font-semibold w-full bg-black/80 py-4 rounded-lg">{destinationsData[key].name}</p>
+              <p className="hidden relative z-10 text-sm font-semibold w-full bg-black/80 py-4 rounded-lg">{destinationsData[key].name}</p>
             </Link>
           ))}
         </div>

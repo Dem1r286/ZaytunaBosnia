@@ -70,7 +70,7 @@ const LeaveReview = ({ onClose }) => {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 30 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative flex flex-col justify-center items-center bg-white shadow-lg rounded-lg pt-20 pb-25 px-40 gap-20"
+        className="relative flex flex-col justify-center h-screen w-screen lg:h-fit lg:w-fit max-w-[1200px] items-center bg-white shadow-lg rounded-lg pt-20 pb-25 px-40 gap-20"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -80,9 +80,9 @@ const LeaveReview = ({ onClose }) => {
           <X size={35} className="text-gray-800" />
         </button>
 
-        <div className="flex justify-center items-center flex-col gap-2">
-          <p className="font-semibold text-2xl text-gray-900">{t("leave-review.heading")}</p>
-          <p className="text-sm text-gray-800">
+        <div className="w-screen text-center px-20 flex justify-center items-center flex-col gap-2">
+          <p className="font-semibold text-2xl text-gray-900 whitespace-nowrap">{t("leave-review.heading")}</p>
+          <p className="w-screen px-10 text-sm text-gray-800">
             {t("leave-review.subheading")}
           </p>
         </div>

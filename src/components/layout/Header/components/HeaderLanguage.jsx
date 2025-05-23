@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const HeaderLanguage = () => {
-  const { t, i18n } = useTranslation();
+const HeaderLanguage = ({ onClick })  => {
+  const { i18n } = useTranslation();
   const [isClicked, setIsClicked] = useState("en");
 
-  const handleClick = (lang) => {
-    setIsClicked(lang);
-    i18n.changeLanguage(lang);
+  const handleClick = () => {
+    const newLang = isClicked === "en" ? "ar" : "en";
+    setIsClicked(newLang);
+    i18n.changeLanguage(newLang);
+    
+    if (onClick) {
+      onClick();
+    }
   };
-
   return (
     <div id="header-language" className="flex items-center justify-center">
       <button
@@ -19,7 +23,7 @@ const HeaderLanguage = () => {
         <div>
           <img src="assets/icons/translation.webp" alt="translation icon" className="w-6" />
         </div>
-        <p className="mr-2">{isClicked === "en" ? "English" : "Arabic"}</p>
+        <p className="mr-2">{isClicked === "en" ? "Arabic" : "English"}</p>
       </button>
     </div>
   );

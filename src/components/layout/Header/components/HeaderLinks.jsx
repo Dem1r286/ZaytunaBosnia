@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HeaderLinks = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
     return (
-      <div className="hidden lg:flex justify-center items-center mr-8">
+      <div className="hidden xl:flex justify-center items-center mr-8">
         <div className="flex items-center gap-14 text-gray-900">
           <Link to="/" className="cursor-pointer">
           {t("header-links.link1")}

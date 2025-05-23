@@ -49,7 +49,7 @@ const BookingSummary = ({
 
 
   return (
-    <div className="relative flex justify-center items-center flex-col min-w-[400px] pb-16">
+    <div className="relative flex justify-center items-center flex-col min-w-[400px]">
       {/* Booking Summary */}
       <div className="flex w-full flex-col bg-gray-100 rounded-xl pt-3 pb-4 mb-10 shadow-md">
         <p className="font-semibold text-lg mb-4 text-center">

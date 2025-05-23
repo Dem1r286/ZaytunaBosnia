@@ -107,22 +107,22 @@ const TravelPackageDetails = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen h-fit px-10 flex flex-col gap-30 items-center mt-40 max-w-[2000px] mb-30 mx-auto">
-      <h1 className="font-semibold text-5xl text-center mb-10">
+    <div className="w-screen min-h-screen flex flex-col gap-14 md:gap-20 lg:gap-30 items-center lg:px-10 mt-30 lg:mt-40 max-w-[2000px] mb-30">
+      <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-center lg:mb-10">
         {nights} {t("travel-package-details.night")} / {days} {t("travel-package-details.day")}  {t("travel-package-details.package")}
       </h1>
 
-      <div className="w-full flex flex-row justify-center gap-30 items-start gap-10">
+      <div className="w-full flex flex-col lg:flex-row justify-center gap-30 items-center lg:items-start gap-10">
         {/* Tour Program Section */}
-        <div className="w-1/2 flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-medium mb-6">{t("travel-package-details.heading1")}</h2>
+        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-10">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6">{t("travel-package-details.heading1")}</h2>
 
           <div className="flex gap-4 flex-wrap justify-center mb-6">
             {activities.map((activity, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedDay(index)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-300
+                className={`px-4 py-2 rounded-full text-[9px] sm:text-xs md:text-sm font-semibold border transition-all duration-300
                   ${selectedDay === index
                     ? "bg-green-500 text-white"
                     : "bg-white text-green-600 border-green-500"
@@ -134,16 +134,16 @@ const TravelPackageDetails = () => {
           </div>
 
           {selectedDay !== null && (
-            <div className="flex flex-col justify-start mb-20 pt-14 items-center mt-4 bg-gray-100 px-10 py-6 rounded-xl min-h-[320px] max-h-[320px] text-center">
-              <p className="text-lg font-medium mb-2">{t(activities[selectedDay])}</p>
-              <p className="text-sm leading-relaxed">
+            <div className="flex flex-col justify-start mb-20 pt-14 items-center mt-4 bg-gray-100 py-10 lg:py-6 px-3 rounded-xl min-h-[320px] lg:max-h-[400px] text-center">
+              <p className="text-sm md:text-md lg:text-lg font-medium mb-2">{t(activities[selectedDay])}</p>
+              <p className="text-xs text-sm md:leading-relaxed">
                 {activitiesDetails ? t(activitiesDetails[selectedDay]) : "No additional details available."}
               </p>
             </div>
           )}
 
           <div className="flex flex-row justify-center items-center gap-14">
-            <Link to="/book-trip" className="self-center text-white font-semibold bg-[#22c55e] 
+            <Link to="/book-trip" className="self-center text-white text-sm md:text-md lg:text-[15px] font-semibold bg-[#22c55e] 
             rounded-xl shadow-lg px-5 py-3 hover:scale-105 
             transition-transform duration-300">
               {t("common.book-your-trip-now")}
@@ -154,8 +154,8 @@ const TravelPackageDetails = () => {
         {/* Image Carousel Section */}
         <div className="flex flex-col justify-center items-center relative gap-10">
           <div className="flex flex-col justify-center items-center gap-2">
-            <p className="text-3xl font-medium">{t("travel-package-details.heading2")}</p>
-            <p className="text-md text-center">{t("travel-package-details.subtext")}</p>
+            <p className="text-xl md:text-2xl lg:text-5xl font-medium">{t("travel-package-details.heading2")}</p>
+            <p className="text-[10px] sm:text-sm md:text-[14px] text-center">{t("travel-package-details.subtext")}</p>
           </div>
 
           <div className="flex overflow-hidden justify-center items-center gap-[3vw] px-16">
@@ -166,7 +166,7 @@ const TravelPackageDetails = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="relative flex justify-center items-center flex-col w-[500px] h-[500px] shadow-lg bg-cover px-2 py-2 rounded-2xl bg-center"
+                className="relative flex justify-center items-center flex-col w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] shadow-lg bg-cover px-2 py-2 rounded-2xl bg-center"
                 style={{ backgroundImage: `url(${currentImages[currentIndex]})` }}
               >
               </motion.div>
@@ -176,57 +176,57 @@ const TravelPackageDetails = () => {
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className={`p-2 rounded-full bg-green-300 absolute left-0 top-[60%] -translate-y-1/2 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
+              className={`p-1 md:p-2 rounded-full bg-green-300 absolute left-0 top-[60%] -translate-y-1/2 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
                 }`}
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft className="w-5 md:w-6" />
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex === currentImages.length - 1}
-              className={`p-2 rounded-full bg-green-300 absolute right-0 top-[60%] -translate-y-1/2 ${currentIndex === currentImages.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
+              className={`p-1 md:p-2 rounded-full bg-green-300 absolute right-0 top-[60%] -translate-y-1/2 ${currentIndex === currentImages.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
                 }`}
             >
-              <ChevronRight size={24} />
+              <ChevronRight className="w-5 md:w-6" />
             </button>
           </div>
         </div>
       </div>
 
       {/* Bottom section: Services */}
-      <div className="flex justify-center items-end flex-row gap-25">
+      <div className="flex flex-wrap justify-center gap-14 items-end text-[10px] sm:text-[12px] lg:text-[13px] flex-row gap-10 md:gap-15 lg:gap-25 px-10">
         <div className="flex justify-center items-center flex-col gap-1">
-          <img src="assets/travelPackageDetails/driverservice.webp" alt="" className="w-30"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.driver")}</p>
+          <img src="assets/travelPackageDetails/driverservice.webp" alt="" className="w-20 lg:w-28"></img>
+          <p className="font-semibold">{t("travel-package-details.services.driver")}</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-1">
-          <img src="assets/travelPackageDetails/accommodation.webp" alt="" className="w-30"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.accommodation")}</p>
+          <img src="assets/travelPackageDetails/accommodation.webp" alt="" className="w-20 lg:w-28"></img>
+          <p className="font-semibold">{t("travel-package-details.services.accommodation")}</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-1">
-          <img src="assets/travelPackageDetails/tourguide.webp" alt="" className="w-30"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.guide")}</p>
+          <img src="assets/travelPackageDetails/tourguide.webp" alt="" className="w-20 lg:w-28"></img>
+          <p className="font-semibold">{t("travel-package-details.services.guide")}</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-1">
-          <img src="assets/travelPackageDetails/frommarchtonovember.webp" alt="" className="w-30"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.date")}</p>
+          <img src="assets/travelPackageDetails/frommarchtonovember.webp" alt="" className="w-20 lg:w-28"></img>
+          <p className="font-semibold">{t("travel-package-details.services.date")}</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-1">
-          <img src="assets/travelPackageDetails/familyfriendly.webp" alt="" className="w-30"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.family")}</p>
+          <img src="assets/travelPackageDetails/familyfriendly.webp" alt="" className="w-20 lg:w-28"></img>
+          <p className="font-semibold">{t("travel-package-details.services.family")}</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-3">
-          <img src="assets/travelPackageDetails/vipavailable.webp" alt="" className="w-15"></img>
-          <p className="font-semibold text-[13px]">{t("travel-package-details.services.vip")}</p>
+          <img src="assets/travelPackageDetails/vipavailable.webp" alt="" className="w-10 lg:w-14"></img>
+          <p className="font-semibold">{t("travel-package-details.services.vip")}</p>
         </div>
       </div>
 
 
       {/* Price Include text only */}
-      <div className="flex justify-center flex-row gap-40 bg-gray-100 py-8 rounded-xl px-20">
+      <div className="flex justify-center flex-col md:flex-row gap-20 lg:gap-40 bg-gray-100 py-8 rounded-xl px-10 lg:px-20">
         <div className="flex justify-center flex-col gap-4">
-          <p className="font-semibold text-xl">{t("travel-package-details.price-include.heading")}</p>
-          <ul className="flex flex-col list-disc text-sm gap-3 items-start">
+          <p className="text-sm md:text-md lg:text-lg font-semibold">{t("travel-package-details.price-include.heading")}</p>
+          <ul className="text-[11px] md:text-[12px] lg:text-[13px] flex flex-col list-disc gap-3 items-start">
             <li>{t("travel-package-details.price-include.paragraph1")}</li>
             <li>{t("travel-package-details.price-include.paragraph2")}</li>
             <li>{t("travel-package-details.price-include.paragraph3")} {nights} {t("travel-package-details.price-include.paragraph4")}</li>
@@ -234,8 +234,8 @@ const TravelPackageDetails = () => {
         </div>
 
         <div className="flex justify-center flex-col gap-4">
-          <p className="font-semibold text-xl">{t("travel-package-details.price-exclude.heading")}</p>
-          <ul className="flex flex-col list-disc text-sm gap-3 items-start">
+          <p className="text-sm md:text-md lg:text-lg font-semibold">{t("travel-package-details.price-exclude.heading")}</p>
+          <ul className="text-[11px] md:text-[12px] lg:text-[13px] flex flex-col list-disc gap-3 items-start">
             <li>{t("travel-package-details.price-exclude.paragraph1")}</li>
             <li>{t("travel-package-details.price-exclude.paragraph2")}</li>
             <li>{t("travel-package-details.price-exclude.paragraph3")}</li>
@@ -244,32 +244,33 @@ const TravelPackageDetails = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center flex-row gap-20 px-40">
 
-        <div className="flex justify-center items-center flex-col bg-gray-200 rounded-xl shadow-lg px-14 pt-6 pb-10 gap-3">
-          <p className="text-lg font-semibold self-center">{t("travel-package-details.regular-package.heading")}</p>
-          <ul className="flex flex-col list-disc text-sm gap-3 items-start">
+      <div className="w-full flex justify-center items-center flex-col lg:flex-row gap-20 px-10">
+
+        <div className="lg:w-1/2 w-fit flex justify-center items-center flex-col bg-gray-200 rounded-xl shadow-lg px-16 pt-6 pb-10 gap-3">
+          <p className="text-sm md:text-md lg:text-lg font-semibold self-center">{t("travel-package-details.regular-package.heading")}</p>
+          <ul className="text-xs md:text-sm lg:text-md flex flex-col list-disc gap-3 items-start">
             <li>{t("travel-package-details.regular-package.paragraph1")}</li>
             <li>{t("travel-package-details.regular-package.paragraph2")}</li>
             <li>{t("travel-package-details.regular-package.paragraph3")}</li>
             <li>{t("travel-package-details.regular-package.paragraph4")}</li>
             <li>{t("travel-package-details.regular-package.paragraph5")}</li>
           </ul>
-          <div className="w-full flex justify-between items-center flex-row mt-6 px-10">
+          <div className="w-full flex justify-between items-center flex-row mt-6 gap-10">
             <div className="flex justify-center items-center flex-col rounded-xl">
-              <p className="text-4xl font-semibold">{price}{currency}</p>
-              <p className="text-md mr-3">/ person</p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold">{price}{currency}</p>
+              <p className="text-xs md:text-sm lg:text-md mr-3">/ person</p>
             </div>
             <Link to="/book-trip">
               <button className="relative inline-block p-px font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                 <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
                 <span className="relative z-1 block px-4 py-2 rounded-xl">
                   <div className="relative z-1 flex items-center space-x-3">
-                    <span className="transition-all duration-500 group-hover:translate-x-1">
-                      {t("common.book-regular")}
+                    <span className="transition-all duration-500 group-hover:translate-x-1 text-xs sm:text-sm md:text-md lg:text-[17px] whitespace-nowrap ">
+                      {t("common.book-vip")}
                     </span>
                     <svg
-                      className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                      className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-500 group-hover:translate-x-1"
                       data-slot="icon"
                       aria-hidden="true"
                       fill="currentColor"
@@ -289,11 +290,11 @@ const TravelPackageDetails = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center flex-col bg-gray-800 text-white rounded-xl shadow-lg px-14 pt-6 pb-10 gap-3">
-          <p className="text-lg font-semibold self-center flex items-center gap-2">
+        <div className="lg:w-1/2 w-fit flex justify-center items-center flex-col bg-gray-800 text-white rounded-xl shadow-lg px-14 pt-6 pb-10 gap-3">
+          <p className="text-sm md:text-md lg:text-lg text-center font-semibold flex items-center gap-2">
             {t("travel-package-details.vip-package.heading")}
           </p>
-          <ul className="flex flex-col text-sm gap-3 items-start">
+          <ul className="text-xs md:text-sm lg:text-md flex flex-col gap-3 items-start">
             <li className="flex items-start gap-2">
               <Crown className="w-4 h-4 text-yellow-500 mt-1" />
               <span>{t("travel-package-details.vip-package.paragraph1")}</span>
@@ -316,21 +317,21 @@ const TravelPackageDetails = () => {
             </li>
           </ul>
 
-          <div className="w-full flex justify-between items-center flex-row mt-6 px-10">
+          <div className="w-full flex justify-between items-center flex-row mt-6 gap-10">
             <div className="flex justify-center items-center flex-col">
-              <p className="text-4xl font-semibold">{vipPrice}{currency}</p>
-              <p className="text-md mr-3">/ person</p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold">{vipPrice}{currency}</p>
+              <p className="text-xs md:text-sm lg:text-md mr-3">/ person</p>
             </div>
             <Link to="/book-trip">
               <button className="relative inline-block p-px font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                 <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
                 <span className="relative z-1 block px-4 py-2 rounded-xl">
                   <div className="relative z-1 flex items-center space-x-3">
-                    <span className="transition-all duration-500 group-hover:translate-x-1">
+                    <span className="transition-all duration-500 group-hover:translate-x-1 text-xs sm:text-sm md:text-md lg:text-[17px] whitespace-nowrap ">
                       {t("common.book-vip")}
                     </span>
                     <svg
-                      className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                      className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-500 group-hover:translate-x-1"
                       data-slot="icon"
                       aria-hidden="true"
                       fill="currentColor"
@@ -353,18 +354,18 @@ const TravelPackageDetails = () => {
 
       {/* Contact for Tailored Package */}
       <div className="w-full flex justify-center items-center flex-col text-center gap-20">
-        <div className="flex justify-center items-center flex-col text-center w-[50%] gap-3">
-          <p className="font-medium">{t("travel-package-details.contact-paragraph")}</p>
+        <div className="flex justify-center items-center flex-col text-center px-10 md:w-[50%] gap-3">
+          <p className="text-[11px] sm:text-xs md:text-sm lg:text-[14px] font-medium">{t("travel-package-details.contact-paragraph")}</p>
           <Link to="/contact#contact">
             <button className="relative inline-block p-px font-semibold leading-6 text-white bg-orange-600 shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
               <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative z-1 block px-4 py-2 rounded-xl">
                 <div className="relative z-1 flex items-center space-x-3">
-                  <span className="transition-all duration-500 group-hover:translate-x-1">
+                  <span className="transition-all duration-500 group-hover:translate-x-1 text-xs sm:text-sm md:text-md lg:text-[17px]">
                     {t("common.contact-button")}
                   </span>
                   <svg
-                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                    className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-500 group-hover:translate-x-1"
                     data-slot="icon"
                     aria-hidden="true"
                     fill="currentColor"

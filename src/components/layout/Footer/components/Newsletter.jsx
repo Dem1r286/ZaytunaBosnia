@@ -51,10 +51,10 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-4 mt-6">
+    <div className="flex flex-col justify-center items-center gap-4 mt-6 w-screen md:w-fit">
       <div className="flex justify-center items-center flex-col text-center">
-        <h6 className="font-semibold text-xl mb-2">{t("footer.newsletter-heading")}</h6>
-        <p className="text-xs font-semibold mb-4">
+        <h6 className="font-semibold text-md sm:text-lg md:text-xl mb-1 md:mb-2">{t("footer.newsletter-heading")}</h6>
+        <p className="text-[10px] md:text-xs font-semibold mb-4">
           {t("footer.newsletter-subtext1")}<br />
           {t("footer.newsletter-subtext2")}
         </p>
@@ -67,14 +67,14 @@ const Newsletter = () => {
             <input
               type="email"
               placeholder={t("footer.newsletter-placeholder")}
-              className="w-[250px] bg-white rounded-l-lg px-4 py-2 text-sm placeholder-black text-black"
+              className="w-[200px] md:w-[250px] bg-white rounded-l-lg px-4 py-2 text-[11px] md:text-sm placeholder-black text-black"
               value={formEmail}
               onChange={handleChange}
               required
             />
             <button
               type="submit"
-              className="w-[100px] text-white bg-gray-800 py-2 rounded-r-lg text-sm text-center cursor-pointer"
+              className="w-[80px] md:w-[100px] text-white bg-gray-800 py-2 rounded-r-lg text-[11px] md:text-sm text-center cursor-pointer"
             >
               {t("footer.newsletter-button")}
             </button>
@@ -84,7 +84,7 @@ const Newsletter = () => {
       </div>
 
       <div className="mt-6">
-        <p className="font-semibold text-lg">{t("footer.footer-contact")}</p>
+        <p className="font-semibold text-md sm:text-lg md:text-xl mb-1 md:mb-2">{t("footer.footer-contact")}</p>
         <div className="flex flex-row gap-4 justify-center items-center mt-2">
           <a
             href="https://www.instagram.com/zaytuna_bosnia/"

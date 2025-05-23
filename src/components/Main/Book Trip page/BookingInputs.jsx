@@ -97,9 +97,9 @@ const BookingInputs = ({
     return (
         <>
             {/* Name & Email */}
-            <div className="flex flex-row gap-10">
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input1")}
                     </label>
                     <input
@@ -107,14 +107,14 @@ const BookingInputs = ({
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         type="text"
                         placeholder={t("contact-page.placeholder1")}
-                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.name ? "ring-red-500" : "ring-gray-300"
-                            } bg-gray-100 text-gray-800 placeholder:text-sm`}
+                        className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ${errors?.name ? "ring-red-500" : "ring-gray-300"
+                            } bg-gray-100 text-gray-800`}
                         required
                     />
                 </div>
 
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input2")}
                     </label>
                     <input
@@ -122,7 +122,7 @@ const BookingInputs = ({
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         type="text"
                         placeholder={t("contact-page.placeholder2")}
-                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.email ? "ring-red-500" : "ring-gray-300"
+                        className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ${errors?.email ? "ring-red-500" : "ring-gray-300"
                             } bg-gray-100 text-gray-800 placeholder:text-sm`}
                         required
                     />
@@ -130,9 +130,9 @@ const BookingInputs = ({
             </div>
 
             {/* Number of Adults & Children */}
-            <div className="flex flex-row gap-10 mt-4">
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input3")}
                     </label>
                     <select
@@ -141,7 +141,7 @@ const BookingInputs = ({
                             setNumOfAdults(Number(e.target.value));
                             setErrors((prev) => ({ ...prev, numOfAdults: "" }));
                         }}
-                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.numOfAdults ? "ring-red-500" : "ring-gray-300"
+                        className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ${errors?.numOfAdults ? "ring-red-500" : "ring-gray-300"
                             } bg-gray-100 text-gray-800 placeholder:text-sm`}
                     >
                         {[...Array(8)].map((_, i) => (
@@ -153,13 +153,13 @@ const BookingInputs = ({
                 </div>
 
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input4")}
                     </label>
                     <select
                         value={numOfChildren}
                         onChange={handleNumOfChildrenChange}
-                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.numOfChildren ? "ring-red-500" : "ring-gray-300"
+                        className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ${errors?.numOfChildren ? "ring-red-500" : "ring-gray-300"
                             } bg-gray-100 text-gray-800 placeholder:text-sm`}
                     >
                         {[...Array(8)].map((_, i) => (
@@ -171,10 +171,9 @@ const BookingInputs = ({
                 </div>
             </div>
 
-            {/* Carousel for Children Ages */}
             {childrenAges.length > 0 && (
                 <div
-                    className={`w-full flex items-center gap-4 mt-4 overflow-hidden px-10 pb-5 pt-3 rounded-xl ${isAnyChildAgeEmpty ? "ring-1 ring-red-500" : "ring-1 ring-gray-200"
+                    className={`w-full flex justify-center items-center gap-4 overflow-hidden pb-5 pt-3 rounded-xl ${isAnyChildAgeEmpty ? "ring-1 ring-red-500" : "ring-1 ring-gray-200"
                         } bg-gray-100`}
                 >
                     <button
@@ -193,21 +192,26 @@ const BookingInputs = ({
                                 const globalIndex = carouselStartIndex + index;
                                 return (
                                     <div key={globalIndex} className="flex flex-col min-w-[120px]">
-                                        <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                                        <label className="font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                                             {t("booking-page.child-age")} {globalIndex + 1}
                                         </label>
-                                        <input
+                                        <select
                                             value={age}
                                             onChange={(e) =>
                                                 handleChildAgeChange(globalIndex, e.target.value)
                                             }
-                                            type="number"
-                                            min="0"
                                             className={`block w-full max-w-[120px] rounded-md py-1.5 px-2 ring-1 ${errors?.childrenAges?.[globalIndex]
-                                                ? "ring-red-500"
-                                                : "ring-gray-500"
-                                                } bg-gray-100 text-gray-800 appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
-                                        />
+                                                    ? "ring-red-500"
+                                                    : "ring-gray-500"
+                                                } bg-gray-100 text-gray-800`}
+                                        >
+                                            <option value="">--</option>
+                                            {[...Array(18).keys()].map((n) => (
+                                                <option key={n} value={n}>
+                                                    {n}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
                                 );
                             })}
@@ -225,11 +229,12 @@ const BookingInputs = ({
             )}
 
 
+
             {/* Arrival, Departure Dates & Phone */}
-            <div className="flex flex-col justify-center items-center gap-6 mt-6">
-                <div className="flex gap-10">
+            <div className="flex flex-col justify-center items-center gap-6">
+                <div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
                     <div className="flex flex-col">
-                        <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                        <label className="font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                             {t("booking-page.input7")}
                         </label>
                         <DatePicker
@@ -244,14 +249,14 @@ const BookingInputs = ({
                             endDate={departureDate}
                             dateFormat="yyyy-MM-dd"
                             minDate={new Date()}
-                            className={`block w-72 rounded-md py-1.5 px-2 h-[35px] ring-1 ${errors?.arrivalDate ? "ring-red-500" : "ring-gray-300"
+                            className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 h-[35px] ring-1 ${errors?.arrivalDate ? "ring-red-500" : "ring-gray-100"
                                 } bg-gray-100 text-gray-800 placeholder:text-sm`}
                             required
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label className="font-semibold text-[13px] text-gray-800 ml-2">
+                        <label className="font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                             {t("booking-page.input8")}
                         </label>
                         <DatePicker
@@ -266,15 +271,14 @@ const BookingInputs = ({
                             endDate={departureDate}
                             dateFormat="yyyy-MM-dd"
                             minDate={arrivalDate || new Date()}
-                            className={`block w-72 rounded-md py-1.5 h-[35px] px-2 ring-1 ${errors?.departureDate ? "ring-red-500" : "ring-gray-300"
+                            className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 h-[35px] px-2 ring-1 ${errors?.departureDate ? "ring-red-500" : "ring-gray-100"
                                 } bg-gray-100 text-gray-800 placeholder:text-sm`}
                             required
                         />
                     </div>
                 </div>
-
-                <div className="flex flex-col w-full items-center">
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                <div className="flex flex-col items-center">
+                    <label className="text-left font-semibold self-start text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input9")}
                     </label>
                     <input
@@ -282,17 +286,18 @@ const BookingInputs = ({
                         onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
                         type="tel"
                         placeholder="e.g. +1 234 567 890"
-                        className={`block w-72 rounded-md py-1.5 px-2 ring-1 ${errors?.phoneNumber ? "ring-red-500" : "ring-gray-300"
+                        className={`block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ${errors?.phoneNumber ? "ring-red-500" : "ring-gray-300"
                             } bg-gray-100 text-gray-800 placeholder:text-sm`}
                         required
                     />
                 </div>
+
             </div>
 
             {/* Travel Package & Duration */}
-            <div className="flex flex-row gap-10 mt-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-10">
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input5")}
                     </label>
                     <select
@@ -301,7 +306,7 @@ const BookingInputs = ({
                             setTravelPackage(e.target.value);
                             setErrors((prev) => ({ ...prev, travelPackage: "" }));
                         }}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+                        className="block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800"
                         required
                     >
                         <option value="" disabled>
@@ -318,13 +323,13 @@ const BookingInputs = ({
                 </div>
 
                 <div>
-                    <label className="block font-semibold text-[13px] text-gray-800 ml-2">
+                    <label className="block font-semibold text-[11px] md:text-[13px] text-gray-800 ml-2">
                         {t("booking-page.input6")}
                     </label>
                     <select
                         value={tripDuration}
                         onChange={handleTripDuration}
-                        className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 text-[15px]"
+                        className="block w-58 lg:w-63 h-7 md:h-8 lg:h-9 text-xs md:text-[13px] lg:text-[14px] placeholder:text-[11px] placeholder:md:text-sm rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800"
                         required
                     >
                         <option value="" disabled>

@@ -40,7 +40,7 @@ const ContactForm = () => {
     setContactStatus("");
 
     try {
-      const response = await axios.post("http://localhost:5000/send-email", formData);
+      const response = await axios.post("http://localhost:5000/contact", formData);
 
       if (response.status === 201) {
         setAlertMessage("Message sent successfully!");
@@ -64,7 +64,7 @@ const ContactForm = () => {
     <>
       <form onSubmit={handleSubmit} className="flex justify-center items-center flex-col gap-8">
         <div>
-          <label htmlFor="name" className="block font-semibold text-[13px] ml-2 text-gray-800">
+          <label htmlFor="name" className="block font-semibold text-[10px] sm:text-[13px] ml-2 text-gray-800">
           {t("contact-page.input1")}
           </label>
           <input
@@ -73,13 +73,13 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder={t("contact-page.placeholder1")}
-            className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+            className="block w-60 sm:w-72 h-6 sm:h-10 text-xs md:text-sm rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-[10px] placeholder:sm:text-sm"
             required
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block font-semibold text-[13px] ml-2 text-gray-800">
+          <label htmlFor="email" className="block font-semibold text-[10px] sm:text-[13px]  ml-2 text-gray-800">
           {t("contact-page.input2")}
           </label>
           <input
@@ -88,13 +88,13 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder={t("contact-page.placeholder2")}
-            className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm"
+            className="block w-60 sm:w-72 h-6 sm:h-10 rounded-md text-xs md:text-sm py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-[10px] placeholder:sm:text-sm"
             required
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block font-semibold text-[13px] ml-2 text-gray-800">
+          <label htmlFor="message" className="block font-semibold text-[10px] sm:text-[13px]  ml-2 text-gray-800">
           {t("contact-page.input3")}
           </label>
           <textarea
@@ -103,7 +103,7 @@ const ContactForm = () => {
             onChange={handleChange}
             rows="4"
             placeholder={t("contact-page.placeholder3")}
-            className="block w-72 rounded-md py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 resize-none placeholder:text-sm"
+            className="block w-60 sm:w-72 h-18 sm:h-30 rounded-md text-xs md:text-sm py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 resize-none placeholder:text-[10px] placeholder:sm:text-sm"
             required
           ></textarea>
         </div>
@@ -112,7 +112,7 @@ const ContactForm = () => {
           <div className="flex justify-center items-center flex-col">
           <button
             type="submit"
-            className="px-3 py-2 mt-4 text-sm font-semibold text-white bg-green-500 shadow-md rounded-md flex items-center gap-1 transition-transform duration-300 hover:scale-105 active:scale-95"
+            className="px-3 py-2 mt-4 text-xs sm:text-sm font-semibold text-white bg-green-500 shadow-md rounded-md flex items-center gap-1 transition-transform duration-300 hover:scale-105 active:scale-95"
           >
             <span> {t("contact-page.button1")}</span>
             <svg

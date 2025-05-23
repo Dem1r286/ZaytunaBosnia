@@ -5,26 +5,13 @@ import InvestmentSection from "../components/Main/Investments page/InvestmentSec
 import HeroAgriculture from "../components/Main/Investments page/HeroAgriculture";
 import Carousel from "../components/Main/Investments page/Carousel";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-
-const FadeInSection = ({ children }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    viewport={{ once: true, amount: 0.3 }}
-  >
-    {children}
-  </motion.div>
-);
-
 const Investments = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t } = useTranslation("global");
   const investmentEducationData = [
     {
       title: t("investments.investmentEducation.waqf"),
@@ -39,7 +26,7 @@ const Investments = () => {
       imageSrc: "assets/investmentImages/scholarship.webp",
     },
     {
-      title: t("investmentEducation.teacher-training"),
+      title: t("investments.investmentEducation.teacher-training"),
       description: t("investments.investmentEducation.teacher-training-description"),
       buttonText: t("investments.investmentEducation.learn-more"),
       imageSrc: "assets/investmentImages/teachertraining.webp",
@@ -113,7 +100,7 @@ const Investments = () => {
 
         <HowOurAgencyWork />
 
-        <div className="flex justify-center items-center flex-col py-20 pb-80 w-screen gap-40 mt-30">
+        <div className="flex justify-center items-center flex-col py-20 pb-40 lg:pb-80 w-screen gap-40 mt-30">
           <InvestmentSection
             title={t("investments.investmentServices.construction-services")}
             description={t("investments.investmentServices.construction-services-description")}
@@ -139,16 +126,16 @@ const Investments = () => {
 
       <div id="education"
         style={{ backgroundImage: "url('/src/assets/background.svg')" }}
-        className="flex justify-center items-center w-screen flex-col gap-60 bg-cover bg-center w-screen">
+        className="flex justify-center items-center w-screen flex-col gap-20 lg:gap-60 bg-cover bg-center">
 
         <div id="education" ref={StartupRef}
-          className="flex justify-center items-center gap-20 flex-col pt-120">
+          className="flex justify-center items-center gap-20 flex-col pt-80 lg:pt-140">
           <div className="flex flex-col text-center gap-3">
-            <p className="font-black text-5xl text-center">
-            {t("investments.heading-education")}
+            <p className="font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-10 text-center">
+              {t("investments.heading-education")}
             </p>
-            <p>
-            {t("investments.education-subtext")}
+            <p className="text-xs md:text-sm">
+              {t("investments.education-subtext")}
             </p>
           </div>
           <Carousel investmentData={investmentEducationData} />
@@ -156,13 +143,13 @@ const Investments = () => {
 
         <div
           id="startup" ref={EducationRef}
-          className="flex justify-center items-center gap-20 flex-col pb-120">
+          className="flex justify-center items-center gap-20 flex-col pb-80 lg:pb-120">
           <div className="flex flex-col text-center gap-3">
-            <p className="font-black text-5xl text-center">
-            {t("investments.heading-startup")}
+            <p className="font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-10 text-center">
+              {t("investments.heading-startup")}
             </p>
-            <p>
-            {t("investments.startup-subtext")}
+            <p className="text-xs md:text-sm">
+              {t("investments.startup-subtext")}
             </p>
           </div>
           <Carousel investmentData={investmentStartupData} />
@@ -171,11 +158,11 @@ const Investments = () => {
               <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative z-1 block px-4 py-2 rounded-xl">
                 <div className="relative z-1 flex items-center space-x-3">
-                  <span className="transition-all duration-500 group-hover:translate-x-1">
-                  {t("common.contact-button")}
+                  <span className="transition-all duration-500 group-hover:translate-x-1 text-xs sm:text-sm md:text-md lg:text-[17px]">
+                    {t("common.contact-button")}
                   </span>
                   <svg
-                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                    className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-500 group-hover:translate-x-1"
                     data-slot="icon"
                     aria-hidden="true"
                     fill="currentColor"
@@ -198,23 +185,19 @@ const Investments = () => {
 
       <div
         id="agriculture" ref={AgricultureRef}
-        className="flex flex-col justify-center items-center bg-cover bg-center pb-100"
-        style={{
-          backgroundImage: "url('/src/assets/agriculturebackground.svg')",
-        }}
-      >
+        className="flex flex-col justify-center items-center bg-cover bg-center pb-40">
         <HeroAgriculture />
         <div className="flex flex-col gap-40">
           <InvestmentSection
             title={t("investments.investmentServices.food-production")}
-              description={t("investments.investmentServices.food-production-description")}
+            description={t("investments.investmentServices.food-production-description")}
             imageSrc="assets/investmentImages/foodproduction.webp"
             reverseLayout={true}
           />
 
           <InvestmentSection
             title={t("investments.investmentServices.greenhouses")}
-             description={t("investments.investmentServices.greenhouses-description")}
+            description={t("investments.investmentServices.greenhouses-description")}
             imageSrc="assets/investmentImages/greenhouse.webp"
             reverseLayout={false}
           />

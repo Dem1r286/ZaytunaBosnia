@@ -8,7 +8,7 @@ const HoneymoonPackages = () => {
   const { t, i18n } = useTranslation("global");
   return (
     <div id="honeymoon-packages" className="flex justify-start items-center">
-       <p className="absolute left-1/2 transform -translate-x-1/2 font-bold text-5xl z-10 text-white bg-black p-6 rounded-xl">{t("travel-package-details.not-available")}</p>
+        <p className="absolute left-1/2 transform -translate-x-1/2 font-bold text-sm w-fit md:text-2xl lg:text-3xl whitespace-nowrap text-center z-10 text-white bg-black p-6 rounded-xl">{t("travel-package-details.not-available")}</p>
       <div className="w-full flex flex-col gap-16">
 
         <div className="w-full flex flex-col items-start ml-10 justify-start">

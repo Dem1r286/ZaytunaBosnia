@@ -7,28 +7,28 @@ const HeroRealEstate = () => {
   const { t, i18n } = useTranslation("global");
   return (
     <div
-      className="flex w-screen h-screen flex-col items-center bg-cover bg-center bg-fixed py-40 mb-120"
+      className="flex w-screen h-screen flex-col items-center bg-cover bg-center bg-fixed py-20 lg:py-40 mb-120 md:mb-100 lg:mb-130"
       style={{ backgroundImage: "url('assets/investmentImages/realestatebackground.webp')" }}
     >
-      <div className="flex justify-center items-center flex-col mt-10 rounded-xl w-full px-10 gap-30">
-        <p className="font-black text-5xl text-white text-center">
+      <div className="flex justify-center items-center flex-col mt-10 rounded-xl w-full px-10 gap-20 lg:gap-30">
+        <p className="font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white text-center">
           {t("investments.heading-estate")}
         </p>
-        <div className="flex justify-center items-center flex-row bg-black/50 rounded-2xl py-15 px-20 gap-15">
+        <div className="flex justify-center items-center flex-col lg:flex-row bg-black/50 rounded-2xl py-10 lg:py-15 px-10 lg:px-20 gap-15">
           <div className="flex justify-center items-center flex-col gap-10">
-            <p className="text-lg text-gray-200 text-center max-w-xl">
-            {t("investments.estate-subtext")}
+            <p className="text-xs sm:text-sm md:text-md lg:text-lg text-gray-200 text-center max-w-xl">
+              {t("investments.estate-subtext")}
             </p>
             <Link to="/contact">
               <button className="relative inline-block p-px font-semibold leading-6 text-white bg-[#22c55e] shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                 <span className="absolute inset-0 rounded-xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
                 <span className="relative z-1 block px-4 py-2 rounded-xl">
                   <div className="relative z-1 flex items-center space-x-3">
-                    <span className="transition-all duration-500 group-hover:translate-x-1">
+                    <span className="transition-all duration-500 group-hover:translate-x-1 text-xs sm:text-sm md:text-md lg:text-[17px]">
                       {t("common.contact-button")}
                     </span>
                     <svg
-                      className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                      className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-500 group-hover:translate-x-1"
                       data-slot="icon"
                       aria-hidden="true"
                       fill="currentColor"
@@ -49,13 +49,13 @@ const HeroRealEstate = () => {
           <div className="flex justify-center items-center w-1/2">
             <img
               src="assets/investmentImages/realestateillustration.webp"
-              className="max-w-[450px] "
+              className="w-[250px] md:w-[300px] lg:w-[400px]"
               alt="Logo"
             />
           </div>
         </div>
       </div>
-      <div className="mt-75">
+      <div className="mt-30 lg:mt-50">
         <InvestmentSection
           title={t("investments.investmentServices.architecture-solutions")}
           description={t("investments.investmentServices.architecture-solutions-description")}

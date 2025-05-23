@@ -33,18 +33,18 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 flex items-center justify-between w-screen px-8 z-20 py-1 bg-white transition-transform duration-300 shadow-sm ${
+        className={`fixed top-0 left-0 flex items-center justify-between w-screen pl-5 pr-8 md:pl-8 md:pr-10 z-20 py-2 bg-white transition-transform duration-300 shadow-sm ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <HeaderLogo />
         <HeaderLinks />
 
-        <div className="hidden lg:flex">
+        <div className="hidden xl:flex">
           <HeaderLanguage />
         </div>
 
-        <div className="flex lg:hidden items-center gap-6">
+        <div className="flex xl:hidden items-center gap-6">
           <div className="hidden sm:flex">
             <HeaderLanguage />
           </div>

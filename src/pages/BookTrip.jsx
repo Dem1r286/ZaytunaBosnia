@@ -116,7 +116,7 @@ const BookTrip = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Move this here
-    setIsSubmitted(true); 
+    setIsSubmitted(true);
 
     const newErrors = {};
 
@@ -159,7 +159,7 @@ const BookTrip = () => {
     console.log("Booking Data:", bookingData); // Debug log for data being submitted
 
     try {
-      const response = await axios.post("http://localhost:5000/confirmation-email", bookingData);
+      const response = await axios.post("http://localhost:5000/confirm-request", bookingData);
 
       if (response.status === 200 || response.status === 201) {
         setBookingStatus("success");
@@ -200,24 +200,26 @@ const BookTrip = () => {
   };
 
   return (
-    <div id="book-trip" className="relative w-full min-h-screen flex flex-col justify-center items-center mt-8 mb-60">
+    <div id="book-trip" className="relative w-full flex flex-row justify-center items-center mt-25 mx-20">
       <div className="flex flex-col justify-center items-center gap-12">
         <FadeInSection>
-          <div className="flex flex-col gap-3 items-center justify-center">
-            <p className="font-semibold text-5xl">{t("booking-page.heading")}</p>
-            <p className="text-md">{t("booking-page.subtext")}</p>
+          <div className="flex flex-col gap-1 md:gap-3 items-center justify-center">
+            <p className="font-semibold text-2xl sm:text-3xl md:text-4xl xl:text-5xl">{t("booking-page.heading")}</p>
+            <p className="px-40 text-xs md:text-sm lg:text-md text-center text-md">{t("booking-page.subtext")}</p>
           </div>
         </FadeInSection>
 
         <FadeInSection>
           <div
-            className="flex flex-row w-[1400px] h-[950px] rounded-xl shadow-xl bg-cover p-10 justify-between px-25 py-10 gap-40 items-center"
+            className="flex flex-col xl:flex-row h-fit rounded-xl shadow-xl bg-cover p-10 justify-between px-30 py-20 gap-20 xl:gap-30 items-center"
             style={{
-              backgroundImage: "url(assets/other/booktripbackground.webp)",
+              boxShadow: "0 0 50px rgba(0, 0, 0, 0.1)",
+              backgroundImage: "url(assets/other/wavebooking.svg)",
             }}
           >
+
             {/* Left Section */}
-            <div className="flex flex-col gap-10 justify-center items-center mt-10">
+            <div className="flex flex-col gap-8 justify-center items-center pt-10 xl:pt-0">
               <BookingInputs
                 name={name}
                 setName={setName}
@@ -252,7 +254,7 @@ const BookTrip = () => {
             </div>
 
             {/* Right Section */}
-            <div className="flex justify-between h-full pt-30 pb-2 items-center flex-col gap-10">
+            <div className="flex justify-center justify-center items-center flex-col gap-10">
               <SpecialRequests
                 specialRequests={specialRequests}
                 setSpecialRequests={setSpecialRequests}

@@ -11,16 +11,16 @@ const PackageOptions = ({
 }) => {
     const { t, i18n } = useTranslation("global");
   return (
-    <div className="flex flex-row gap-10 justify-center items-center bg-gray-100 px-10 rounded-xl py-4">
+    <div className="flex flex-col sm:flex-row gap-10 justify-center items-center bg-gray-100 w-full mx-20 rounded-xl py-4">
   
       {/* Booked Flight */}
       <div className="flex flex-col justify-center items-center">
-        <label className="block font-semibold text-sm text-gray-800">
+        <label className="block font-semibold text-xs text-sm text-gray-800">
         {t("booking-page.book-flight")}
         </label>
         <div className="flex gap-4 mt-2">
           <button
-            className={`px-4 rounded-md font-semibold text-sm transition ${
+            className={`px-4 rounded-md font-semibold text-xs md:text-sm transition ${
               hasBookedFlight === true
                 ? "bg-green-600 text-white"
                 : "bg-gray-300 text-gray-800"
@@ -30,7 +30,7 @@ const PackageOptions = ({
              {t("booking-page.yes")}
           </button>
           <button
-            className={`px-4 py-2 rounded-md font-semibold text-sm transition ${
+            className={`px-4 py-2 rounded-md font-semibold text-xs md:text-sm transition ${
               hasBookedFlight === false
                 ? "bg-red-600 text-white"
                 : "bg-gray-300 text-gray-800"
@@ -44,12 +44,12 @@ const PackageOptions = ({
 
       {/* Package Type */}
       <div className="flex flex-col justify-center items-center">
-        <label className="block font-semibold text-sm text-gray-800 ml-2">
+        <label className="block font-semibold text-xs text-sm text-gray-800 ml-2">
         {t("booking-page.package-type")}
         </label>
         <div className="flex gap-4 mt-2">
           <button
-            className={`px-4 py-2 rounded-md font-semibold text-sm transition ${
+            className={`px-4 py-2 rounded-md font-semibold text-xs md:text-sm transition ${
               selectedPackage === "regular"
                 ? "bg-blue-600 text-white"
                 : "bg-gray-300 text-gray-800"
@@ -59,7 +59,7 @@ const PackageOptions = ({
             {t("booking-page.regular")}
           </button>
           <button
-            className={`px-4 py-2 rounded-md font-semibold text-sm transition ${
+            className={`px-4 py-2 rounded-md font-semibold text-xs md:text-sm transition ${
               selectedPackage === "vip"
                 ? "bg-yellow-500 text-white"
                 : "bg-gray-300 text-gray-800"

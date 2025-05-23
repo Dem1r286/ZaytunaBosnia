@@ -5,7 +5,6 @@ import HomePage from "./pages/Homepage";
 import Investment from "./pages/Investments";
 import Contact from "./pages/Contact";
 import Layout from "./Layout";
-import { useTranslation } from "react-i18next";
 import TravelPackages from "./pages/TravelPackages";
 import TravelPackageDetails from "./pages/TravelPackageDetails";
 import ScrollToTop from "./components/layout/Header/components/ScrollToTop";
@@ -15,8 +14,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
-  const { t, i18n } = useTranslation("global");
-
   return (
     <Router>
       <ScrollToTop />

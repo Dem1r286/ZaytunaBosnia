@@ -36,8 +36,8 @@ const ExploreInvestment = () => {
     <div id="explore-investment" className="flex flex-col justify-center items-center px-30 py-20 rounded-2xl">
 
       <div className="flex justify-center items-center gap-10 mb-36">
-        <img src="assets/icons/logo.svg" alt="Bosnia Real Estate Logo" className="w-30" />
-        <h2 className="font-semibold text-3xl">
+        <img src="assets/icons/logo.svg" alt="Bosnia Real Estate Logo" className="w-14 md:w-25 lg:w-30" />
+        <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl f">
         {t("explore-investment.heading")}
         </h2>
       </div>
@@ -45,9 +45,9 @@ const ExploreInvestment = () => {
       <div className="flex flex-col justify-center items-center gap-[20vh]">
         {Data.map((item, idx) => (
           item.text && ( 
-            <div key={idx} className={`flex ${idx % 2 === 0 ? "flex-row" : "flex-row-reverse"} justify-center gap-[10vw] items-center h-[400px]`}>
+            <div key={idx} className={`flex flex-col  ${idx % 2 === 0 ? "flex-row" : "flex-row-reverse"} justify-center gap-[10vw] items-center h-[400px]`}>
 
-              <div className="max-w-2xl text-center">
+              <div className="max-w-2xl  text-center">
                 <div className="flex flex-col justify-center items-center gap-10">
                 <p className="font-semibold text-2xl text-gray-800">{item.heading}</p>
                 <p className="text-md">{item.text}</p>

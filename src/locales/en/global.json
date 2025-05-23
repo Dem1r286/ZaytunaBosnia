@@ -35,6 +35,7 @@
   },
   "destinations": {
     "heading": "Explore Destinations",
+    "text": "Discover stunning places — from mountain escapes to seaside retreats, your next adventure begins here",
     "card1": "Sarajevo",
     "card2": "Mostar",
     "card3": "Blagaj",
@@ -53,8 +54,8 @@
   },
   "court-banner": {
     "heading": "Do you need court interpreter?",
-    "text1": "Our team of expert court interpreters provides fast",
-    "text2": "and accurate translation for Bosnian and Arabic!",
+    "text1": "Our team of expert court interpreters provides fast and",
+    "text2": "accurate translation for Bosnian and Arabic!",
     "button1": "Go To Page"
   },
   "explore-investment": {
@@ -522,7 +523,7 @@
       "driver": "Driver Services",
       "accommodation": "Accommodation",
       "guide": "Tour Guide",
-      "date": "From March to November",
+      "date": "From Mar to Nov",
       "family": "Family Friendly",
       "vip": "Vip Available"
     },
@@ -696,5 +697,10 @@
     "placeholder1": "e.g. John Doe",
     "placeholder2": "e.g. I would like to inquire about...",
     "placeholder3": "e.g. johndoe@example.com"
+  },
+  "package-images": {
+    "honeymoon": "assets/packages/honeymoonpackage.webp",
+    "summer": "assets/packages/summerpackage.webp",
+    "winter": "assets/packages/winterpackage.webp"
   }
 }
