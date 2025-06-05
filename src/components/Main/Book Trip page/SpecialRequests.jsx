@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 const SpecialRequests = ({ specialRequests, setSpecialRequests }) => {
   const { t } = useTranslation("global");
   return (
-    <div className="flex flex-col justify-center items-center">
-      <label className="block font-semibold text-sm text-gray-800 ml-2">
+    <div className="flex flex-col justify-center items-center text-sm">
+      <label className="block font-semibold text-xs sm:text-sm text-gray-800 ml-2">
       {t("booking-page.special-requests")}
       </label>
       <textarea
@@ -13,7 +13,8 @@ const SpecialRequests = ({ specialRequests, setSpecialRequests }) => {
         onChange={(e) => setSpecialRequests(e.target.value)}
         rows="3"
         placeholder= {t("booking-page.special-requests-placeholder")}
-        className="block w-full rounded-xl h-[50px] py-1.5 px-2 ring-1 ring-gray-300 bg-gray-100 text-gray-800 placeholder:text-sm mt-2 resize-none"
+        className="block w-full rounded-xl h-[50px] py-1.5 px-2 border-1 border-gray-300 bg-white text-gray-800 placeholder:text-xs sm:placeholder:text-xs mt-2 resize-none"
+        style={{ boxShadow: "0 0 30px rgba(0, 0, 0, 0.1)" }}
       ></textarea>
     </div>
   );

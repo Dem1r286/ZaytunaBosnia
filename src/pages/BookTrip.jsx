@@ -47,6 +47,7 @@ const BookTrip = () => {
   const [childrenAges, setChildrenAges] = useState([]);
   const [groupSize, setGroupSize] = useState(0);
   const [packagePrice, setPackagePrice] = useState(0);
+  const [isMdUp, setIsMdUp] = useState(false);
 
   useEffect(() => {
     const fixedPriceMap = {
@@ -199,6 +200,15 @@ const BookTrip = () => {
     setIsLoading(false);
   };
 
+  useEffect(() => {
+    function checkWidth() {
+      setIsMdUp(window.innerWidth >= 768);
+    }
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
   return (
     <div id="book-trip" className="relative w-full flex flex-row justify-center items-center mt-25 mx-20">
       <div className="flex flex-col justify-center items-center gap-12">
@@ -211,10 +221,12 @@ const BookTrip = () => {
 
         <FadeInSection>
           <div
-            className="flex flex-col xl:flex-row h-fit rounded-xl shadow-xl bg-cover p-10 justify-between px-30 py-20 gap-20 xl:gap-30 items-center"
+            className="flex flex-col xl:flex-row h-fit rounded-xl shadow-xl bg-cover p-10 justify-between px-30 py-20 gap-20 xl:gap-30 items-center bg-center"
             style={{
               boxShadow: "0 0 50px rgba(0, 0, 0, 0.1)",
-              backgroundImage: "url(assets/other/wavebooking.svg)",
+              backgroundImage: isMdUp
+                ? "url(assets/other/wavebooking.svg)"
+                :  "url(assets/other/bookingsmallscreen.svg)"
             }}
           >
 
@@ -254,7 +266,7 @@ const BookTrip = () => {
             </div>
 
             {/* Right Section */}
-            <div className="flex justify-center justify-center items-center flex-col gap-10">
+            <div className="flex justify-center justify-center items-center flex-col gap-10 mb-20 md:mb-0">
               <SpecialRequests
                 specialRequests={specialRequests}
                 setSpecialRequests={setSpecialRequests}

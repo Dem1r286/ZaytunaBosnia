@@ -23,6 +23,7 @@ const AppBanner = () => {
           <img src="assets/icons/googleplay.webp" className="w-25 md:w-35" alt="Google Play" />
           <img src="assets/icons/appstore.webp" className="w-25 md:w-35" alt="App Store" />
         </div>
+        <p className="text-white mt-2 text-xs font-semibold">*App currently down for maintenance.</p>
       </div>
     </div>
   );

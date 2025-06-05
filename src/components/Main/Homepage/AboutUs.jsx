@@ -5,12 +5,12 @@ import { useTranslation } from "react-i18next";
 const AboutUs = () => {
   const { t } = useTranslation("global");
   return (
-    <div id="about-us" className="flex justify-center items-center flex-col gap-10">
+    <div id="about-us" className="flex justify-center items-center flex-col gap-5 md:gap-10 mb-6 md:mb-0">
       <div className="flex justify-center items-center flex-col">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-1 md:mb-2 text-center whitespace-nowrap">{t("about-us.heading")}</h3>
         <span className="bg-[#22c55e] rounded-2xl h-[5px] w-1/3 md:mt-3"></span>
       </div>
-      <div className="flex justify-center items-center flex-col gap-10 px-10">
+      <div className="flex justify-center items-center flex-col gap-5 md:gap-10 px-10">
         <p className="w-screen text-[10px] sm:text-xs md:text-[14px] text-center px-10 md:px-20 max-w-[1800px]">
           {t("about-us.text1")} <span className="font-semibold">{t("about-us.text2")}</span>, {t("about-us.text3")} {" "}
           <span className="font-semibold">{t("about-us.text4")}</span>

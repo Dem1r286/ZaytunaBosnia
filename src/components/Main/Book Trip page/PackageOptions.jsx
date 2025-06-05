@@ -11,7 +11,8 @@ const PackageOptions = ({
 }) => {
     const { t, i18n } = useTranslation("global");
   return (
-    <div className="flex flex-col sm:flex-row gap-10 justify-center items-center bg-gray-100 w-full mx-20 rounded-xl py-4">
+    <div className="flex flex-col sm:flex-row gap-7 sm:gap-10 justify-center items-center w-full rounded-xl py-4"
+    style={{ boxShadow: "0 0 50px rgba(0, 0, 0, 0.1)" }}>
   
       {/* Booked Flight */}
       <div className="flex flex-col justify-center items-center">

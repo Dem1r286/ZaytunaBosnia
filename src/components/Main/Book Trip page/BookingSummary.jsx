@@ -49,14 +49,15 @@ const BookingSummary = ({
 
 
   return (
-    <div className="relative flex justify-center items-center flex-col min-w-[400px]">
+    <div className="relative flex justify-center items-center flex-col w-full">
       {/* Booking Summary */}
-      <div className="flex w-full flex-col bg-gray-100 rounded-xl pt-3 pb-4 mb-10 shadow-md">
-        <p className="font-semibold text-lg mb-4 text-center">
+      <div className="flex w-full flex-col rounded-xl pt-3 pb-4 mb-10"
+       style={{ boxShadow: "0 0 50px rgba(0, 0, 0, 0.1)" }}>
+        <p className="font-semibold text-md md:text-lg mb-4 text-center">
           {t("booking-page.booking-summary")}
         </p>
 
-        <div className="flex justify-between items-start gap-20 w-full px-6 text-sm">
+        <div className="flex justify-between items-start gap-20 w-full px-6 text-xs md:text-sm">
           {/* left labels */}
           <div className="flex flex-col gap-1">
             <p>{t("booking-page.accommodation")}</p>
@@ -99,7 +100,7 @@ const BookingSummary = ({
       </div>
 
       {/* Submit + More-info buttons */}
-      <div className="flex flex-col items-center mt-4 relative">
+      <div className="flex flex-col justify-center items-center mt-4 relative">
         <div className="flex justify-center items-center flex-row gap-4">
           <div className="w-6 h-6">
             {isLoading ? (
@@ -113,7 +114,7 @@ const BookingSummary = ({
 
           <button
             onClick={handleSubmit}
-            className="w-[220px] h-[50px] rounded-[12px] bg-[#22c55e] relative overflow-hidden shadow-md active:scale-95 transition-all"
+            className="w-[200px] h-[45px] md:w-[220px] md:h-[50px] text-sm md:text-md lg:text-[15px] rounded-[12px] bg-[#22c55e] relative overflow-hidden shadow-md active:scale-95 transition-all"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -134,7 +135,7 @@ const BookingSummary = ({
           </button>
 
           <button
-            className="text-xs bg-blue-600 text-white font-semibold px-2 py-1 rounded-xl hover:scale-104 transition-transform"
+            className="text-[11px] md:text-xs bg-blue-600 whitespace-nowrap text-white font-semibold px-2 py-1 rounded-xl hover:scale-104 transition-transform"
             onClick={() => setIsMoreInfoOpen(true)}
           >
             {t("booking-page.button2")}
