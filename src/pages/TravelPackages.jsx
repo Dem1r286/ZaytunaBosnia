@@ -28,6 +28,9 @@ const TravelPackages = () => {
   const summerRef = useRef(null);
   const honeymoonRef = useRef(null);
 
+  // Determine if current language is Arabic
+  const isRTL = i18n.language === "ar";  // or however you name your Arabic language key
+
   useEffect(() => {
     if (packageType) {
       let targetRef;
@@ -48,26 +51,32 @@ const TravelPackages = () => {
   }, [packageType]);
 
   return (
-    <div id="travel-packages" className="flex flex-col mt-30 md:mt-45 gap-10 md:gap-30">
+    <div
+      id="travel-packages"
+      dir={isRTL ? "rtl" : "ltr"}
+      className={`flex flex-col mt-30 md:mt-45 gap-10 md:gap-30 ${
+        isRTL ? "text-right" : "text-left"
+      }`}
+    >
       <FadeInSection>
         <div className="flex justify-center items-center flex-col">
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold m-0 text-center px-20">
-          {t("travel-packages-page.heading")}
+            {t("travel-packages-page.heading")}
           </p>
           <p className="w-[100%] px-20 md:w-[60%] text-center font-medium text-[10px] sm:text-sm md:text-[14px] text-gray-700 mt-1">
-          {t("travel-packages-page.subtext")}
+            {t("travel-packages-page.subtext")}
           </p>
         </div>
       </FadeInSection>
 
-      <div className="flex flex-col items-center justify-center gap-35 mb-50 md:mb-80">
+      <div className="flex flex-col items-center justify-center gap-35 mb-50">
         <FadeInSection>
           <div ref={summerRef} className="w-full flex justify-start px-10">
             <SummerPackages />
           </div>
         </FadeInSection>
 
-         <FadeInSection>
+        <FadeInSection>
           <div ref={honeymoonRef} className="w-full flex justify-start px-10">
             <HoneymoonPackages />
           </div>
@@ -77,7 +86,7 @@ const TravelPackages = () => {
           <div ref={winterRef} className="w-full flex justify-start px-10">
             <WinterPackages />
           </div>
-        </FadeInSection> 
+        </FadeInSection>
       </div>
     </div>
   );

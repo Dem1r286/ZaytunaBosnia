@@ -8,22 +8,30 @@ const Hero = () => {
   return (
     <div
       className="relative flex flex-col items-center justify-center w-screen h-[60vh] mt-14 bg-cover bg-center"
-      style={{ backgroundImage: "url('assets/destinations/ai7.png')" }}
+      style={{ backgroundImage: "url('assets/other/herobackground.webp')" }}
     >
-      <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <div className="absolute inset-0 bg-black/25 z-0">
+      </div>
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <h1
           className="text-white text-3xl md:text-4xl lg:text-[50px] font-bold mb-2"
-          style={{ textShadow: "2px 2px 30px rgba(0,0,0,0.75)" }}
+          style={{
+            textShadow:
+              "3px 3px 8px rgba(0,0,0,0.9), 0px 0px 12px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)"
+          }}
         >
-          Bosnia Starts Here
+          {t("hero.heading")}
         </h1>
+
         <h2
           className="text-white font-medium text-md md:text-lg lg:text-[22px] mb-10"
-               style={{ textShadow: "2px 2px 30px rgba(0,0,0,0.75)" }}
+          style={{
+            textShadow:
+              "2px 2px 6px rgba(0,0,0,0.85), 0px 0px 10px rgba(0,0,0,0.75), 1px 1px 1px rgba(0,0,0,0.6)"
+          }}
         >
-           <span className="font-semibold">Plan less.</span> We’ve got your hotel, driver & guide ready
+          <span className="font-semibold">{t("hero.heading1")}</span> {t("hero.heading2")}
         </h2>
 
         <Link to="/book-trip" className="group">

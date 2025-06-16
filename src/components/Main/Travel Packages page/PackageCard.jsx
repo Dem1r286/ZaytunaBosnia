@@ -20,8 +20,8 @@ const PackageCard = ({
             <h3 className="text-4xl md:text-5xl mt-6 md:mt-4" style={{ fontFamily: "'Bangers', cursive" }}>
                 {nights} {t("travel-package-details.night")} / {days} {t("travel-package-details.day")}
             </h3>
-            <div className="flex flex-row justify-center items-center">
-                <div className="flex justify-start flex-col items-center mt-4 md:mt-6 mr-10">
+            <div className="flex flex-row justify-center items-center gap-10">
+                <div className="flex justify-start flex-col items-center mt-4 md:mt-6">
                     <p className="text-3xl md:text-4xl lg:text-5xl font-black">
                         {price} {currency}
                     </p>

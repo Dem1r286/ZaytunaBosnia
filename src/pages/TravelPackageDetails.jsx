@@ -176,7 +176,7 @@ const TravelPackageDetails = () => {
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className={`p-1 md:p-2 rounded-full bg-green-300 absolute left-0 top-[60%] -translate-y-1/2 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
+              className={`p-1 md:p-2 rounded-full bg-green-300 absolute left-5 md:left-0 top-[60%] -translate-y-1/2 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
                 }`}
             >
               <ChevronLeft className="w-5 md:w-6" />
@@ -184,7 +184,7 @@ const TravelPackageDetails = () => {
             <button
               onClick={nextSlide}
               disabled={currentIndex === currentImages.length - 1}
-              className={`p-1 md:p-2 rounded-full bg-green-300 absolute right-0 top-[60%] -translate-y-1/2 ${currentIndex === currentImages.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
+              className={`p-1 md:p-2 rounded-full bg-green-300 absolute right-5 md:right-0 top-[60%] -translate-y-1/2 ${currentIndex === currentImages.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-green-400"
                 }`}
             >
               <ChevronRight className="w-5 md:w-6" />

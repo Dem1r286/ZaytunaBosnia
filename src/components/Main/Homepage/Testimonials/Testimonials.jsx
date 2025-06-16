@@ -99,7 +99,7 @@ const TestimonialSlider = () => {
                 key={index}
                 className="bg-gray-100 md:bg-white rounded-xl p-6 mb-2"
                 style={{
-                  height: "250px",
+                  height: "270px",
                   width: "100%",
                   display: "flex",
                   flexDirection: "column",
